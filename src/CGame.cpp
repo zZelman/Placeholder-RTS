@@ -12,6 +12,8 @@ CGame::CGame()
 	sf::Vector2<int> gridSize(35, 35);
 	sf::Vector2<int> gridSubSize(20, 20); // 1 cell is 20x20 pixels
 
+	m_pGrid = new CGrid("debug map.tmx");
+
 	isRunning = false;
 	isPaused = false;
 }
@@ -35,6 +37,8 @@ CGame::~CGame()
 	delete m_pGameWindow;
 	m_pGameWindow = NULL;
 
+	delete m_pGrid;
+	m_pGrid = NULL;
 }
 
 

@@ -77,12 +77,53 @@ void testingThreads()
 	}
 }
 
+#include "rapidxml_utils.hpp"
+void testingRapidXML()
+{
+	rapidxml::file<> file("res/Maps/simple map.tmx");
+	rapidxml::xml_document<> doc;
+	doc.parse<0>(file.data());
+	std::string tabSize = "  ";
+
+	rapidxml::xml_node<>* node = doc.first_node();
+
+	// starts at "map"
+	std::cout << node->name() << "\n";
+
+	// moves to "tileset"
+	node = node->first_node();
+	std::cout << tabSize <<  node->name() << "\n";
+
+	// goes within the "tileset" tree
+	node = node->first_node();
+	std::cout << tabSize + tabSize << node->name() << "\n";
+
+	// moves out of the "tileset" tree
+	node = node->parent();
+
+	// moves to "layer"
+	node = node->next_sibling();
+	std::cout << tabSize <<  node->name() << "\n";
+
+	// goes within the "layer" tree to find "data"
+	node = node->first_node();
+	std::cout << tabSize + tabSize <<  node->name() << "\n";
+
+	// goes within the "data" tree to find the "tile"
+	node = node->first_node();
+	rapidxml::xml_attribute<>* attr = node->first_attribute(); // use this to get the name and data from a node
+	std::cout << tabSize + tabSize + tabSize <<  node->name() << ": " << attr->name() << "=" << attr->value() << "\n";
+
+
+	std::cout << "end" << std::endl;
+}
+
 
 int main()
 {
 //	testingBasics();
 //	testingThreads();
-
+//	testingRapidXML();
 
 	CGame* pGame = new CGame();
 

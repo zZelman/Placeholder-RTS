@@ -74,7 +74,9 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/CSprite.h ../src/CTexture.h ../src/IRenderable.h \
- ../src/IUpdateable.h
+ ../src/IUpdateable.h ../src/CGrid.h \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp
 
 ../src/CGame.h:
 
@@ -235,3 +237,9 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/IRenderable.h:
 
 ../src/IUpdateable.h:
+
+../src/CGrid.h:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:

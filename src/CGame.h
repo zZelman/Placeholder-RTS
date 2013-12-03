@@ -13,6 +13,7 @@
 #include "CTexture.h"
 #include "IUpdateable.h"
 #include "IRenderable.h"
+#include "CGrid.h"
 
 class CGame : public IUpdateable, public IRenderable
 {
@@ -33,6 +34,7 @@ public:
 
 private:
 	sf::RenderWindow* m_pGameWindow;
+	CGrid* m_pGrid;
 
 	bool isRunning;
 	bool isPaused;
