@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../src/CGrid.cpp \
 ../src/CSprite.cpp \
 ../src/CTexture.cpp \
+../src/CTile.cpp \
 ../src/IRenderable.cpp \
 ../src/IUpdateable.cpp \
 ../src/IUserInput.cpp \
@@ -18,6 +19,7 @@ OBJS += \
 ./src/CGrid.o \
 ./src/CSprite.o \
 ./src/CTexture.o \
+./src/CTile.o \
 ./src/IRenderable.o \
 ./src/IUpdateable.o \
 ./src/IUserInput.o \
@@ -28,6 +30,7 @@ CPP_DEPS += \
 ./src/CGrid.d \
 ./src/CSprite.d \
 ./src/CTexture.d \
+./src/CTile.d \
 ./src/IRenderable.d \
 ./src/IUpdateable.d \
 ./src/IUserInput.d \

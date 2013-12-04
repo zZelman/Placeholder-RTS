@@ -76,7 +76,8 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  ../src/CSprite.h ../src/CTexture.h ../src/IRenderable.h \
  ../src/IUpdateable.h ../src/CGrid.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
+ ../src/CTile.h
 
 ../src/CGame.h:
 
@@ -243,3 +244,5 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
 
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
+
+../src/CTile.h:

@@ -33,7 +33,7 @@ public:
 	void stopGame();
 
 private:
-	sf::RenderWindow* m_pGameWindow;
+	sf::RenderWindow* m_pWindow;
 	CGrid* m_pGrid;
 
 	bool isRunning;

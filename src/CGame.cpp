@@ -7,12 +7,11 @@
 
 CGame::CGame()
 {
-	initWindow(); // m_pGameWindow new'ed here
+	// * m_pGameWindow new'ed here
+	// * !! local vars dictate the size !! [need to change]
+	initWindow();
 
-	sf::Vector2<int> gridSize(35, 35);
-	sf::Vector2<int> gridSubSize(20, 20); // 1 cell is 20x20 pixels
-
-	m_pGrid = new CGrid("debug map.tmx");
+	m_pGrid = new CGrid(m_pWindow, "simple map.tmx");
 
 	isRunning = false;
 	isPaused = false;
@@ -34,8 +33,8 @@ CGame::CGame(const CGame& other)
 
 CGame::~CGame()
 {
-	delete m_pGameWindow;
-	m_pGameWindow = NULL;
+	delete m_pWindow;
+	m_pWindow = NULL;
 
 	delete m_pGrid;
 	m_pGrid = NULL;
@@ -66,7 +65,7 @@ CGame& CGame::operator=(const CGame& other)
 
 sf::RenderWindow* CGame::getGameWindow()
 {
-	return m_pGameWindow;
+	return m_pWindow;
 }
 
 
@@ -96,13 +95,13 @@ void CGame::stopGame()
 
 void CGame::initWindow()
 {
-	int numTiles = 35;
-	int sizeTile = 20;
-	m_pGameWindow 	= new sf::RenderWindow(sf::VideoMode(sizeTile * numTiles, sizeTile * numTiles), "Independent Study");
+	int numTiles = 25;
+	int sizeTile = 32;
+	m_pWindow 	= new sf::RenderWindow(sf::VideoMode(sizeTile * numTiles, sizeTile * numTiles), "Independent Study");
 
 	// NOTE: do not use Virtual Sync and fixed frame rate at once
 //	m_pGameWindow->setVerticalSyncEnabled(true);
-	m_pGameWindow->setFramerateLimit(60);
+	m_pWindow->setFramerateLimit(60);
 }
 
 
@@ -110,17 +109,17 @@ void CGame::gameLoop()
 {
 	isRunning = true;
 
-	while (m_pGameWindow->isOpen() && isRunning)
+	while (m_pWindow->isOpen() && isRunning)
 	{
 
 		// NOTE: events must be polled within the main window thread
 		sf::Event event;
-		while (m_pGameWindow->pollEvent(event))
+		while (m_pWindow->pollEvent(event))
 		{
 			// window was closed by user
 			if (event.type == sf::Event::Closed)
 			{
-				m_pGameWindow->close();
+				m_pWindow->close();
 				return;
 			}
 
@@ -145,7 +144,7 @@ void CGame::gameLoop()
 
 	// if the program flow gets here, its because isRunning was requested as being false
 	//		therefore, you still need to close the window
-	m_pGameWindow->close();
+	m_pWindow->close();
 }
 
 
@@ -157,7 +156,7 @@ bool CGame::input_user(sf::Event* pEvent)
 	{
 		if (pEvent->key.code == sf::Keyboard::Escape)
 		{
-			m_pGameWindow->close();
+			m_pWindow->close();
 			return true;
 		}
 
@@ -214,9 +213,10 @@ void CGame::update()
 
 void CGame::render()
 {
-	m_pGameWindow->clear(sf::Color::White); // clear screen with a black background
+	m_pWindow->clear(sf::Color::White); // clear screen with a black background
 
 	// drawing here...
+	m_pGrid->render();
 
-	m_pGameWindow->display(); // displays what has been rendered since last clear
+	m_pWindow->display(); // displays what has been rendered since last clear
 }

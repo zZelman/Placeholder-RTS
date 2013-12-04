@@ -1,4 +1,5 @@
-src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
+src/CTile.d: ../src/CTile.cpp ../src/CTile.h ../src/IRenderable.h \
+ ../src/IUpdateable.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -73,13 +74,13 @@ src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/IUpdateable.h ../src/IRenderable.h ../src/CTexture.h \
- ../src/CSprite.h \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h
+ ../src/CTexture.h ../src/CSprite.h
 
-../src/CGrid.h:
+../src/CTile.h:
+
+../src/IRenderable.h:
+
+../src/IUpdateable.h:
 
 ../src/include_sfml.h:
 
@@ -231,16 +232,6 @@ src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/IUpdateable.h:
-
-../src/IRenderable.h:
-
 ../src/CTexture.h:
 
 ../src/CSprite.h:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
-
-../src/CTile.h:

@@ -14,20 +14,33 @@
 #include "rapidxml_utils.hpp"
 
 
-CGrid::CGrid(std::string fileName)
+CGrid::CGrid(sf::RenderWindow* pWindow, std::string fileName)
 {
+	m_pWindow = pWindow;
+
 	m_fileName = fileName;
 	m_filePath = "res/Maps/" + m_fileName;
 
 	m_tileSetPath = "res/Map Tilesets/";
 
 	parseFile();
+
+	generateGrid();
 }
 
 
 CGrid::~CGrid()
 {
-	// TODO Auto-generated destructor stub
+	delete m_pTestTexture;
+	m_pTestTexture = NULL;
+
+	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	{
+		CSprite* s = m_testSprites.at(i);
+		delete s;
+		s = NULL;
+	}
+	m_testSprites.clear();
 }
 
 
@@ -38,6 +51,118 @@ void CGrid::update()
 
 void CGrid::render()
 {
+	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	{
+		m_testSprites.at(i)->render();
+	}
+}
+
+
+void CGrid::generateGrid()
+{
+	CTexture* pTexture = generateGrid_texture();
+	m_pTestTexture = pTexture;
+
+	// use the info received at the specific 2D index to create a sprite
+	//		with the correct texture, and in the correct position
+	for (unsigned int i = 0; i < m_sLayerData.tiles.size(); ++i)
+	{
+		std::vector<int> internalVect = m_sLayerData.tiles.at(i);
+		for (unsigned int n = 0; n < internalVect.size(); ++n)
+		{
+			int data = internalVect.at(n);
+			if (data == 0) // 0 in the Tiled data structure represents "no tile present"
+			{
+				continue;
+			}
+			else
+			{
+				m_testSprites.push_back(generateGrid_sprite(n + 1, i + 1, data, pTexture));
+			}
+		}
+	}
+}
+
+
+CTexture* CGrid::generateGrid_texture()
+{
+	// CTexture() data fields, pulled out for readability
+	std::string fileName;
+	sf::Vector2<int> subSize;
+	sf::Vector2<int> subNum;
+
+	// cut off everything exept the actuall file name
+	int find = m_sTilesetData.image.source.find_last_of('/');
+	fileName = m_sTilesetData.image.source.substr(find + 1, m_sTilesetData.image.source.size());
+	fileName = m_tileSetPath + fileName;
+
+	// fill in values
+	subSize.x = m_sTilesetData.tileWidth;
+	subSize.y = m_sTilesetData.tileHeight;
+
+	// (total image demention size) / (size of sub images) = numer of sub images
+	subNum.x = m_sTilesetData.image.width / subSize.x;
+	subNum.y = m_sTilesetData.image.height / subSize.y;
+
+	return new CTexture(fileName, subSize, subNum);
+}
+
+
+CSprite* CGrid::generateGrid_sprite(int posX, int posY, int gridNum, CTexture* pTexture)
+{
+	// CSprite() data fileds, pulled out for readability
+	sf::RenderWindow* pWindow = m_pWindow;
+
+	// because "gridNum" is given as a single value (see Tiled documentation of sprite sheet breakdowns)
+	//		we need to devide the number out to find where on the sprite sheet it came from
+	sf::Vector2<int> subNum = m_pTestTexture->getSubNum();
+	int startingLength = m_sTilesetData.firstGrid;
+	int recievedNum = gridNum;
+	sf::Vector2<int> currSub;
+	findSubImage(&subNum, startingLength, recievedNum, &currSub);
+
+	CSprite* s = new CSprite(pWindow, pTexture, currSub);
+
+	positionTile(s, posX, posY);
+
+	return s;
+}
+
+void CGrid::findSubImage(sf::Vector2<int>* subNum, int startingLength,
+                         int recievedNum, sf::Vector2<int>* returnedPos)
+{
+
+	// Find the row by subtracting the column size from the recievedNum
+	// 	you have found it when that is less than the startingLenght
+	int row = 0;
+	for (int i = 0; i < subNum->y + 1; ++i)
+	{
+		int subtract = i * subNum->x;
+		if (recievedNum - subtract < startingLength)
+		{
+			row = i;
+			break;
+		}
+	}
+
+	// fidning the column is easy once you have the row
+	int col = recievedNum - (row - 1) * subNum->x;
+
+//	std::cout << "(" << col << ", " << row << ")" << std::endl;
+
+	// save the data into the return sf::Vector2
+	returnedPos->x = col;
+	returnedPos->y = row;
+}
+
+
+void CGrid::positionTile(CSprite* pSprite, int posX, int posY)
+{
+	// final position variables
+	int x = (posX - 1) * m_sTilesetData.tileWidth;
+	int y = (posY - 1) * m_sTilesetData.tileHeight;
+
+	pSprite->setPosition(x, y);
 }
 
 
@@ -166,6 +291,7 @@ void CGrid::parseFile_layer(rapidxml::xml_node<>* pLayer, layer_data* pData)
 //	}
 }
 
+
 void CGrid::parseFile_objectgroup(rapidxml::xml_node<>* pObjectgroup, objectgroup_data* pData)
 {
 	//
@@ -208,11 +334,11 @@ void CGrid::parseFile_objectgroup(rapidxml::xml_node<>* pObjectgroup, objectgrou
 	}
 
 	// NOTE: if there are multiple "object"s in the target file, they will stack up here (because vector)
-	for (unsigned int i = 0; i < pData->rectObjects.size(); ++i)
-	{
-		struct objectgroup_objectRect obj = pData->rectObjects.at(i);
-		std::cout << obj.x << ", " << obj.y << ", " << obj.height << ", "
-		          << obj.width << std::endl;
-	}
-	std::cout << std::endl;
+//	for (unsigned int i = 0; i < pData->rectObjects.size(); ++i)
+//	{
+//		struct objectgroup_objectRect obj = pData->rectObjects.at(i);
+//		std::cout << obj.x << ", " << obj.y << ", " << obj.height << ", "
+//		          << obj.width << std::endl;
+//	}
+//	std::cout << std::endl;
 }

@@ -11,20 +11,25 @@
 #include "include_sfml.h"
 #include "IUpdateable.h"
 #include "IRenderable.h"
+#include "CTexture.h"
+#include "CSprite.h"
 #include <iostream>
 #include <vector>
 #include "rapidxml_utils.hpp"
+#include "CTile.h"
 
 class CGrid : public IUpdateable, public IRenderable
 {
 public:
-	CGrid(std::string fileName);
+	CGrid(sf::RenderWindow* pWindow, std::string fileName);
 	~CGrid();
 
 	void update();
 	void render();
 
 private:
+	sf::RenderWindow* m_pWindow;
+
 	// Initial (relative) file path to the Tiled XML map file directory
 	std::string m_filePath;
 	std::string m_fileName;			// name within the map file directory that is used for this CGrid
@@ -36,7 +41,35 @@ private:
 	std::string m_tileSetName;		// name of the singular tile set image file
 	std::string m_tileSetPath;		// path to the directory containing the tilesets
 
-	std::vector<std::vector<int> > m_grid;
+	std::vector<CTile*> m_grid;		// 1D data structure containing a layer of tiles
+
+	CTexture* m_pTestTexture;
+	std::vector<CSprite*> m_testSprites;
+
+	// uses the information gathered AFTER "parseFile()" has been called, and creates all of the
+	//		tile objects that will be interacted with by the game
+	void generateGrid();
+	CTexture* generateGrid_texture();
+
+	// takes the values of the (x,y) pos in 2D space and the Tiled grid num on the sprite sheet
+	CSprite* generateGrid_sprite(int posX, int posY, int gridNum, CTexture* pTexture);
+
+	// * helper function to gererateGrid_sprite
+	// * In short, converts the "tile" node data recieved from Tiled XML, into a (col, row) sfml vector2
+	//		texture coord which is used by CSprite (in m_currSub)
+	// * NOTE: this function only works on/with converting the linear(ish) -non repeating- number recieved
+	//		from Tiled into THIS program's CTexture currentSubImage coords
+	//
+	// * subNum 			= maximum number in (col, row)
+	// * startingLength 	= starting number on the specific texture recieved from Tiled (can be >1)
+	// * recievedNum		= the specific subImage number recieved from Tiled to be converted
+	// * returnedPos		= CTexture's formated output (allocated elsewhere)
+	void findSubImage(sf::Vector2<int>* subNum, int startingLength,
+	                  int recievedNum, sf::Vector2<int>* returnedPos);
+
+	// * helper function to generatedGrid_sprite
+	// * calls the move() of the pSprite based on posX and posY to position the tile correctly on the screen
+	void positionTile(CSprite* pSprite, int posX, int posY);
 
 	// parses the given Tiled XML document into required data fields
 	void parseFile();
