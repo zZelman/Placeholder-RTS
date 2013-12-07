@@ -27,6 +27,12 @@ public:
 	void update();
 	void render();
 
+	// * checks if the given data is within a tile
+	// * the sprite pointed to by pSprite is changed to the collision if true, null if not
+	bool isCollision(const sf::Rect<float>& rect, CSprite*& pSprite);
+	bool isCollision(const sf::Vector2<float>& point, CSprite*& pSprite);
+	bool isCollision(float x, float y, CSprite*& pSprite);
+
 private:
 	sf::RenderWindow* m_pWindow;
 

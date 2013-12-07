@@ -58,6 +58,52 @@ void CGrid::render()
 }
 
 
+bool CGrid::isCollision(const sf::Rect<float>& rect, CSprite*& pSprite)
+{
+	sf::FloatRect tileRect;
+	CSprite* pS;
+	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	{
+		pS = m_testSprites.at(i);
+		tileRect = pS->getGlobalBounds();
+		if (tileRect.intersects(rect))
+		{
+			pSprite = pS;
+			return true;
+		}
+	}
+
+	pSprite = NULL;
+	return false;
+}
+
+
+bool CGrid::isCollision(const sf::Vector2<float>& point, CSprite*& pSprite)
+{
+	return isCollision(point.x, point.y, pSprite);
+}
+
+
+bool CGrid::isCollision(float x, float y, CSprite*& pSprite)
+{
+	sf::FloatRect tileRect;
+	CSprite* pS;
+	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	{
+		pS = m_testSprites.at(i);
+		tileRect = pS->getGlobalBounds();
+		if (tileRect.contains(x, y))
+		{
+			pSprite = pS;
+			return true;
+		}
+	}
+
+	pSprite = NULL;
+	return false;
+}
+
+
 void CGrid::generateGrid()
 {
 	CTexture* pTexture = generateGrid_texture();

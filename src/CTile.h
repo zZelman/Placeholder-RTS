@@ -22,6 +22,8 @@ public:
 	CTile(CSprite* pSprite);
 	~CTile();
 
+	CSprite* const getSprite();
+
 	void render();
 	void update();
 

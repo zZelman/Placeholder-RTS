@@ -35,4 +35,20 @@ struct SAcceptableKeys
 };
 
 
+// phisics data
+struct SPhysics
+{
+	sf::Clock gravityTimer; // used in parabolic curve modeling
+	int velosity_x;
+	int velosity_y;
+
+	inline void nullAll()
+	{
+		gravityTimer.restart();
+		velosity_x = 0;
+		velosity_y = 0;
+	}
+};
+
+
 #endif /* UTILLS_H_ */

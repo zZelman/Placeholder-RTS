@@ -11,9 +11,10 @@
 #include "Utills.h"
 
 
-CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow)
+CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CGrid* pGrid)
 {
 	m_pWindow = pWindow;
+	m_pGrid = pGrid;
 	m_pDebugTexture = new CTexture("res/Unit Tilesets/debug unit.png",
 	                               sf::Vector2<int>(16, 16),
 	                               sf::Vector2<int>(1, 1));
@@ -43,7 +44,10 @@ void CUnit_Container::update()
 {
 	for (unsigned int i = 0; i < m_units.size(); ++i)
 	{
-		m_units.at(i)->update();
+		CUnit* pU = m_units.at(i);
+
+		applyPhysics(pU);
+		pU->update();
 	}
 }
 
@@ -90,8 +94,15 @@ bool CUnit_Container::userInput_mouseRelease(sf::Event* pEvent)
 
 void CUnit_Container::initUnit(int x, int y)
 {
-	CUnit* pU = new CUnit(m_pWindow, m_pDebugTexture, sf::Vector2<int>(1, 1));
-	pU->m_pSprite->setPosition(x, y);
+	CUnit* pU = new CUnit(m_pWindow, m_pGrid, m_pDebugTexture, sf::Vector2<int>(1, 1));
+	pU->getSprite()->setPosition(x, y);
 	m_units.push_back(pU);
 }
 
+
+void CUnit_Container::applyPhysics(CUnit* pUnit)
+{
+	sf::Time timer = pUnit->m_sPhysics.gravityTimer.getElapsedTime();
+	int elapsed = timer.asMilliseconds();
+	pUnit->m_sPhysics.velosity_y = (0.01) * (elapsed);
+}

@@ -14,11 +14,19 @@ CTile::CTile(CSprite* pSprite)
 	m_pSprite = pSprite;
 }
 
+
 CTile::~CTile()
 {
 	delete m_pSprite;
 	m_pSprite = NULL;
 }
+
+
+CSprite* const CTile::getSprite()
+{
+	return m_pSprite;
+}
+
 
 void CTile::render()
 {

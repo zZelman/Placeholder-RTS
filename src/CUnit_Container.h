@@ -14,12 +14,14 @@
 #include "include_sfml.h"
 #include "CUnit.h"
 #include "Utills.h"
+#include "CGrid.h"
 #include <vector>
 
 class CUnit_Container: public IUpdateable, public IRenderable, public IUserInput
 {
 public:
-	CUnit_Container(sf::RenderWindow* pWindow);
+	CUnit_Container(sf::RenderWindow* pWindow,
+	                CGrid* pGrid);
 	~CUnit_Container();
 
 	void update();
@@ -34,6 +36,7 @@ public:
 
 private:
 	sf::RenderWindow* m_pWindow;
+	CGrid* m_pGrid;
 
 	// keeps track of what arbitrary keys representing directions are pressed
 	struct SDirections m_sKeyPress;
@@ -53,6 +56,8 @@ private:
 
 	// creates a new unit into m_units
 	void initUnit(int x, int y);
+
+	void applyPhysics(CUnit* pUnit);
 
 };
 
