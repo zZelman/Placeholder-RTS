@@ -9,6 +9,8 @@ CPP_SRCS += \
 ../src/CSprite.cpp \
 ../src/CTexture.cpp \
 ../src/CTile.cpp \
+../src/CUnit.cpp \
+../src/CUnit_Container.cpp \
 ../src/IRenderable.cpp \
 ../src/IUpdateable.cpp \
 ../src/IUserInput.cpp \
@@ -20,6 +22,8 @@ OBJS += \
 ./src/CSprite.o \
 ./src/CTexture.o \
 ./src/CTile.o \
+./src/CUnit.o \
+./src/CUnit_Container.o \
 ./src/IRenderable.o \
 ./src/IUpdateable.o \
 ./src/IUserInput.o \
@@ -31,6 +35,8 @@ CPP_DEPS += \
 ./src/CSprite.d \
 ./src/CTexture.d \
 ./src/CTile.d \
+./src/CUnit.d \
+./src/CUnit_Container.d \
 ./src/IRenderable.d \
 ./src/IUpdateable.d \
 ./src/IUserInput.d \

@@ -2,6 +2,7 @@
 #include "include_sfml.h"
 #include "CSprite.h"
 #include "CTexture.h"
+#include "CUnit_Container.h"
 #include <iostream>
 #include <assert.h>
 
@@ -12,6 +13,8 @@ CGame::CGame()
 	initWindow();
 
 	m_pGrid = new CGrid(m_pWindow, "simple map.tmx");
+
+	m_pUnit_Container = new CUnit_Container(m_pWindow);
 
 	isRunning = false;
 	isPaused = false;
@@ -159,18 +162,34 @@ bool CGame::input_user(sf::Event* pEvent)
 			m_pWindow->close();
 			return true;
 		}
+		else if (m_pUnit_Container->userInput_keyPress(pEvent))
+		{
+			return true;
+		}
 
 	}
 	else if (pEvent->type == sf::Event::KeyReleased) // release
 	{
+		if (m_pUnit_Container->userInput_keyRelease(pEvent))
+		{
+			return true;
+		}
 	}
 
 	// mouse
 	if (pEvent->type == sf::Event::MouseButtonPressed) // press
 	{
+		if (m_pUnit_Container->userInput_mousePress(pEvent))
+		{
+			return true;
+		}
 	}
 	else if (pEvent->type == sf::Event::MouseButtonReleased) // release
 	{
+		if (m_pUnit_Container->userInput_mouseRelease(pEvent))
+		{
+			return true;
+		}
 	}
 
 	return false;
@@ -208,6 +227,7 @@ bool CGame::input_gameSystem(sf::Event* pEvent)
 
 void CGame::update()
 {
+	m_pUnit_Container->update();
 }
 
 
@@ -217,6 +237,7 @@ void CGame::render()
 
 	// drawing here...
 	m_pGrid->render();
+	m_pUnit_Container->render();
 
 	m_pWindow->display(); // displays what has been rendered since last clear
 }

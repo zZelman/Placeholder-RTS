@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.1">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=12
+fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>9</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>369</x>
+      <y>72</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Power Plant&gt;&gt;
+--
+Generates the power resource
+    - When maned up to a cap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>720</x>
+      <y>72</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Smithy&gt;&gt;
+--
+Generates the metal resource
+    - When maned up to a cap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1197</x>
+      <y>72</y>
+      <w>360</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Warehouse&gt;&gt;
+--
+Increases the total resources able to be held at once
+    - Note: total = sum( all resources )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>963</x>
+      <y>72</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Kichen&gt;&gt;
+--
+Generates the food resource
+    - When maned up to a cap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>306</x>
+      <y>234</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;War&gt;&gt;
+--
+Spawns
+    - Recruits</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>594</x>
+      <y>234</y>
+      <w>135</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Research&gt;&gt;
+--
+Spawns
+    - Grad Students</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>864</x>
+      <y>234</y>
+      <w>99</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Support&gt;&gt;
+--
+Spawns
+    - Workers</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>261</x>
+      <y>342</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;War outfiter&gt;&gt;
+--
+Changes "Recruits" into
+    - Snipers
+    - Machine gunners
+    - Shotgunners
+--
+Must be researched before outfitted
+    - Spy
+    - Rocket Man</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>567</x>
+      <y>342</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Research outfiter&gt;&gt;
+--
+Changes "Grad Students" into
+    - Scientists
+    - Engineers
+--
+Must be researched before outfitted
+    - Doctor
+    - Architect</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>873</x>
+      <y>342</y>
+      <w>243</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Support outfiter&gt;&gt;
+--
+Changes "Workers"
+Must be researched before outfitted
+    - Minner
+    - Geologist
+    - Driver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>333</x>
+      <y>621</y>
+      <w>63</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Lab&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>612</x>
+      <y>621</y>
+      <w>72</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Factory&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>918</x>
+      <y>621</y>
+      <w>90</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Tool shop&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>558</x>
+      <y>738</y>
+      <w>243</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Craftsman&gt;&gt;
+--
+    - Only Architects can work here
+     (Must be manned to research)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>315</x>
+      <y>738</y>
+      <w>225</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Medbay&gt;&gt;
+--
+    - Only Doctors can work here
+     (Must be manned to research)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>864</x>
+      <y>792</y>
+      <w>198</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Vehicle Builder&gt;&gt;
+--
+    - Spawns ground vehicles</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1080</x>
+      <y>792</y>
+      <w>153</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Aircraft Builder&gt;&gt;
+--
+    - Spawns aircraft</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>684</x>
+      <y>855</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Offensive Addon Builder&gt;&gt;
+--
+    - Attacking room addons</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>432</x>
+      <y>855</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Deffensive Addon Builder&gt;&gt;
+--
+    - Defensive room addons</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>324</x>
+      <y>162</y>
+      <w>350</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;72;27;27;333;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>162</y>
+      <w>44</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;72;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>162</y>
+      <w>296</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>279;72;279;27;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>441</x>
+      <y>108</y>
+      <w>233</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>216;81;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>108</y>
+      <w>197</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>180;27;27;81</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>324</x>
+      <y>261</y>
+      <w>44</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;81;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>639</x>
+      <y>261</y>
+      <w>44</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;81;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>891</x>
+      <y>261</y>
+      <w>44</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;81;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>333</x>
+      <y>486</y>
+      <w>44</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;135;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>486</y>
+      <w>44</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;135;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>360</x>
+      <y>486</y>
+      <w>314</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;135;27;99;297;99;297;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>648</x>
+      <y>486</y>
+      <w>332</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;135;27;81;315;81;315;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>936</x>
+      <y>486</y>
+      <w>44</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;135;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>342</x>
+      <y>621</y>
+      <w>44</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;117;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>405</x>
+      <y>621</y>
+      <w>575</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;117;27;81;558;81;558;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>342</x>
+      <y>621</y>
+      <w>251</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>234;117;234;36;27;36;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>621</x>
+      <y>621</y>
+      <w>44</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;117;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>621</x>
+      <y>621</y>
+      <w>323</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>306;171;306;54;27;54;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>621</x>
+      <y>621</y>
+      <w>503</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>486;171;486;54;27;54;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>936</x>
+      <y>621</y>
+      <w>44</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;171;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>936</x>
+      <y>621</y>
+      <w>161</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>144;171;144;81;27;81;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>486</x>
+      <y>765</y>
+      <w>179</w>
+      <h>107</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>27;90;27;54;162;54;162;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>621</x>
+      <y>765</y>
+      <w>170</w>
+      <h>107</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>153;90;153;54;27;54;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>81</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>bt=*
+Always Available</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>234</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>bt=*
+Spawners
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>378</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>bt=*
+Outfitters
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>612</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>bt=*
+Research
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>729</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>bt=*
+Research (advanced)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>828</y>
+      <w>135</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>bt=*
+Builders
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

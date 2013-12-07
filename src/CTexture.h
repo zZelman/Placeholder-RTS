@@ -14,9 +14,9 @@ class CTexture : public sf::Texture
 {
 public:
 	CTexture();
-	CTexture(std::string fileName,		// Relative path to the texture image
-	         sf::Vector2<int> subSize,	// LENGTH sub-image height/width
-	         sf::Vector2<int> subNum);	// LENGTH number of sub images
+	CTexture(std::string fileName,		// Relative full path to the texture image
+	         const sf::Vector2<int>& subSize,	// LENGTH sub-image height/width
+	         const sf::Vector2<int>& subNum);	// LENGTH number of sub images
 	CTexture(const CTexture& other);
 
 	CTexture& operator=(const CTexture& other);

@@ -14,6 +14,7 @@
 #include "IUpdateable.h"
 #include "IRenderable.h"
 #include "CGrid.h"
+#include "CUnit_Container.h"
 
 class CGame : public IUpdateable, public IRenderable
 {
@@ -35,6 +36,7 @@ public:
 private:
 	sf::RenderWindow* m_pWindow;
 	CGrid* m_pGrid;
+	CUnit_Container* m_pUnit_Container;
 
 	bool isRunning;
 	bool isPaused;

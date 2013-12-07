@@ -1,4 +1,5 @@
-src/CGame.d: ../src/CGame.cpp ../src/CGame.h ../src/include_sfml.h \
+src/CUnit.d: ../src/CUnit.cpp ../src/CUnit.h ../src/IRenderable.h \
+ ../src/IUpdateable.h ../src/CSprite.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -73,14 +74,15 @@ src/CGame.d: ../src/CGame.cpp ../src/CGame.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/CSprite.h ../src/CTexture.h ../src/IRenderable.h \
- ../src/IUpdateable.h ../src/CGrid.h \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/CUnit_Container.h ../src/IUserInput.h \
- ../src/CUnit.h ../src/Utills.h
+ ../src/CTexture.h ../src/Utills.h
 
-../src/CGame.h:
+../src/CUnit.h:
+
+../src/IRenderable.h:
+
+../src/IUpdateable.h:
+
+../src/CSprite.h:
 
 ../src/include_sfml.h:
 
@@ -232,26 +234,6 @@ src/CGame.d: ../src/CGame.cpp ../src/CGame.h ../src/include_sfml.h \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/CSprite.h:
-
 ../src/CTexture.h:
-
-../src/IRenderable.h:
-
-../src/IUpdateable.h:
-
-../src/CGrid.h:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
-
-../src/CTile.h:
-
-../src/CUnit_Container.h:
-
-../src/IUserInput.h:
-
-../src/CUnit.h:
 
 ../src/Utills.h:
