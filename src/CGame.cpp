@@ -3,6 +3,7 @@
 #include "CSprite.h"
 #include "CTexture.h"
 #include "CUnit_Container.h"
+#include "CRoom_Container.h"
 #include <iostream>
 #include <assert.h>
 
@@ -16,21 +17,10 @@ CGame::CGame()
 
 	m_pUnit_Container = new CUnit_Container(m_pWindow, m_pGrid);
 
+	m_pRoom_Container = new CRoom_Container(m_pWindow, m_pGrid);
+
 	isRunning = false;
 	isPaused = false;
-}
-
-
-CGame::CGame(const CGame& other)
-{
-//	m_pGameWindow = new sf::RenderWindow();
-//	*m_pGameWindow = *(other.m_pGameWindow);
-
-	std::cout << "CGame copy constructor called, exiting" << std::endl;
-	assert(false);
-
-	isRunning = other.isRunning;
-	isPaused = other.isPaused;
 }
 
 
@@ -41,28 +31,9 @@ CGame::~CGame()
 
 	delete m_pGrid;
 	m_pGrid = NULL;
-}
 
-
-CGame& CGame::operator=(const CGame& other)
-{
-	if (this == &other)
-	{
-		return *this;
-	}
-
-	std::cout << "CGame operator= called, exiting" << std::endl;
-	assert(false);
-
-	// [QUESTION] not sure if need delete?
-//	if (m_pGameWindow != NULL)
-//	{
-//		delete m_pGameWindow;
-//	}
-//	m_pGameWindow = new sf::RenderWindow();
-//	*m_pGameWindow = *(other.m_pGameWindow);
-
-	return *this;
+	delete m_pRoom_Container;
+	m_pRoom_Container = NULL;
 }
 
 
@@ -179,14 +150,22 @@ bool CGame::input_user(sf::Event* pEvent)
 	// mouse
 	if (pEvent->type == sf::Event::MouseButtonPressed) // press
 	{
-		if (m_pUnit_Container->userInput_mousePress(pEvent))
+//		if (m_pUnit_Container->userInput_mousePress(pEvent))
+//		{
+//			return true;
+//		}
+		if (m_pRoom_Container->userInput_mousePress(pEvent))
 		{
 			return true;
 		}
 	}
 	else if (pEvent->type == sf::Event::MouseButtonReleased) // release
 	{
-		if (m_pUnit_Container->userInput_mouseRelease(pEvent))
+//		if (m_pUnit_Container->userInput_mouseRelease(pEvent))
+//		{
+//			return true;
+//		}
+		if (m_pRoom_Container->userInput_mouseRelease(pEvent))
 		{
 			return true;
 		}
@@ -228,6 +207,7 @@ bool CGame::input_gameSystem(sf::Event* pEvent)
 void CGame::update()
 {
 	m_pUnit_Container->update();
+	m_pRoom_Container->update();
 }
 
 
@@ -237,6 +217,7 @@ void CGame::render()
 
 	// drawing here...
 	m_pGrid->render();
+	m_pRoom_Container->render();
 	m_pUnit_Container->render();
 
 	m_pWindow->display(); // displays what has been rendered since last clear

@@ -77,7 +77,7 @@ src/CUnit.d: ../src/CUnit.cpp ../src/CUnit.h ../src/IRenderable.h \
  ../src/CTexture.h ../src/CGrid.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/Utills.h
+ ../src/Utills.h
 
 ../src/CUnit.h:
 
@@ -244,7 +244,5 @@ src/CUnit.d: ../src/CUnit.cpp ../src/CUnit.h ../src/IRenderable.h \
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
 
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
-
-../src/CTile.h:
 
 ../src/Utills.h:

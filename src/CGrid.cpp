@@ -44,6 +44,18 @@ CGrid::~CGrid()
 }
 
 
+sf::Vector2<int> CGrid::getGridSize()
+{
+	return sf::Vector2<int>(m_sLayerData.width, m_sLayerData.height);
+}
+
+
+sf::Vector2<int> CGrid::getGridSubSize()
+{
+	return sf::Vector2<int>(m_sTilesetData.tileWidth, m_sTilesetData.tileHeight);
+}
+
+
 void CGrid::update()
 {
 }

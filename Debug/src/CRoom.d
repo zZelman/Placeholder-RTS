@@ -1,5 +1,5 @@
-src/CTile.d: ../src/CTile.cpp ../src/CTile.h ../src/IRenderable.h \
- ../src/IUpdateable.h ../src/include_sfml.h \
+src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/IRenderable.h \
+ ../src/IUpdateable.h ../src/CSprite.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -74,13 +74,17 @@ src/CTile.d: ../src/CTile.cpp ../src/CTile.h ../src/IRenderable.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/CTexture.h ../src/CSprite.h
+ ../src/CTexture.h ../src/Utills.h ../src/CGrid.h \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp
 
-../src/CTile.h:
+../src/CRoom.h:
 
 ../src/IRenderable.h:
 
 ../src/IUpdateable.h:
+
+../src/CSprite.h:
 
 ../src/include_sfml.h:
 
@@ -234,4 +238,10 @@ src/CTile.d: ../src/CTile.cpp ../src/CTile.h ../src/IRenderable.h \
 
 ../src/CTexture.h:
 
-../src/CSprite.h:
+../src/Utills.h:
+
+../src/CGrid.h:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:

@@ -16,13 +16,15 @@
 #include <iostream>
 #include <vector>
 #include "rapidxml_utils.hpp"
-#include "CTile.h"
 
 class CGrid : public IUpdateable, public IRenderable
 {
 public:
 	CGrid(sf::RenderWindow* pWindow, std::string fileName);
 	~CGrid();
+
+	sf::Vector2<int> getGridSize(); // returns the total number of squares in (x, y)
+	sf::Vector2<int> getGridSubSize(); // returns the individual tile size
 
 	void update();
 	void render();
@@ -40,14 +42,10 @@ private:
 	std::string m_filePath;
 	std::string m_fileName;			// name within the map file directory that is used for this CGrid
 
-	sf::Vector2<int> m_gridSize; 	// holds the total number of tiles in (width, height)
-
 	sf::Vector2<int> m_tileSubSize; // holds the individual tile size in (width, height)
 	sf::Vector2<int> m_tileSetSize;	// total size of the tile set in (width, height)
 	std::string m_tileSetName;		// name of the singular tile set image file
 	std::string m_tileSetPath;		// path to the directory containing the tilesets
-
-	std::vector<CTile*> m_grid;		// 1D data structure containing a layer of tiles
 
 	CTexture* m_pTestTexture;
 	std::vector<CSprite*> m_testSprites;

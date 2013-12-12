@@ -15,15 +15,13 @@
 #include "IRenderable.h"
 #include "CGrid.h"
 #include "CUnit_Container.h"
+#include "CRoom_Container.h"
 
 class CGame : public IUpdateable, public IRenderable
 {
 public:
 	CGame();
-	CGame(const CGame& other);
 	~CGame();
-
-	CGame& operator=(const CGame& other);
 
 	sf::RenderWindow* getGameWindow();
 
@@ -37,6 +35,7 @@ private:
 	sf::RenderWindow* m_pWindow;
 	CGrid* m_pGrid;
 	CUnit_Container* m_pUnit_Container;
+	CRoom_Container* m_pRoom_Container;
 
 	bool isRunning;
 	bool isPaused;

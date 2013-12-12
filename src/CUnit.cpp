@@ -99,11 +99,13 @@ bool CUnit::canMove_vertical()
 	if (m_sMovement.isDown)
 	{
 		futureRect.top += m_sPhysics.velosity_y; // test the future
+
+		// unit-tile collision detection
 		if (m_pGrid->isCollision(futureRect, returnedSprite))
 		{
 			sf::FloatRect tileRect = returnedSprite->getGlobalBounds();
 
-			int newY = tileRect.top - futureRect.height;
+			int newY = tileRect.top - unitRect.height;
 			m_pSprite->setPosition(unitRect.left, newY);
 
 			m_sPhysics.gravityTimer.restart();
@@ -115,6 +117,8 @@ bool CUnit::canMove_vertical()
 	else if (m_sMovement.isUp)
 	{
 		futureRect.top -= m_sPhysics.velosity_y; // test the future
+
+		// unit-tile collision detection
 		if (m_pGrid->isCollision(futureRect, returnedSprite))
 		{
 			sf::FloatRect tileRect = returnedSprite->getGlobalBounds();
@@ -142,11 +146,13 @@ bool CUnit::canMove_horizontal()
 	if (m_sMovement.isRight)
 	{
 		futureRect.left += m_sPhysics.velosity_x; // test the future
+
+		// unit-tile collision detection
 		if (m_pGrid->isCollision(futureRect, returnedSprite))
 		{
 			sf::FloatRect tileRect = returnedSprite->getGlobalBounds();
 
-			int newX = tileRect.left - futureRect.width;
+			int newX = tileRect.left - unitRect.width;
 			m_pSprite->setPosition(newX, unitRect.top);
 
 			return false;
@@ -155,6 +161,8 @@ bool CUnit::canMove_horizontal()
 	else if (m_sMovement.isLeft)
 	{
 		futureRect.left -= m_sPhysics.velosity_x; // test the future
+
+		// unit-tile collision detection
 		if (m_pGrid->isCollision(futureRect, returnedSprite))
 		{
 			sf::FloatRect tileRect = returnedSprite->getGlobalBounds();

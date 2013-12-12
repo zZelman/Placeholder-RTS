@@ -76,8 +76,7 @@ src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
  ../src/IUpdateable.h ../src/IRenderable.h ../src/CTexture.h \
  ../src/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp
 
 ../src/CGrid.h:
 
@@ -242,5 +241,3 @@ src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
 
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
-
-../src/CTile.h:

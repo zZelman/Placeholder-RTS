@@ -6,9 +6,10 @@
 CPP_SRCS += \
 ../src/CGame.cpp \
 ../src/CGrid.cpp \
+../src/CRoom.cpp \
+../src/CRoom_Container.cpp \
 ../src/CSprite.cpp \
 ../src/CTexture.cpp \
-../src/CTile.cpp \
 ../src/CUnit.cpp \
 ../src/CUnit_Container.cpp \
 ../src/IRenderable.cpp \
@@ -19,9 +20,10 @@ CPP_SRCS += \
 OBJS += \
 ./src/CGame.o \
 ./src/CGrid.o \
+./src/CRoom.o \
+./src/CRoom_Container.o \
 ./src/CSprite.o \
 ./src/CTexture.o \
-./src/CTile.o \
 ./src/CUnit.o \
 ./src/CUnit_Container.o \
 ./src/IRenderable.o \
@@ -32,9 +34,10 @@ OBJS += \
 CPP_DEPS += \
 ./src/CGame.d \
 ./src/CGrid.d \
+./src/CRoom.d \
+./src/CRoom_Container.d \
 ./src/CSprite.d \
 ./src/CTexture.d \
-./src/CTile.d \
 ./src/CUnit.d \
 ./src/CUnit_Container.d \
 ./src/IRenderable.d \
