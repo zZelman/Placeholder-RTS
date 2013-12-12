@@ -88,26 +88,39 @@ bool CRoom_Container::userInput_mouseRelease(sf::Event* pEvent)
 }
 
 
+bool CRoom_Container::isCollision(const sf::Rect<float>& rect, CRoom*& pRoom)
+{
+	sf::FloatRect roomRect;
+	CRoom* pR;
+	for (unsigned int i = 0; i < m_rooms.size(); ++i)
+	{
+		pR = m_rooms.at(i);
+		roomRect = pR->getSprite()->getGlobalBounds();
+		if (roomRect.intersects(rect))
+		{
+			pRoom = pR;
+			return true;
+		}
+	}
+
+	pRoom = NULL;
+	return false;
+}
+
+
 void CRoom_Container::initRoom(int x, int y)
 {
-	// x & y represent the mouse location, just need to normalize that to the grid
-	sf::Vector2<int> gridSize = m_pGrid->getGridSize();
-	sf::Vector2<int> gridSubSize = m_pGrid->getGridSubSize();
-
-	// total pixels in the grid
-	int totalX = gridSize.x * gridSubSize.x;
-	int totalY = gridSize.y * gridSubSize.y;
-
-	// compute new coords (in GRID space)
-	x = (x * gridSize.x) / totalX;
-	y = (y * gridSize.y) / totalY;
+	// * use the grid function to translate
+	// * x and y are now in grid coords
+	m_pGrid->screenToGrid(&x, &y);
 
 	// translate from GIRD space to SCREEN space
+	sf::Vector2<int> gridSubSize = m_pGrid->getGridSubSize();
 	x = x * gridSubSize.x;
 	y = y * gridSubSize.y;
 
 	// add new room to vector
-	CRoom* pR = new CRoom(m_pWindow, m_pGrid, m_pDebugTexture, sf::Vector2<int>(1, 1));
+	CRoom* pR = new CRoom(m_pWindow, m_pGrid, this, m_pDebugTexture, sf::Vector2<int>(1, 1));
 	pR->getSprite()->setPosition(x, y);
 	m_rooms.push_back(pR);
 }

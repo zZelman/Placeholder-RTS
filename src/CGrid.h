@@ -29,6 +29,10 @@ public:
 	void update();
 	void render();
 
+	// * manipulates the screen values given into (x, y) grid coords
+	// * values of posX and posY ARE OVERRIDEN
+	void screenToGrid(int* posX, int* posY);
+
 	// * checks if the given data is within a tile
 	// * the sprite pointed to by pSprite is changed to the collision if true, null if not
 	bool isCollision(const sf::Rect<float>& rect, CSprite*& pSprite);

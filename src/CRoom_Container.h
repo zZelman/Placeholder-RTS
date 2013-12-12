@@ -33,6 +33,8 @@ public:
 	bool userInput_mousePress(sf::Event* pEvent);
 	bool userInput_mouseRelease(sf::Event* pEvent);
 
+	bool isCollision(const sf::Rect<float>& rect, CRoom*& pRoom);
+
 
 private:
 	sf::RenderWindow* m_pWindow;

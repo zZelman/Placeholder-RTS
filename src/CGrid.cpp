@@ -70,6 +70,22 @@ void CGrid::render()
 }
 
 
+void CGrid::screenToGrid(int* posX, int* posY)
+{
+	// x & y represent the mouse location, just need to normalize that to the grid
+	sf::Vector2<int> gridSize(m_sLayerData.width, m_sLayerData.height);
+	sf::Vector2<int> gridSubSize(m_sTilesetData.tileWidth, m_sTilesetData.tileHeight);
+
+	// total pixels in the grid
+	int totalX = gridSize.x * gridSubSize.x;
+	int totalY = gridSize.y * gridSubSize.y;
+
+	// compute new coords (in GRID space)
+	*posX = ((*posX) * gridSize.x) / totalX;
+	*posY = ((*posY) * gridSize.y) / totalY;
+}
+
+
 bool CGrid::isCollision(const sf::Rect<float>& rect, CSprite*& pSprite)
 {
 	sf::FloatRect tileRect;

@@ -15,13 +15,16 @@
 #include "include_sfml.h"
 #include "CGrid.h"
 
+// forward declare to prevent circular includes
+class CRoom_Container;
+
 class CRoom: public IRenderable, public IUpdateable
 {
 public:
 	struct SPhysics m_sPhysics;
 
 	CRoom(sf::RenderWindow* pWindow,
-	      CGrid* pGrid,
+	      CGrid* pGrid, CRoom_Container* pRoom_Container,
 	      CTexture* pTexture,
 	      const sf::Vector2<int>& currSub);
 	~CRoom();
@@ -34,6 +37,7 @@ public:
 private:
 	CSprite* m_pSprite;
 	CGrid* m_pGrid;
+	CRoom_Container* m_pRoom_Container;
 
 	bool m_isFalling;
 	bool m_isFirstUpdate;

@@ -15,6 +15,7 @@ CPP_SRCS += \
 ../src/IRenderable.cpp \
 ../src/IUpdateable.cpp \
 ../src/IUserInput.cpp \
+../src/Utills.cpp \
 ../src/main.cpp 
 
 OBJS += \
@@ -29,6 +30,7 @@ OBJS += \
 ./src/IRenderable.o \
 ./src/IUpdateable.o \
 ./src/IUserInput.o \
+./src/Utills.o \
 ./src/main.o 
 
 CPP_DEPS += \
@@ -43,6 +45,7 @@ CPP_DEPS += \
 ./src/IRenderable.d \
 ./src/IUpdateable.d \
 ./src/IUserInput.d \
+./src/Utills.d \
 ./src/main.d 
 
 
