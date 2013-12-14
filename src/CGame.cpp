@@ -13,7 +13,7 @@ CGame::CGame()
 	// * !! local vars dictate the size !! [need to change]
 	initWindow();
 
-	m_pGrid = new CGrid(m_pWindow, "simple map.tmx");
+	m_pGrid = new CTile_Container(m_pWindow, "simple map.tmx");
 
 	m_pUnit_Container = new CUnit_Container(m_pWindow, m_pGrid);
 

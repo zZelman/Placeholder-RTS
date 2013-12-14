@@ -27,14 +27,6 @@ struct SDirections
 	}
 };
 
-
-// data fileds for arbitrary keys that are accptable for individual object input
-struct SAcceptableKeys
-{
-	sf::Keyboard::Key up, down, left, right;
-};
-
-
 // phisics data
 struct SPhysics
 {

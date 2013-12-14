@@ -12,12 +12,11 @@
 #include "CSprite.h"
 #include "CTexture.h"
 #include "IUpdateable.h"
-#include "IRenderable.h"
-#include "CGrid.h"
+#include "CTile_Container.h"
 #include "CUnit_Container.h"
 #include "CRoom_Container.h"
 
-class CGame : public IUpdateable, public IRenderable
+class CGame : public IUpdateable
 {
 public:
 	CGame();
@@ -33,7 +32,7 @@ public:
 
 private:
 	sf::RenderWindow* m_pWindow;
-	CGrid* m_pGrid;
+	CTile_Container* m_pGrid;
 	CUnit_Container* m_pUnit_Container;
 	CRoom_Container* m_pRoom_Container;
 

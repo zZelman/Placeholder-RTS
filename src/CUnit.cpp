@@ -8,39 +8,28 @@
 #include "CUnit.h"
 #include "CTexture.h"
 #include "CSprite.h"
-#include "CGrid.h"
+#include "CTile_Container.h"
 #include "include_sfml.h"
 #include <iostream>
 
 CUnit::CUnit(sf::RenderWindow* pWindow,
-             CGrid* pGrid,
+             CTile_Container* pGrid,
              CTexture* pTexture,
              const sf::Vector2<int>& currSub)
+	: AUpdate(), ARender(pWindow, pTexture, currSub), DPhysics()
 {
 	m_pGrid = pGrid;
-
-	m_pSprite = new CSprite(pWindow, pTexture, currSub);
 
 	m_sMovement.nullAll();
 //	m_sMovement.isLeft	= true;
 	m_sMovement.isRight	= true;
 //	m_sMovement.isUp 	= true;
 	m_sMovement.isDown 	= true;
-
-	m_isFirstUpdate = true;
 }
 
 
 CUnit::~CUnit()
 {
-	delete m_pSprite;
-	m_pSprite = NULL;
-}
-
-
-CSprite* const CUnit::getSprite()
-{
-	return m_pSprite;
 }
 
 
@@ -80,12 +69,6 @@ void CUnit::update()
 		}
 	}
 
-}
-
-
-void CUnit::render()
-{
-	m_pSprite->render();
 }
 
 

@@ -1,4 +1,5 @@
-src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
+src/AUserInput.d: ../src/AUserInput.cpp ../src/AUserInput.h \
+ ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -72,13 +73,9 @@ src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/Sound.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/IUpdateable.h ../src/IRenderable.h ../src/CTexture.h \
- ../src/CSprite.h \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp
+ /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp
 
-../src/CGrid.h:
+../src/AUserInput.h:
 
 ../src/include_sfml.h:
 
@@ -229,15 +226,3 @@ src/CGrid.d: ../src/CGrid.cpp ../src/CGrid.h ../src/include_sfml.h \
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
-
-../src/IUpdateable.h:
-
-../src/IRenderable.h:
-
-../src/CTexture.h:
-
-../src/CSprite.h:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:

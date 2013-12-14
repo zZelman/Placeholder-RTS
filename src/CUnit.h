@@ -8,38 +8,31 @@
 #ifndef CUNIT_H_
 #define CUNIT_H_
 
-#include "IRenderable.h"
-#include "IUpdateable.h"
+#include "ARender.h"
+#include "AUpdate.h"
 #include "CSprite.h"
 #include "include_sfml.h"
-#include "CGrid.h"
+#include "CTile_Container.h"
 #include "Utills.h"
+#include "DPhysics.h"
 
-class CUnit: public IUpdateable, public IRenderable
+class CUnit: public AUpdate, public ARender, public DPhysics
 {
 public:
-	struct SPhysics m_sPhysics;
-
 	CUnit(sf::RenderWindow* pWindow, 			// rendering window
-	      CGrid* pGrid,
+	      CTile_Container* pGrid,
 	      CTexture* pTexture, 				// texture that this sprite will render with
 	      const sf::Vector2<int>& currSub);	// LENGTH current sub image being rendered
 	~CUnit();
 
-	CSprite* const getSprite();
-
 	void update();
-	void render();
 
 private:
-	CSprite* m_pSprite;
-	CGrid* m_pGrid;
+	CTile_Container* m_pGrid;
 
 	// * Controls how the sprite is moving during the update phase
 	// * these flags are set elsewhere, then passively acted on as they precist
 	struct SDirections m_sMovement;
-
-	bool m_isFirstUpdate;
 
 	// collision detection between
 	bool canMove_vertical();

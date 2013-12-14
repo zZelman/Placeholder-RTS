@@ -8,20 +8,21 @@
 #ifndef CROOM_CONTAINER_H_
 #define CROOM_CONTAINER_H_
 
-#include "IRenderable.h"
 #include "IUpdateable.h"
-#include "IUserInput.h"
+#include "AUserInput.h"
+#include "IRenderable.h"
 #include "include_sfml.h"
 #include "CRoom.h"
-#include "Utills.h"
-#include "CGrid.h"
+#include "CTile_Container.h"
 #include <vector>
+#include "IGetCollisionData.h"
+#include <list>
 
-class CRoom_Container: public IUpdateable, public IRenderable, public IUserInput
+class CRoom_Container: public IUpdateable, public IRenderable, public IGetCollisionData, public AUserInput
 {
 public:
 	CRoom_Container(sf::RenderWindow* pWindow,
-	                CGrid* pGrid);
+	                CTile_Container* pGrid);
 	~CRoom_Container();
 
 	void update();
@@ -38,15 +39,7 @@ public:
 
 private:
 	sf::RenderWindow* m_pWindow;
-	CGrid* m_pGrid;
-
-	// keeps track of what arbitrary keys representing directions are pressed
-	struct SDirections m_sKeyPress;
-
-	// acceptable keys for user input (init'ed in constructor)
-	struct SAcceptableKeys m_sKeys;
-
-	bool m_isMousePressed;
+	CTile_Container* m_pGrid;
 
 	// Unit texture filepaths
 	std::string m_debugTexture_path;

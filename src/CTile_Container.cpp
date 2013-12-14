@@ -5,16 +5,19 @@
  *      Author: zZelman
  */
 
-#include "CGrid.h"
+#include "CTile_Container.h"
 
 #include <iostream>
 #include <fstream>
 #include <assert.h>
 #include <stdlib.h>
 #include "rapidxml_utils.hpp"
+#include "IRenderable.h"
+#include "CTile.h"
+#include <vector>
 
 
-CGrid::CGrid(sf::RenderWindow* pWindow, std::string fileName)
+CTile_Container::CTile_Container(sf::RenderWindow* pWindow, std::string fileName)
 {
 	m_pWindow = pWindow;
 
@@ -29,48 +32,52 @@ CGrid::CGrid(sf::RenderWindow* pWindow, std::string fileName)
 }
 
 
-CGrid::~CGrid()
+CTile_Container::~CTile_Container()
 {
-	delete m_pTestTexture;
-	m_pTestTexture = NULL;
+	delete m_pTexture;
+	m_pTexture = NULL;
 
-	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	for (unsigned int i = 0; i < m_tiles.size(); ++i)
 	{
-		CSprite* s = m_testSprites.at(i);
-		delete s;
-		s = NULL;
+		delete m_tiles.at(i);
+		m_tiles.at(i) = NULL;
 	}
-	m_testSprites.clear();
+	m_tiles.clear();
 }
 
 
-sf::Vector2<int> CGrid::getGridSize()
+sf::Vector2<int> CTile_Container::getGridSize()
 {
 	return sf::Vector2<int>(m_sLayerData.width, m_sLayerData.height);
 }
 
 
-sf::Vector2<int> CGrid::getGridSubSize()
+sf::Vector2<int> CTile_Container::getGridSubSize()
 {
 	return sf::Vector2<int>(m_sTilesetData.tileWidth, m_sTilesetData.tileHeight);
 }
 
 
-void CGrid::update()
+void CTile_Container::update()
 {
 }
 
 
-void CGrid::render()
+void CTile_Container::render()
 {
-	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	for (unsigned int i = 0; i < m_tiles.size(); ++i)
 	{
-		m_testSprites.at(i)->render();
+		m_tiles.at(i)->render();
 	}
 }
 
 
-void CGrid::screenToGrid(int* posX, int* posY)
+void CTile_Container::getCollisiondata(std::list<ARender*>* pList)
+{
+}
+
+
+void CTile_Container::screenToGrid(int* posX, int* posY)
 {
 	// x & y represent the mouse location, just need to normalize that to the grid
 	sf::Vector2<int> gridSize(m_sLayerData.width, m_sLayerData.height);
@@ -86,17 +93,17 @@ void CGrid::screenToGrid(int* posX, int* posY)
 }
 
 
-bool CGrid::isCollision(const sf::Rect<float>& rect, CSprite*& pSprite)
+bool CTile_Container::isCollision(const sf::Rect<float>& rect, CSprite*& pSprite)
 {
 	sf::FloatRect tileRect;
-	CSprite* pS;
-	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	CTile* pT;
+	for (unsigned int i = 0; i < m_tiles.size(); ++i)
 	{
-		pS = m_testSprites.at(i);
-		tileRect = pS->getGlobalBounds();
+		pT = m_tiles.at(i);
+		tileRect = pT->getSprite()->getGlobalBounds();
 		if (tileRect.intersects(rect))
 		{
-			pSprite = pS;
+			pSprite = pT->getSprite();
 			return true;
 		}
 	}
@@ -106,23 +113,23 @@ bool CGrid::isCollision(const sf::Rect<float>& rect, CSprite*& pSprite)
 }
 
 
-bool CGrid::isCollision(const sf::Vector2<float>& point, CSprite*& pSprite)
+bool CTile_Container::isCollision(const sf::Vector2<float>& point, CSprite*& pSprite)
 {
 	return isCollision(point.x, point.y, pSprite);
 }
 
 
-bool CGrid::isCollision(float x, float y, CSprite*& pSprite)
+bool CTile_Container::isCollision(float x, float y, CSprite*& pSprite)
 {
 	sf::FloatRect tileRect;
-	CSprite* pS;
-	for (unsigned int i = 0; i < m_testSprites.size(); ++i)
+	CTile* pT;
+	for (unsigned int i = 0; i < m_tiles.size(); ++i)
 	{
-		pS = m_testSprites.at(i);
-		tileRect = pS->getGlobalBounds();
+		pT = m_tiles.at(i);
+		tileRect = pT->getSprite()->getGlobalBounds();
 		if (tileRect.contains(x, y))
 		{
-			pSprite = pS;
+			pSprite = pT->getSprite();
 			return true;
 		}
 	}
@@ -132,10 +139,10 @@ bool CGrid::isCollision(float x, float y, CSprite*& pSprite)
 }
 
 
-void CGrid::generateGrid()
+void CTile_Container::generateGrid()
 {
 	CTexture* pTexture = generateGrid_texture();
-	m_pTestTexture = pTexture;
+	m_pTexture = pTexture;
 
 	// use the info received at the specific 2D index to create a sprite
 	//		with the correct texture, and in the correct position
@@ -151,14 +158,14 @@ void CGrid::generateGrid()
 			}
 			else
 			{
-				m_testSprites.push_back(generateGrid_sprite(n + 1, i + 1, data, pTexture));
+				m_tiles.push_back(new CTile(generateGrid_sprite(n + 1, i + 1, data, pTexture)));
 			}
 		}
 	}
 }
 
 
-CTexture* CGrid::generateGrid_texture()
+CTexture* CTile_Container::generateGrid_texture()
 {
 	// CTexture() data fields, pulled out for readability
 	std::string fileName;
@@ -182,14 +189,14 @@ CTexture* CGrid::generateGrid_texture()
 }
 
 
-CSprite* CGrid::generateGrid_sprite(int posX, int posY, int gridNum, CTexture* pTexture)
+CSprite* CTile_Container::generateGrid_sprite(int posX, int posY, int gridNum, CTexture* pTexture)
 {
 	// CSprite() data fileds, pulled out for readability
 	sf::RenderWindow* pWindow = m_pWindow;
 
 	// because "gridNum" is given as a single value (see Tiled documentation of sprite sheet breakdowns)
 	//		we need to devide the number out to find where on the sprite sheet it came from
-	sf::Vector2<int> subNum = m_pTestTexture->getSubNum();
+	sf::Vector2<int> subNum = m_pTexture->getSubNum();
 	int startingLength = m_sTilesetData.firstGrid;
 	int recievedNum = gridNum;
 	sf::Vector2<int> currSub;
@@ -202,8 +209,8 @@ CSprite* CGrid::generateGrid_sprite(int posX, int posY, int gridNum, CTexture* p
 	return s;
 }
 
-void CGrid::findSubImage(sf::Vector2<int>* subNum, int startingLength,
-                         int recievedNum, sf::Vector2<int>* returnedPos)
+void CTile_Container::findSubImage(sf::Vector2<int>* subNum, int startingLength,
+                                   int recievedNum, sf::Vector2<int>* returnedPos)
 {
 
 	// Find the row by subtracting the column size from the recievedNum
@@ -230,7 +237,7 @@ void CGrid::findSubImage(sf::Vector2<int>* subNum, int startingLength,
 }
 
 
-void CGrid::positionTile(CSprite* pSprite, int posX, int posY)
+void CTile_Container::positionTile(CSprite* pSprite, int posX, int posY)
 {
 	// final position variables
 	int x = (posX - 1) * m_sTilesetData.tileWidth;
@@ -240,7 +247,7 @@ void CGrid::positionTile(CSprite* pSprite, int posX, int posY)
 }
 
 
-void CGrid::parseFile()
+void CTile_Container::parseFile()
 {
 	// internal flags to look for; direct children of node "map"
 	std::string tileSetNode 	= "tileset";
@@ -275,7 +282,7 @@ void CGrid::parseFile()
 }
 
 
-void CGrid::parseFile_tileset(rapidxml::xml_node<>* pTileSet, tileset_data* pData)
+void CTile_Container::parseFile_tileset(rapidxml::xml_node<>* pTileSet, tileset_data* pData)
 {
 	//
 	// Extract information from the "tileset" node
@@ -315,7 +322,7 @@ void CGrid::parseFile_tileset(rapidxml::xml_node<>* pTileSet, tileset_data* pDat
 }
 
 
-void CGrid::parseFile_layer(rapidxml::xml_node<>* pLayer, layer_data* pData)
+void CTile_Container::parseFile_layer(rapidxml::xml_node<>* pLayer, layer_data* pData)
 {
 	//
 	// Extract information from the "layer" node
@@ -366,7 +373,7 @@ void CGrid::parseFile_layer(rapidxml::xml_node<>* pLayer, layer_data* pData)
 }
 
 
-void CGrid::parseFile_objectgroup(rapidxml::xml_node<>* pObjectgroup, objectgroup_data* pData)
+void CTile_Container::parseFile_objectgroup(rapidxml::xml_node<>* pObjectgroup, objectgroup_data* pData)
 {
 	//
 	// Extract information from "objectgroup" node

@@ -1,4 +1,4 @@
-src/IUserInput.d: ../src/IUserInput.cpp ../src/IUserInput.h \
+src/DPhysics.d: ../src/DPhysics.cpp ../src/DPhysics.h \
  ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -75,7 +75,7 @@ src/IUserInput.d: ../src/IUserInput.cpp ../src/IUserInput.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp
 
-../src/IUserInput.h:
+../src/DPhysics.h:
 
 ../src/include_sfml.h:
 

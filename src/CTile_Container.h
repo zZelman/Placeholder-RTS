@@ -5,8 +5,8 @@
  *      Author: zZelman
  */
 
-#ifndef CGRID_H_
-#define CGRID_H_
+#ifndef CTILE_CONTAINER_H_
+#define CTILE_CONTAINER_H_
 
 #include "include_sfml.h"
 #include "IUpdateable.h"
@@ -16,18 +16,23 @@
 #include <iostream>
 #include <vector>
 #include "rapidxml_utils.hpp"
+#include "CTile.h"
+#include "IGetCollisionData.h"
+#include <list>
 
-class CGrid : public IUpdateable, public IRenderable
+class CTile_Container : public IUpdateable, public IRenderable, public IGetCollisionData
 {
 public:
-	CGrid(sf::RenderWindow* pWindow, std::string fileName);
-	~CGrid();
+	CTile_Container(sf::RenderWindow* pWindow, std::string fileName);
+	~CTile_Container();
 
 	sf::Vector2<int> getGridSize(); // returns the total number of squares in (x, y)
 	sf::Vector2<int> getGridSubSize(); // returns the individual tile size
 
 	void update();
 	void render();
+
+	void getCollisiondata(std::list<ARender*>* pList);
 
 	// * manipulates the screen values given into (x, y) grid coords
 	// * values of posX and posY ARE OVERRIDEN
@@ -45,14 +50,10 @@ private:
 	// Initial (relative) file path to the Tiled XML map file directory
 	std::string m_filePath;
 	std::string m_fileName;			// name within the map file directory that is used for this CGrid
-
-	sf::Vector2<int> m_tileSubSize; // holds the individual tile size in (width, height)
-	sf::Vector2<int> m_tileSetSize;	// total size of the tile set in (width, height)
-	std::string m_tileSetName;		// name of the singular tile set image file
 	std::string m_tileSetPath;		// path to the directory containing the tilesets
 
-	CTexture* m_pTestTexture;
-	std::vector<CSprite*> m_testSprites;
+	CTexture* m_pTexture;
+	std::vector<CTile*> m_tiles;
 
 	// uses the information gathered AFTER "parseFile()" has been called, and creates all of the
 	//		tile objects that will be interacted with by the game

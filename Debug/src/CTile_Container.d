@@ -1,4 +1,5 @@
-src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
+src/CTile_Container.d: ../src/CTile_Container.cpp \
+ ../src/CTile_Container.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -73,15 +74,13 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/CSprite.h ../src/CTexture.h ../src/IUpdateable.h \
- ../src/CTile_Container.h ../src/IRenderable.h \
+ ../src/IUpdateable.h ../src/IRenderable.h ../src/CTexture.h \
+ ../src/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/ARender.h ../src/AUpdate.h ../src/DPhysics.h \
- ../src/CUnit_Container.h ../src/AUserInput.h ../src/CUnit.h \
- ../src/Utills.h ../src/CRoom_Container.h ../src/CRoom.h
+ ../src/CTile.h ../src/ARender.h ../src/AUpdate.h ../src/DPhysics.h
 
-../src/CGame.h:
+../src/CTile_Container.h:
 
 ../src/include_sfml.h:
 
@@ -233,15 +232,13 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/CSprite.h:
+../src/IUpdateable.h:
+
+../src/IRenderable.h:
 
 ../src/CTexture.h:
 
-../src/IUpdateable.h:
-
-../src/CTile_Container.h:
-
-../src/IRenderable.h:
+../src/CSprite.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
 
@@ -254,15 +251,3 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/AUpdate.h:
 
 ../src/DPhysics.h:
-
-../src/CUnit_Container.h:
-
-../src/AUserInput.h:
-
-../src/CUnit.h:
-
-../src/Utills.h:
-
-../src/CRoom_Container.h:
-
-../src/CRoom.h:

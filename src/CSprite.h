@@ -10,9 +10,8 @@
 
 #include "include_sfml.h"
 #include "CTexture.h"
-#include "IRenderable.h"
 
-class CSprite : public IRenderable, public sf::Sprite
+class CSprite : public sf::Sprite
 {
 public:
 	CSprite();

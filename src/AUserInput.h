@@ -5,16 +5,16 @@
  *      Author: zZelman
  */
 
-#ifndef IUSERINPUT_H_
-#define IUSERINPUT_H_
+#ifndef AUSERINPUT_H_
+#define AUSERINPUT_H_
 
 #include "include_sfml.h"
 
-class IUserInput
+class AUserInput
 {
 public:
-	IUserInput();
-	virtual ~IUserInput();
+	AUserInput();
+	virtual ~AUserInput();
 
 	// "pressed" or "released" is determined by the overarching game structure
 	virtual bool userInput_keyPress(sf::Event* pEvent) = 0;
@@ -22,6 +22,25 @@ public:
 
 	virtual bool userInput_mousePress(sf::Event* pEvent) = 0;
 	virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
+
+protected:
+	struct SKeyStates
+	{
+		// Acceptable keys
+		sf::Keyboard::Key up, down, left, right;
+
+		// states of those keys
+		bool isUp;
+		bool isDown;
+		bool isRight;
+		bool isLeft;
+
+		// reset states
+		void nullStates();
+	} m_sKeys;
+
+	// state of the mouse
+	bool m_isMousePressed;
 };
 
 #endif /* IUSERINPUT_H_ */

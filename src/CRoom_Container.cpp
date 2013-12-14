@@ -8,7 +8,7 @@
 #include "CRoom_Container.h"
 
 CRoom_Container::CRoom_Container(sf::RenderWindow* pWindow,
-                                 CGrid* pGrid)
+                                 CTile_Container* pGrid) : AUserInput()
 {
 	m_pWindow = pWindow;
 	m_pGrid = pGrid;
@@ -16,15 +16,10 @@ CRoom_Container::CRoom_Container(sf::RenderWindow* pWindow,
 	                               sf::Vector2<int>(32, 32),
 	                               sf::Vector2<int>(1, 1));
 
-	m_sKeyPress.nullAll();
-
 	m_sKeys.up 		= sf::Keyboard::Up;
 	m_sKeys.down 	= sf::Keyboard::Down;
 	m_sKeys.left 	= sf::Keyboard::Left;
 	m_sKeys.right 	= sf::Keyboard::Right;
-
-	m_isMousePressed = false;
-
 }
 
 
@@ -35,6 +30,9 @@ CRoom_Container::~CRoom_Container()
 		delete m_rooms.at(i);
 	}
 	m_rooms.clear();
+
+	delete m_pDebugTexture;
+	m_pDebugTexture = NULL;
 }
 
 
@@ -59,6 +57,11 @@ void CRoom_Container::render()
 }
 
 
+void CRoom_Container::getCollisiondata(std::list<ARender*>* pList)
+{
+}
+
+
 bool CRoom_Container::userInput_keyPress(sf::Event* pEvent)
 {
 	return false;
@@ -77,14 +80,13 @@ bool CRoom_Container::userInput_mousePress(sf::Event* pEvent)
 	initRoom(pEvent->mouseButton.x, pEvent->mouseButton.y);
 	m_isMousePressed = true;
 	return true;
-
-	return false;
 }
 
 
 bool CRoom_Container::userInput_mouseRelease(sf::Event* pEvent)
 {
-	return false;
+	m_isMousePressed = false;
+	return true;
 }
 
 
@@ -132,4 +134,3 @@ void CRoom_Container::applyPhysics(CRoom* pRoom)
 	int elapsed = timer.asMilliseconds();
 	pRoom->m_sPhysics.velosity_y = (0.01) * (elapsed);
 }
-

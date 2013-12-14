@@ -8,10 +8,10 @@
 #include "CUnit_Container.h"
 #include "CTexture.h"
 #include "include_sfml.h"
-#include "Utills.h"
 
 
-CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CGrid* pGrid)
+CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CTile_Container* pGrid)
+	: AUserInput()
 {
 	m_pWindow = pWindow;
 	m_pGrid = pGrid;
@@ -19,14 +19,10 @@ CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CGrid* pGrid)
 	                               sf::Vector2<int>(16, 16),
 	                               sf::Vector2<int>(1, 1));
 
-	m_sKeyPress.nullAll();
-
 	m_sKeys.up 		= sf::Keyboard::Up;
 	m_sKeys.down 	= sf::Keyboard::Down;
 	m_sKeys.left 	= sf::Keyboard::Left;
 	m_sKeys.right 	= sf::Keyboard::Right;
-
-	m_isMousePressed = false;
 }
 
 
@@ -37,6 +33,9 @@ CUnit_Container::~CUnit_Container()
 		delete m_units.at(i);
 	}
 	m_units.clear();
+
+	delete m_pDebugTexture;
+	m_pDebugTexture = NULL;
 }
 
 
@@ -61,6 +60,11 @@ void CUnit_Container::render()
 }
 
 
+void CUnit_Container::getCollisiondata(std::list<ARender*>* pList)
+{
+}
+
+
 bool CUnit_Container::userInput_keyPress(sf::Event* pEvent)
 {
 	return false;
@@ -69,9 +73,6 @@ bool CUnit_Container::userInput_keyPress(sf::Event* pEvent)
 
 bool CUnit_Container::userInput_keyRelease(sf::Event* pEvent)
 {
-	m_isMousePressed = false;
-	return true;
-
 	return false;
 }
 
@@ -81,14 +82,13 @@ bool CUnit_Container::userInput_mousePress(sf::Event* pEvent)
 	initUnit(pEvent->mouseButton.x, pEvent->mouseButton.y);
 	m_isMousePressed = true;
 	return true;
-
-	return false;
 }
 
 
 bool CUnit_Container::userInput_mouseRelease(sf::Event* pEvent)
 {
-	return false;
+	m_isMousePressed = false;
+	return true;
 }
 
 
