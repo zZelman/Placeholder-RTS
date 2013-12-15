@@ -59,6 +59,10 @@ void CRoom_Container::render()
 
 void CRoom_Container::getCollisiondata(std::list<ARender*>* pList)
 {
+	for (unsigned int i = 0; i < m_rooms.size(); ++i)
+	{
+		pList->push_front(m_rooms[i]);
+	}
 }
 
 

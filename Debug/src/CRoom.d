@@ -78,8 +78,8 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
  ../src/IUpdateable.h ../src/CTile_Container.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/DPhysics.h ../src/CRoom_Container.h \
- ../src/AUserInput.h
+ ../src/CTile.h ../src/DPhysics.h ../src/IGetCollisionData.h \
+ ../src/CRoom_Container.h ../src/AUserInput.h
 
 ../src/CRoom.h:
 
@@ -254,6 +254,8 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
 ../src/CTile.h:
 
 ../src/DPhysics.h:
+
+../src/IGetCollisionData.h:
 
 ../src/CRoom_Container.h:
 

@@ -62,6 +62,10 @@ void CUnit_Container::render()
 
 void CUnit_Container::getCollisiondata(std::list<ARender*>* pList)
 {
+	for (unsigned int i = 0; i < m_units.size(); ++i)
+	{
+		pList->push_front(m_units[i]);
+	}
 }
 
 

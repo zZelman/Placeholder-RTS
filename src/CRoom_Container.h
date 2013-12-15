@@ -28,6 +28,8 @@ public:
 	void update();
 	void render();
 
+	void getCollisiondata(std::list<ARender*>* pList);
+
 	bool userInput_keyPress(sf::Event* pEvent);
 	bool userInput_keyRelease(sf::Event* pEvent);
 

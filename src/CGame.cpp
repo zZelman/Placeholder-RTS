@@ -4,6 +4,7 @@
 #include "CTexture.h"
 #include "CUnit_Container.h"
 #include "CRoom_Container.h"
+#include "CPhysicsEngine.h"
 #include <iostream>
 #include <assert.h>
 
@@ -13,11 +14,15 @@ CGame::CGame()
 	// * !! local vars dictate the size !! [need to change]
 	initWindow();
 
-	m_pGrid = new CTile_Container(m_pWindow, "simple map.tmx");
+	m_pTile_Container = new CTile_Container(m_pWindow, "simple map.tmx");
 
-	m_pUnit_Container = new CUnit_Container(m_pWindow, m_pGrid);
+	m_pUnit_Container = new CUnit_Container(m_pWindow, m_pTile_Container);
 
-	m_pRoom_Container = new CRoom_Container(m_pWindow, m_pGrid);
+	m_pRoom_Container = new CRoom_Container(m_pWindow, m_pTile_Container);
+
+	m_pPhysicsEngine = new CPhysicsEngine(m_pTile_Container,
+	                                      m_pRoom_Container,
+	                                      m_pUnit_Container);
 
 	isRunning = false;
 	isPaused = false;
@@ -29,11 +34,17 @@ CGame::~CGame()
 	delete m_pWindow;
 	m_pWindow = NULL;
 
-	delete m_pGrid;
-	m_pGrid = NULL;
+	delete m_pTile_Container;
+	m_pTile_Container = NULL;
 
 	delete m_pRoom_Container;
 	m_pRoom_Container = NULL;
+
+	delete m_pUnit_Container;
+	m_pUnit_Container = NULL;
+
+	delete m_pPhysicsEngine;
+	m_pPhysicsEngine = NULL;
 }
 
 
@@ -206,8 +217,10 @@ bool CGame::input_gameSystem(sf::Event* pEvent)
 
 void CGame::update()
 {
+	m_pPhysicsEngine->update();
 	m_pUnit_Container->update();
 	m_pRoom_Container->update();
+
 }
 
 
@@ -216,7 +229,7 @@ void CGame::render()
 	m_pWindow->clear(sf::Color::White); // clear screen with a black background
 
 	// drawing here...
-	m_pGrid->render();
+	m_pTile_Container->render();
 	m_pRoom_Container->render();
 	m_pUnit_Container->render();
 

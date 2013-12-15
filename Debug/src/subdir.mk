@@ -8,6 +8,8 @@ CPP_SRCS += \
 ../src/AUpdate.cpp \
 ../src/AUserInput.cpp \
 ../src/CGame.cpp \
+../src/CPhysicsEngine.cpp \
+../src/CQuadTree.cpp \
 ../src/CRoom.cpp \
 ../src/CRoom_Container.cpp \
 ../src/CSprite.cpp \
@@ -17,6 +19,7 @@ CPP_SRCS += \
 ../src/CUnit.cpp \
 ../src/CUnit_Container.cpp \
 ../src/DPhysics.cpp \
+../src/IGetCollisionData.cpp \
 ../src/IRenderable.cpp \
 ../src/IUpdateable.cpp \
 ../src/Utills.cpp \
@@ -27,6 +30,8 @@ OBJS += \
 ./src/AUpdate.o \
 ./src/AUserInput.o \
 ./src/CGame.o \
+./src/CPhysicsEngine.o \
+./src/CQuadTree.o \
 ./src/CRoom.o \
 ./src/CRoom_Container.o \
 ./src/CSprite.o \
@@ -36,6 +41,7 @@ OBJS += \
 ./src/CUnit.o \
 ./src/CUnit_Container.o \
 ./src/DPhysics.o \
+./src/IGetCollisionData.o \
 ./src/IRenderable.o \
 ./src/IUpdateable.o \
 ./src/Utills.o \
@@ -46,6 +52,8 @@ CPP_DEPS += \
 ./src/AUpdate.d \
 ./src/AUserInput.d \
 ./src/CGame.d \
+./src/CPhysicsEngine.d \
+./src/CQuadTree.d \
 ./src/CRoom.d \
 ./src/CRoom_Container.d \
 ./src/CSprite.d \
@@ -55,6 +63,7 @@ CPP_DEPS += \
 ./src/CUnit.d \
 ./src/CUnit_Container.d \
 ./src/DPhysics.d \
+./src/IGetCollisionData.d \
 ./src/IRenderable.d \
 ./src/IUpdateable.d \
 ./src/Utills.d \

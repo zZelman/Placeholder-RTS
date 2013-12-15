@@ -74,6 +74,10 @@ void CTile_Container::render()
 
 void CTile_Container::getCollisiondata(std::list<ARender*>* pList)
 {
+	for (unsigned int i = 0; i < m_tiles.size(); ++i)
+	{
+		pList->push_front(m_tiles[i]);
+	}
 }
 
 

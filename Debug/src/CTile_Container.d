@@ -78,7 +78,8 @@ src/CTile_Container.d: ../src/CTile_Container.cpp \
  ../src/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/ARender.h ../src/AUpdate.h ../src/DPhysics.h
+ ../src/CTile.h ../src/ARender.h ../src/AUpdate.h ../src/DPhysics.h \
+ ../src/IGetCollisionData.h
 
 ../src/CTile_Container.h:
 
@@ -251,3 +252,5 @@ src/CTile_Container.d: ../src/CTile_Container.cpp \
 ../src/AUpdate.h:
 
 ../src/DPhysics.h:
+
+../src/IGetCollisionData.h:

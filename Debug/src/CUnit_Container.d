@@ -79,7 +79,8 @@ src/CUnit_Container.d: ../src/CUnit_Container.cpp \
  ../src/CSprite.h ../src/AUpdate.h ../src/CTile_Container.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/DPhysics.h ../src/Utills.h
+ ../src/CTile.h ../src/DPhysics.h ../src/IGetCollisionData.h \
+ ../src/Utills.h
 
 ../src/CUnit_Container.h:
 
@@ -258,5 +259,7 @@ src/CUnit_Container.d: ../src/CUnit_Container.cpp \
 ../src/CTile.h:
 
 ../src/DPhysics.h:
+
+../src/IGetCollisionData.h:
 
 ../src/Utills.h:

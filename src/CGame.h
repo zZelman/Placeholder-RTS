@@ -15,6 +15,7 @@
 #include "CTile_Container.h"
 #include "CUnit_Container.h"
 #include "CRoom_Container.h"
+#include "CPhysicsEngine.h"
 
 class CGame : public IUpdateable
 {
@@ -32,9 +33,10 @@ public:
 
 private:
 	sf::RenderWindow* m_pWindow;
-	CTile_Container* m_pGrid;
+	CTile_Container* m_pTile_Container;
 	CUnit_Container* m_pUnit_Container;
 	CRoom_Container* m_pRoom_Container;
+	CPhysicsEngine* m_pPhysicsEngine;
 
 	bool isRunning;
 	bool isPaused;
