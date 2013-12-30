@@ -10,9 +10,9 @@
 
 CGame::CGame()
 {
-	// * m_pGameWindow new'ed here
-	// * !! local vars dictate the size !! [need to change]
+	// * m_pWindow new'ed here
 	initWindow();
+
 
 	m_pTile_Container = new CTile_Container(m_pWindow, "simple map.tmx");
 
@@ -23,6 +23,16 @@ CGame::CGame()
 	m_pPhysicsEngine = new CPhysicsEngine(m_pTile_Container,
 	                                      m_pRoom_Container,
 	                                      m_pUnit_Container);
+
+
+	// re-work the window to be dependent on the amount of tiles in the world
+	// work toward finding the whole world width/height
+//	sf::Vector2<int> gridSize = m_pTile_Container->getGridSize();
+//	sf::Vector2<int> gridSubSize = m_pTile_Container->getGridSubSize();
+//	int width = gridSize.x * gridSubSize.x;
+//	int height = gridSize.y * gridSubSize.y;
+//	m_pWindow->create(sf::VideoMode(width, height), "Placeholder-RTS");
+
 
 	isRunning = false;
 	isPaused = false;
@@ -217,9 +227,10 @@ bool CGame::input_gameSystem(sf::Event* pEvent)
 
 void CGame::update()
 {
-	m_pPhysicsEngine->update();
 	m_pUnit_Container->update();
 	m_pRoom_Container->update();
+
+	m_pPhysicsEngine->update();
 
 }
 

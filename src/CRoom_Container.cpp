@@ -42,7 +42,7 @@ void CRoom_Container::update()
 	{
 		CRoom* pR = m_rooms.at(i);
 
-		applyPhysics(pR);
+//		applyPhysics(pR);
 		pR->update();
 	}
 }

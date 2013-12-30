@@ -35,13 +35,18 @@ void CRoom::update()
 		m_isFirstUpdate = false;
 	}
 
-	int stepSize_y = m_sPhysics.velosity_y;
+//	if (canMove_vertical())
+//	{
+//		stepNormally();
+//	}
+}
 
-	if (canMove_vertical())
-	{
-		m_pSprite->move(0, stepSize_y);
-		m_sPhysics.isFalling = true;
-	}
+
+void CRoom::stepNormally()
+{
+	int stepSize_y = m_sPhysics.velosity_y;
+	m_pSprite->move(0, stepSize_y);
+	m_sPhysics.isFalling = true;
 }
 
 

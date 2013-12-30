@@ -41,34 +41,43 @@ void CUnit::update()
 		m_isFirstUpdate = false;
 	}
 
-	int stepSize_y = m_sPhysics.velosity_y;
-	m_sPhysics.velosity_x = 5;
-	int stepSize_x = m_sPhysics.velosity_x;
 
 	if (canMove_horizontal())
 	{
-		if (m_sMovement.isLeft)
-		{
-			m_pSprite->move(-stepSize_x, 0);
-		}
-		else if (m_sMovement.isRight)
-		{
-			m_pSprite->move(stepSize_x, 0);
-		}
+		stepNormally();
 	}
 
 	if (canMove_vertical())
 	{
-		if (m_sMovement.isDown)
-		{
-			m_pSprite->move(0, stepSize_y);
-		}
-		else if (m_sMovement.isUp)
-		{
-			m_pSprite->move(0, -stepSize_y);
-		}
+		stepNormally();
 	}
 
+}
+
+
+void CUnit::stepNormally()
+{
+	int stepSize_y = m_sPhysics.velosity_y;
+	m_sPhysics.velosity_x = 5;
+	int stepSize_x = m_sPhysics.velosity_x;
+
+	if (m_sMovement.isDown)
+	{
+		m_pSprite->move(0, stepSize_y);
+	}
+	else if (m_sMovement.isUp)
+	{
+		m_pSprite->move(0, -stepSize_y);
+	}
+
+	if (m_sMovement.isLeft)
+	{
+		m_pSprite->move(-stepSize_x, 0);
+	}
+	else if (m_sMovement.isRight)
+	{
+		m_pSprite->move(stepSize_x, 0);
+	}
 }
 
 

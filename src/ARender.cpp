@@ -41,6 +41,17 @@ sf::Sprite* const ARender::getSprite_API()
 	return m_pSprite;
 }
 
+
+sf::FloatRect ARender::getGlobalBounds()
+{
+	return m_pSprite->getGlobalBounds();
+}
+
+void ARender::setPosition(float x, float y)
+{
+	m_pSprite->setPosition(x, y);
+}
+
 void ARender::render()
 {
 	m_pSprite->render();

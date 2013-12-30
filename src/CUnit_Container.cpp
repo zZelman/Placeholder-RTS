@@ -45,7 +45,7 @@ void CUnit_Container::update()
 	{
 		CUnit* pU = m_units.at(i);
 
-		applyPhysics(pU);
+//		applyPhysics(pU);
 		pU->update();
 	}
 }

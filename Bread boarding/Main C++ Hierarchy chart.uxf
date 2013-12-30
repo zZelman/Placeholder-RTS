@@ -28,8 +28,8 @@ fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1024</x>
-      <y>616</y>
+      <x>928</x>
+      <y>608</y>
       <w>96</w>
       <h>96</h>
     </coordinates>
@@ -45,8 +45,8 @@ _Requirements_
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>864</x>
-      <y>616</y>
+      <x>768</x>
+      <y>608</y>
       <w>112</w>
       <h>112</h>
     </coordinates>
@@ -63,8 +63,8 @@ _Requirements_
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1160</x>
-      <y>616</y>
+      <x>1064</x>
+      <y>608</y>
       <w>96</w>
       <h>80</h>
     </coordinates>
@@ -79,8 +79,8 @@ _Requirements_
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>728</x>
-      <y>248</y>
+      <x>632</x>
+      <y>240</y>
       <w>208</w>
       <h>96</h>
     </coordinates>
@@ -97,8 +97,8 @@ virtual void render()
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>976</x>
-      <y>248</y>
+      <x>880</x>
+      <y>240</y>
       <w>192</w>
       <h>72</h>
     </coordinates>
@@ -113,8 +113,8 @@ virtual void update() = 0
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1208</x>
-      <y>248</y>
+      <x>1112</x>
+      <y>240</y>
       <w>168</w>
       <h>40</h>
     </coordinates>
@@ -126,8 +126,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>792</x>
-      <y>320</y>
+      <x>696</x>
+      <y>312</y>
       <w>40</w>
       <h>80</h>
     </coordinates>
@@ -137,8 +137,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1032</x>
-      <y>296</y>
+      <x>936</x>
+      <y>288</y>
       <w>40</w>
       <h>104</h>
     </coordinates>
@@ -148,8 +148,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1256</x>
-      <y>264</y>
+      <x>1160</x>
+      <y>256</y>
       <w>40</w>
       <h>136</h>
     </coordinates>
@@ -159,8 +159,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>792</x>
-      <y>360</y>
+      <x>696</x>
+      <y>352</y>
       <w>504</w>
       <h>40</h>
     </coordinates>
@@ -170,8 +170,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>920</x>
-      <y>544</y>
+      <x>824</x>
+      <y>536</y>
       <w>152</w>
       <h>88</h>
     </coordinates>
@@ -181,8 +181,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1032</x>
-      <y>360</y>
+      <x>936</x>
+      <y>352</y>
       <w>40</w>
       <h>272</h>
     </coordinates>
@@ -192,8 +192,8 @@ struct SPhysics</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>728</x>
-      <y>144</y>
+      <x>632</x>
+      <y>136</y>
       <w>200</w>
       <h>48</h>
     </coordinates>
@@ -205,8 +205,8 @@ virtual void render() = 0</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>800</x>
-      <y>168</y>
+      <x>704</x>
+      <y>160</y>
       <w>40</w>
       <h>96</h>
     </coordinates>
@@ -216,8 +216,8 @@ virtual void render() = 0</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>976</x>
-      <y>144</y>
+      <x>880</x>
+      <y>136</y>
       <w>192</w>
       <h>48</h>
     </coordinates>
@@ -229,8 +229,8 @@ virtual void update() = 0</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1040</x>
-      <y>168</y>
+      <x>944</x>
+      <y>160</y>
       <w>40</w>
       <h>96</h>
     </coordinates>
@@ -240,8 +240,8 @@ virtual void update() = 0</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>568</x>
-      <y>504</y>
+      <x>472</x>
+      <y>496</y>
       <w>216</w>
       <h>96</h>
     </coordinates>
@@ -257,8 +257,8 @@ _Requriements_
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>104</x>
-      <y>504</y>
+      <x>8</x>
+      <y>496</y>
       <w>216</w>
       <h>96</h>
     </coordinates>
@@ -274,8 +274,8 @@ _Requriements_
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>336</x>
-      <y>504</y>
+      <x>240</x>
+      <y>496</y>
       <w>216</w>
       <h>96</h>
     </coordinates>
@@ -291,8 +291,8 @@ _Requriements_
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>272</x>
-      <y>248</y>
+      <x>176</x>
+      <y>240</y>
       <w>408</w>
       <h>136</h>
     </coordinates>
@@ -311,8 +311,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>432</x>
-      <y>360</y>
+      <x>336</x>
+      <y>352</y>
       <w>40</w>
       <h>104</h>
     </coordinates>
@@ -322,8 +322,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>200</x>
-      <y>424</y>
+      <x>104</x>
+      <y>416</y>
       <w>272</w>
       <h>40</h>
     </coordinates>
@@ -333,8 +333,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>432</x>
-      <y>424</y>
+      <x>336</x>
+      <y>416</y>
       <w>40</w>
       <h>96</h>
     </coordinates>
@@ -344,8 +344,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>200</x>
-      <y>424</y>
+      <x>104</x>
+      <y>416</y>
       <w>40</w>
       <h>96</h>
     </coordinates>
@@ -355,8 +355,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>672</x>
-      <y>192</y>
+      <x>576</x>
+      <y>184</y>
       <w>344</w>
       <h>328</h>
     </coordinates>
@@ -366,8 +366,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>224</x>
-      <y>456</y>
+      <x>128</x>
+      <y>448</y>
       <w>488</w>
       <h>40</h>
     </coordinates>
@@ -377,8 +377,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>224</x>
-      <y>456</y>
+      <x>128</x>
+      <y>448</y>
       <w>40</w>
       <h>64</h>
     </coordinates>
@@ -388,8 +388,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>480</x>
-      <y>456</y>
+      <x>384</x>
+      <y>448</y>
       <w>40</w>
       <h>64</h>
     </coordinates>
@@ -399,8 +399,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>736</x>
-      <y>168</y>
+      <x>640</x>
+      <y>160</y>
       <w>40</w>
       <h>64</h>
     </coordinates>
@@ -410,8 +410,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>976</x>
-      <y>168</y>
+      <x>880</x>
+      <y>160</y>
       <w>40</w>
       <h>64</h>
     </coordinates>
@@ -421,8 +421,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>656</x>
-      <y>576</y>
+      <x>560</x>
+      <y>568</y>
       <w>568</w>
       <h>200</h>
     </coordinates>
@@ -432,8 +432,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>424</x>
-      <y>576</y>
+      <x>328</x>
+      <y>568</y>
       <w>648</w>
       <h>240</h>
     </coordinates>
@@ -443,8 +443,8 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>176</x>
-      <y>576</y>
+      <x>80</x>
+      <y>568</y>
       <w>752</w>
       <h>272</h>
     </coordinates>
@@ -454,30 +454,30 @@ virtual bool userInput_mouseRelease(sf::Event* pEvent) = 0;
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1056</x>
-      <y>296</y>
+      <x>960</x>
+      <y>288</y>
       <w>168</w>
       <h>336</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>24;24;24;232;152;232;152;320</additional_attributes>
+    <additional_attributes>24;24;152;264;152;320</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>808</x>
-      <y>320</y>
-      <w>288</w>
-      <h>224</h>
+      <x>712</x>
+      <y>312</y>
+      <w>416</w>
+      <h>256</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>24;24;24;208;272;208</additional_attributes>
+    <additional_attributes>24;24;400;240</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>280</x>
-      <y>144</y>
+      <x>184</x>
+      <y>136</y>
       <w>384</w>
       <h>48</h>
     </coordinates>
@@ -489,8 +489,8 @@ virtual void getCollisiondata(std::list&lt;ARender*&gt;*) = 0</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>472</x>
-      <y>168</y>
+      <x>376</x>
+      <y>160</y>
       <w>240</w>
       <h>64</h>
     </coordinates>

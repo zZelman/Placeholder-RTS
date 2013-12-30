@@ -14,7 +14,7 @@ class DPhysics
 {
 public:
 	DPhysics();
-	~DPhysics();
+	virtual ~DPhysics();
 
 	// physics data
 	struct SPhysics
@@ -27,6 +27,11 @@ public:
 
 		void nullAll();
 	} m_sPhysics;
+
+	// * a normal step in 1 update call
+	// * when this method is called, it is assumed that there will NOT
+	//		be a collision next step
+	virtual void stepNormally() = 0;
 };
 
 #endif /* DPHYSICS_H_ */

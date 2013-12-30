@@ -26,6 +26,7 @@ public:
 	~CUnit();
 
 	void update();
+	void stepNormally();
 
 private:
 	CTile_Container* m_pGrid;

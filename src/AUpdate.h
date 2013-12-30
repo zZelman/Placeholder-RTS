@@ -18,7 +18,6 @@ public:
 
 	virtual void update() = 0;
 
-
 protected:
 
 	// * Boolean to keep track of first-time update cycles

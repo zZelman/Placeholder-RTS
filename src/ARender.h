@@ -27,6 +27,9 @@ public:
 
 	CSprite* const getSprite();
 	sf::Sprite* const getSprite_API();
+	sf::FloatRect getGlobalBounds();
+
+	void setPosition(float x, float y);
 
 	virtual void render();
 
