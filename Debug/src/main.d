@@ -80,7 +80,8 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  ../src/CTile.h ../src/ARender.h ../src/AUpdate.h ../src/DPhysics.h \
  ../src/IGetCollisionData.h ../src/CUnit_Container.h ../src/AUserInput.h \
  ../src/CUnit.h ../src/Utills.h ../src/CRoom_Container.h ../src/CRoom.h \
- ../src/CPhysicsEngine.h ../src/CQuadTree.h
+ ../src/CRoom_warehouse.h ../src/CRoom_kitchen.h ../src/CPhysicsEngine.h \
+ ../src/CQuadTree.h
 
 ../src/CGame.h:
 
@@ -269,6 +270,10 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/CRoom_Container.h:
 
 ../src/CRoom.h:
+
+../src/CRoom_warehouse.h:
+
+../src/CRoom_kitchen.h:
 
 ../src/CPhysicsEngine.h:
 

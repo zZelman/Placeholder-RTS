@@ -158,6 +158,10 @@ bool CGame::input_user(sf::Event* pEvent)
 		{
 			return true;
 		}
+		else if (m_pRoom_Container->userInput_keyPress(pEvent))
+		{
+			return true;
+		}
 
 	}
 	else if (pEvent->type == sf::Event::KeyReleased) // release
@@ -166,6 +170,11 @@ bool CGame::input_user(sf::Event* pEvent)
 		{
 			return true;
 		}
+		else if (m_pRoom_Container->userInput_keyRelease(pEvent))
+		{
+			return true;
+		}
+
 	}
 
 	// mouse

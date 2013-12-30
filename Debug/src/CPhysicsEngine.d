@@ -80,7 +80,8 @@ src/CPhysicsEngine.d: ../src/CPhysicsEngine.cpp ../src/CPhysicsEngine.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/CTile.h ../src/AUpdate.h ../src/DPhysics.h \
  ../src/IGetCollisionData.h ../src/CRoom_Container.h ../src/AUserInput.h \
- ../src/CRoom.h ../src/CUnit_Container.h ../src/CUnit.h ../src/Utills.h
+ ../src/CRoom.h ../src/CRoom_warehouse.h ../src/CRoom_kitchen.h \
+ ../src/CUnit_Container.h ../src/CUnit.h ../src/Utills.h
 
 ../src/CPhysicsEngine.h:
 
@@ -265,6 +266,10 @@ src/CPhysicsEngine.d: ../src/CPhysicsEngine.cpp ../src/CPhysicsEngine.h \
 ../src/AUserInput.h:
 
 ../src/CRoom.h:
+
+../src/CRoom_warehouse.h:
+
+../src/CRoom_kitchen.h:
 
 ../src/CUnit_Container.h:
 

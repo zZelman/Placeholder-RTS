@@ -75,11 +75,11 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/IRenderable.h ../src/CTexture.h ../src/CSprite.h ../src/AUpdate.h \
- ../src/IUpdateable.h ../src/CTile_Container.h \
+ ../src/IUpdateable.h ../src/DPhysics.h ../src/CTile_Container.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/DPhysics.h ../src/IGetCollisionData.h \
- ../src/CRoom_Container.h ../src/AUserInput.h
+ ../src/CTile.h ../src/IGetCollisionData.h ../src/CRoom_Container.h \
+ ../src/AUserInput.h ../src/CRoom_warehouse.h ../src/CRoom_kitchen.h
 
 ../src/CRoom.h:
 
@@ -245,6 +245,8 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
 
 ../src/IUpdateable.h:
 
+../src/DPhysics.h:
+
 ../src/CTile_Container.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
@@ -253,10 +255,12 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
 
 ../src/CTile.h:
 
-../src/DPhysics.h:
-
 ../src/IGetCollisionData.h:
 
 ../src/CRoom_Container.h:
 
 ../src/AUserInput.h:
+
+../src/CRoom_warehouse.h:
+
+../src/CRoom_kitchen.h:

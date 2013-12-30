@@ -84,15 +84,13 @@ bool CUnit_Container::userInput_keyRelease(sf::Event* pEvent)
 bool CUnit_Container::userInput_mousePress(sf::Event* pEvent)
 {
 	initUnit(pEvent->mouseButton.x, pEvent->mouseButton.y);
-	m_isMousePressed = true;
 	return true;
 }
 
 
 bool CUnit_Container::userInput_mouseRelease(sf::Event* pEvent)
 {
-	m_isMousePressed = false;
-	return true;
+	return false;
 }
 
 

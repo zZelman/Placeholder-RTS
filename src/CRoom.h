@@ -11,8 +11,8 @@
 #include "ARender.h"
 #include "AUpdate.h"
 #include "CSprite.h"
+#include "CTexture.h"
 #include "include_sfml.h"
-#include "CTile_Container.h"
 #include "DPhysics.h"
 
 // forward declare to prevent circular includes
@@ -22,19 +22,18 @@ class CRoom: public ARender, public AUpdate, public DPhysics
 {
 public:
 	CRoom(sf::RenderWindow* pWindow,
-	      CTile_Container* pGrid, CRoom_Container* pRoom_Container,
 	      CTexture* pTexture,
 	      const sf::Vector2<int>& currSub);
-	~CRoom();
+	virtual ~CRoom();
 
-	void update();
+	virtual void update();
 	void stepNormally();
 
-private:
-	CTile_Container* m_pGrid;
-	CRoom_Container* m_pRoom_Container;
+//private:
+//	CTile_Container* m_pGrid;
+//	CRoom_Container* m_pRoom_Container;
 
-	bool canMove_vertical();
+//	bool canMove_vertical();
 };
 
 #endif /* CROOM_H_ */

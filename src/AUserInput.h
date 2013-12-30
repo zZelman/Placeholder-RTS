@@ -38,9 +38,6 @@ protected:
 		// reset states
 		void nullStates();
 	} m_sKeys;
-
-	// state of the mouse
-	bool m_isMousePressed;
 };
 
 #endif /* IUSERINPUT_H_ */

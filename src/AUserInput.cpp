@@ -10,8 +10,6 @@
 AUserInput::AUserInput()
 {
 	m_sKeys.nullStates();
-
-	m_isMousePressed = false;
 }
 
 

@@ -36,9 +36,9 @@ CPhysicsEngine::~CPhysicsEngine()
 
 void CPhysicsEngine::update()
 {
-	// choice of collision detection
-	quadTree_collision();
-//	n2_collision();
+//	 choice of collision detection
+//	quadTree_collision();
+	n2_collision();
 }
 
 
@@ -52,7 +52,6 @@ void CPhysicsEngine::quadTree_collision()
 
 	// add all objects to the quad tree
 	m_pQuadTree->clear();
-	DPhysics* pPhysics;
 	for (std::list<ARender*>::iterator itr = totalObjects.begin();
 	        itr != totalObjects.end();
 	        ++itr)

@@ -1,6 +1,5 @@
-src/CRoom_Container.d: ../src/CRoom_Container.cpp \
- ../src/CRoom_Container.h ../src/IUpdateable.h ../src/AUserInput.h \
- ../src/include_sfml.h \
+src/CRoom_kitchen.d: ../src/CRoom_kitchen.cpp ../src/CRoom_kitchen.h \
+ ../src/CRoom.h ../src/ARender.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -75,18 +74,14 @@ src/CRoom_Container.d: ../src/CRoom_Container.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/IRenderable.h ../src/CRoom.h ../src/ARender.h ../src/CTexture.h \
- ../src/CSprite.h ../src/AUpdate.h ../src/DPhysics.h \
- ../src/CRoom_warehouse.h ../src/CRoom_kitchen.h ../src/CTile_Container.h \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/CTile.h ../src/IGetCollisionData.h
+ ../src/IRenderable.h ../src/CTexture.h ../src/CSprite.h ../src/AUpdate.h \
+ ../src/IUpdateable.h ../src/DPhysics.h
 
-../src/CRoom_Container.h:
+../src/CRoom_kitchen.h:
 
-../src/IUpdateable.h:
+../src/CRoom.h:
 
-../src/AUserInput.h:
+../src/ARender.h:
 
 ../src/include_sfml.h:
 
@@ -240,28 +235,12 @@ src/CRoom_Container.d: ../src/CRoom_Container.cpp \
 
 ../src/IRenderable.h:
 
-../src/CRoom.h:
-
-../src/ARender.h:
-
 ../src/CTexture.h:
 
 ../src/CSprite.h:
 
 ../src/AUpdate.h:
 
+../src/IUpdateable.h:
+
 ../src/DPhysics.h:
-
-../src/CRoom_warehouse.h:
-
-../src/CRoom_kitchen.h:
-
-../src/CTile_Container.h:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
-
-/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
-
-../src/CTile.h:
-
-../src/IGetCollisionData.h:
