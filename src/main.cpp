@@ -119,11 +119,34 @@ void testingRapidXML()
 }
 
 
+void functionToCall_1(int x, int y)
+{
+	std::cout << "1!! : " << x+y << std::endl;
+}
+
+void functionToCall_2(int x, int y)
+{
+	std::cout << "2!! : " << x*y << std::endl;
+}
+
+void chooseFunction(int x, int y, void (*functionToCall)(int, int))
+{
+	(*functionToCall)(x, y);
+}
+
+void testingFunctionPTRs()
+{
+	void (*funct)(int, int) = functionToCall_1;
+	chooseFunction(5, 5, funct);
+}
+
+
 int main()
 {
 //	testingBasics();
 //	testingThreads();
 //	testingRapidXML();
+//	testingFunctionPTRs();
 
 	CGame* pGame = new CGame();
 
