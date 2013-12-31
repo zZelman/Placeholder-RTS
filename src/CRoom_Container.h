@@ -58,6 +58,9 @@ private:
 		CTexture* kitchen;
 		CTexture* smithy;
 		CTexture* powerPlant;
+		CTexture* warSpawner;
+		CTexture* researchSpawner;
+		CTexture* supportSpawner;
 
 		void init_RoomTextures();
 		void delete_RoomTextures();
@@ -69,6 +72,9 @@ private:
 		sf::Keyboard::Key kitchen;
 		sf::Keyboard::Key smithy;
 		sf::Keyboard::Key powerPlant;
+		sf::Keyboard::Key warSpawner;
+		sf::Keyboard::Key researchSpawner;
+		sf::Keyboard::Key supportSpawner;
 
 	} m_sRoomSpawnKeys;
 
@@ -78,6 +84,9 @@ private:
 		int kitchen;
 		int smithy;
 		int powerPlant;
+		int warSpawner;
+		int researchSpawner;
+		int supportSpawner;
 
 		void nullAll();
 	} m_sNumRooms;
@@ -88,6 +97,9 @@ private:
 		bool kitchen;
 		bool smithy;
 		bool powerPlant;
+		bool warSpawner;
+		bool researchSpawner;
+		bool supportSpawner;
 
 		void nullAll();
 	} m_sRoomSpawnKeyStates;
@@ -103,18 +115,35 @@ private:
 		// * point to the data structs above (SRoomSpawnKeys SRoomSpawnKeyStates)
 		sf::Keyboard::Key* spawnKey;	// key (when pressed) that allows for spawning
 		bool* spawnKeyState;			// state of ^ key, true = pressed; false = !pressed
-		void (CRoom_Container::*spawnFunction)(int, int) = NULL; // function ptr to the appropriate room spawner function
+
+		// function ptr to the appropriate room spawner function
+		void (CRoom_Container::*spawnFunction)(int, int) = NULL;
 	} m_sSpawnInfo;
 
-	// uses the values within m_sSpawnInfo to deduce whether or not that specific room
-	//		can be spawned
+	// * called by the user input functions after the generic
+	//		information within m_sSpawnInfo has been set.
+	// * holds the specific information required by ALL of the user input
+	//		functions to spawn/update spawn conditions of rooms
+	bool roomSwitchboard();
+
+	// * A generic function that uses the information within m_sSpawnInfo to either
+	//		spawn a new room or update the spawn conditions of a room based on the
+	//		information within m_sSpawnInfo
+	// * THIS FUNCTION IS THE HEART AND SOUL OF THIS OBJECT
 	bool canSpawnRoom();
+
+	// utility function only really used by the constructor to set what key presses
+	//		are acceptable to spawn a room
+	void setRoomKeybinds();
 
 	// fills in the specific values of m_sSpawnInfo for the specific room
 	void setInfo_warehouse();
 	void setInfo_kitchen();
 	void setInfo_smithy();
 	void setInfo_powerPlant();
+	void setInfo_warSpawner();
+	void setInfo_researchSpawner();
+	void setInfo_supportSpawner();
 
 	// * Encapsulation of the ability to spawn the specific room
 	// * keyPressState is whether or not the key was pressed (true) or released (false)
@@ -129,7 +158,7 @@ private:
 	// * current spawn conditions:
 	//		- not within a current room
 	//		- not below a current room (must fall onto the top of the building)
-	bool canSpawn(int x, int y);
+	bool canSpawnAtPos(int x, int y);
 
 	// makes the given x,y coords into the (left,top) coords used by
 	//		sfml to create a room that is grid-aligned
@@ -141,6 +170,9 @@ private:
 	void spawnRoom_kitchen(int x, int y);
 	void spawnRoom_smithy(int x, int y);
 	void spawnRoom_powerPlant(int x, int y);
+	void spawnRoom_warSpawner(int x, int y);
+	void spawnRoom_researchSpawner(int x, int y);
+	void spawnRoom_supportSpawner(int x, int y);
 
 	// deletes a room
 	bool deleteRoom(int x, int y);

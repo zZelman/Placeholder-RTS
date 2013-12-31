@@ -80,7 +80,9 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/CTile.h ../src/IGetCollisionData.h ../src/CRoom_Container.h \
  ../src/AUserInput.h ../src/include_rooms.h ../src/CRoom_warehouse.h \
- ../src/CRoom_kitchen.h ../src/CRoom_smithy.h ../src/CRoom_powerPlant.h
+ ../src/CRoom_kitchen.h ../src/CRoom_smithy.h ../src/CRoom_powerPlant.h \
+ ../src/CRoom_warSpawner.h ../src/CRoom_researchSpawner.h \
+ ../src/CRoom_supportSpawner.h
 
 ../src/CRoom.h:
 
@@ -271,3 +273,9 @@ src/CRoom.d: ../src/CRoom.cpp ../src/CRoom.h ../src/ARender.h \
 ../src/CRoom_smithy.h:
 
 ../src/CRoom_powerPlant.h:
+
+../src/CRoom_warSpawner.h:
+
+../src/CRoom_researchSpawner.h:
+
+../src/CRoom_supportSpawner.h:

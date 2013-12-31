@@ -121,12 +121,12 @@ void testingRapidXML()
 
 void functionToCall_1(int x, int y)
 {
-	std::cout << "1!! : " << x+y << std::endl;
+	std::cout << "1!! : " << x + y << std::endl;
 }
 
 void functionToCall_2(int x, int y)
 {
-	std::cout << "2!! : " << x*y << std::endl;
+	std::cout << "2!! : " << x* y << std::endl;
 }
 
 void chooseFunction(int x, int y, void (*functionToCall)(int, int))

@@ -78,7 +78,9 @@ src/CRoom_Container.d: ../src/CRoom_Container.cpp \
  ../src/CTexture.h ../src/CSprite.h ../src/AUserInput.h \
  ../src/include_rooms.h ../src/CRoom.h ../src/AUpdate.h ../src/DPhysics.h \
  ../src/CRoom_warehouse.h ../src/CRoom_kitchen.h ../src/CRoom_smithy.h \
- ../src/CRoom_powerPlant.h ../src/CTile_Container.h \
+ ../src/CRoom_powerPlant.h ../src/CRoom_warSpawner.h \
+ ../src/CRoom_researchSpawner.h ../src/CRoom_supportSpawner.h \
+ ../src/CTile_Container.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/CTile.h
@@ -264,6 +266,12 @@ src/CRoom_Container.d: ../src/CRoom_Container.cpp \
 ../src/CRoom_smithy.h:
 
 ../src/CRoom_powerPlant.h:
+
+../src/CRoom_warSpawner.h:
+
+../src/CRoom_researchSpawner.h:
+
+../src/CRoom_supportSpawner.h:
 
 ../src/CTile_Container.h:
 

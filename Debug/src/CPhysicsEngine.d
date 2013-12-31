@@ -82,7 +82,9 @@ src/CPhysicsEngine.d: ../src/CPhysicsEngine.cpp ../src/CPhysicsEngine.h \
  ../src/IGetCollisionData.h ../src/CRoom_Container.h ../src/AUserInput.h \
  ../src/include_rooms.h ../src/CRoom.h ../src/CRoom_warehouse.h \
  ../src/CRoom_kitchen.h ../src/CRoom_smithy.h ../src/CRoom_powerPlant.h \
- ../src/CUnit_Container.h ../src/CUnit.h ../src/Utills.h
+ ../src/CRoom_warSpawner.h ../src/CRoom_researchSpawner.h \
+ ../src/CRoom_supportSpawner.h ../src/CUnit_Container.h ../src/CUnit.h \
+ ../src/Utills.h
 
 ../src/CPhysicsEngine.h:
 
@@ -277,6 +279,12 @@ src/CPhysicsEngine.d: ../src/CPhysicsEngine.cpp ../src/CPhysicsEngine.h \
 ../src/CRoom_smithy.h:
 
 ../src/CRoom_powerPlant.h:
+
+../src/CRoom_warSpawner.h:
+
+../src/CRoom_researchSpawner.h:
+
+../src/CRoom_supportSpawner.h:
 
 ../src/CUnit_Container.h:
 

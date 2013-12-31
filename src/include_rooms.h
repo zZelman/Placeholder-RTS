@@ -15,6 +15,9 @@
 #include "CRoom_kitchen.h"
 #include "CRoom_smithy.h"
 #include "CRoom_powerPlant.h"
+#include "CRoom_warSpawner.h"
+#include "CRoom_researchSpawner.h"
+#include "CRoom_supportSpawner.h"
 
 
 #endif /* ROOMS_H_ */

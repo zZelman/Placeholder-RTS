@@ -82,7 +82,8 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  ../src/CUnit.h ../src/Utills.h ../src/CRoom_Container.h \
  ../src/include_rooms.h ../src/CRoom.h ../src/CRoom_warehouse.h \
  ../src/CRoom_kitchen.h ../src/CRoom_smithy.h ../src/CRoom_powerPlant.h \
- ../src/CPhysicsEngine.h ../src/CQuadTree.h
+ ../src/CRoom_warSpawner.h ../src/CRoom_researchSpawner.h \
+ ../src/CRoom_supportSpawner.h ../src/CPhysicsEngine.h ../src/CQuadTree.h
 
 ../src/CGame.h:
 
@@ -281,6 +282,12 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/CRoom_smithy.h:
 
 ../src/CRoom_powerPlant.h:
+
+../src/CRoom_warSpawner.h:
+
+../src/CRoom_researchSpawner.h:
+
+../src/CRoom_supportSpawner.h:
 
 ../src/CPhysicsEngine.h:
 

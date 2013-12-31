@@ -10,11 +10,12 @@
 
 #include "CRoom.h"
 
-class CRoom_powerPlant: public CRoom {
+class CRoom_powerPlant: public CRoom
+{
 public:
 	CRoom_powerPlant(sf::RenderWindow* pWindow,
-            CTexture* pTexture,
-            const sf::Vector2<int>& currSub);
+	                 CTexture* pTexture,
+	                 const sf::Vector2<int>& currSub);
 	~CRoom_powerPlant();
 
 	void update();

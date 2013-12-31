@@ -10,11 +10,12 @@
 
 #include "CRoom.h"
 
-class CRoom_smithy: public CRoom {
+class CRoom_smithy: public CRoom
+{
 public:
 	CRoom_smithy(sf::RenderWindow* pWindow,
-            CTexture* pTexture,
-            const sf::Vector2<int>& currSub);
+	             CTexture* pTexture,
+	             const sf::Vector2<int>& currSub);
 	~CRoom_smithy();
 
 	void update();

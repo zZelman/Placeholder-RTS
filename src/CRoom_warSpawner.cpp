@@ -1,24 +1,24 @@
 /*
- * CRoom_powerPlant.cpp
+ * CRoom_war.cpp
  *
  *  Created on: Dec 31, 2013
  *      Author: zZelman
  */
 
-#include "CRoom_powerPlant.h"
+#include "CRoom_warSpawner.h"
 
-CRoom_powerPlant::CRoom_powerPlant(sf::RenderWindow* pWindow,
+CRoom_warSpawner::CRoom_warSpawner(sf::RenderWindow* pWindow,
                                    CTexture* pTexture,
                                    const sf::Vector2<int>& currSub) : CRoom(pWindow, pTexture, currSub)
 {
 
 }
 
-CRoom_powerPlant::~CRoom_powerPlant()
+CRoom_warSpawner::~CRoom_warSpawner()
 {
 }
 
-void CRoom_powerPlant::update()
+void CRoom_warSpawner::update()
 {
 	CRoom::update();
 }

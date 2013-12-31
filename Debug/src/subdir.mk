@@ -14,7 +14,10 @@ CPP_SRCS += \
 ../src/CRoom_Container.cpp \
 ../src/CRoom_kitchen.cpp \
 ../src/CRoom_powerPlant.cpp \
+../src/CRoom_researchSpawner.cpp \
 ../src/CRoom_smithy.cpp \
+../src/CRoom_supportSpawner.cpp \
+../src/CRoom_warSpawner.cpp \
 ../src/CRoom_warehouse.cpp \
 ../src/CSprite.cpp \
 ../src/CTexture.cpp \
@@ -40,7 +43,10 @@ OBJS += \
 ./src/CRoom_Container.o \
 ./src/CRoom_kitchen.o \
 ./src/CRoom_powerPlant.o \
+./src/CRoom_researchSpawner.o \
 ./src/CRoom_smithy.o \
+./src/CRoom_supportSpawner.o \
+./src/CRoom_warSpawner.o \
 ./src/CRoom_warehouse.o \
 ./src/CSprite.o \
 ./src/CTexture.o \
@@ -66,7 +72,10 @@ CPP_DEPS += \
 ./src/CRoom_Container.d \
 ./src/CRoom_kitchen.d \
 ./src/CRoom_powerPlant.d \
+./src/CRoom_researchSpawner.d \
 ./src/CRoom_smithy.d \
+./src/CRoom_supportSpawner.d \
+./src/CRoom_warSpawner.d \
 ./src/CRoom_warehouse.d \
 ./src/CSprite.d \
 ./src/CTexture.d \

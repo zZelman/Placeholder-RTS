@@ -9,7 +9,8 @@
 
 CRoom_warehouse::CRoom_warehouse(sf::RenderWindow* pWindow,
                                  CTexture* pTexture,
-                                 const sf::Vector2<int>& currSub) : CRoom(pWindow, pTexture, currSub)
+                                 const sf::Vector2<int>& currSub)
+	: CRoom(pWindow, pTexture, currSub)
 {
 
 }

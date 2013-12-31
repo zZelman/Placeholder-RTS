@@ -20,41 +20,64 @@ CRoom_Container::CRoom_Container(sf::RenderWindow* pWindow,
 	m_sKeys.left 	= sf::Keyboard::Left;
 	m_sKeys.right 	= sf::Keyboard::Right;
 
-	m_sRoomSpawnKeys.warehouse 		= sf::Keyboard::Num1;
-	m_sRoomSpawnKeys.kitchen 		= sf::Keyboard::Num2;
-	m_sRoomSpawnKeys.smithy 		= sf::Keyboard::Num3;
-	m_sRoomSpawnKeys.powerPlant 	= sf::Keyboard::Num4;
+	setRoomKeybinds();
 
 	m_sNumRooms.nullAll();
 	m_sRoomSpawnKeyStates.nullAll();
 }
 
 
-void CRoom_Container::SRoomTextures::init_RoomTextures() {
-	debug = new CTexture("res/Rooms/room 1x1.png",
-            sf::Vector2<int>(32, 32),
-            sf::Vector2<int>(1, 1));
-
-	warehouse = new CTexture("res/Rooms/warehouse.png",
-            sf::Vector2<int>(32, 32),
-            sf::Vector2<int>(1, 1));
-
-	kitchen = new CTexture("res/Rooms/kitchen.png",
-            sf::Vector2<int>(64, 32),
-            sf::Vector2<int>(1, 1));
-
-	smithy = new CTexture("res/Rooms/smithy.png",
-            sf::Vector2<int>(32, 64),
-            sf::Vector2<int>(1, 1));
-
-	powerPlant = new CTexture("res/Rooms/powerPlant.png",
-            sf::Vector2<int>(64, 64),
-            sf::Vector2<int>(1, 1));
+void CRoom_Container::setRoomKeybinds()
+{
+	m_sRoomSpawnKeys.warehouse 			= sf::Keyboard::Num1;
+	m_sRoomSpawnKeys.kitchen 			= sf::Keyboard::Num2;
+	m_sRoomSpawnKeys.smithy 			= sf::Keyboard::Num3;
+	m_sRoomSpawnKeys.powerPlant 		= sf::Keyboard::Num4;
+	m_sRoomSpawnKeys.warSpawner			= sf::Keyboard::Num5;
+	m_sRoomSpawnKeys.researchSpawner	= sf::Keyboard::Num6;
+	m_sRoomSpawnKeys.supportSpawner		= sf::Keyboard::Num7;
 
 }
 
 
-void CRoom_Container::SRoomTextures::delete_RoomTextures() {
+void CRoom_Container::SRoomTextures::init_RoomTextures()
+{
+	debug = new CTexture("res/Rooms/room 1x1.png",
+	                     sf::Vector2<int>(32, 32),
+	                     sf::Vector2<int>(1, 1));
+
+	warehouse = new CTexture("res/Rooms/warehouse.png",
+	                         sf::Vector2<int>(32, 32),
+	                         sf::Vector2<int>(1, 1));
+
+	kitchen = new CTexture("res/Rooms/kitchen.png",
+	                       sf::Vector2<int>(64, 32),
+	                       sf::Vector2<int>(1, 1));
+
+	smithy = new CTexture("res/Rooms/smithy.png",
+	                      sf::Vector2<int>(32, 64),
+	                      sf::Vector2<int>(1, 1));
+
+	powerPlant = new CTexture("res/Rooms/powerPlant.png",
+	                          sf::Vector2<int>(64, 64),
+	                          sf::Vector2<int>(1, 1));
+
+	warSpawner = new CTexture("res/Rooms/warSpawner.png",
+	                          sf::Vector2<int>(32, 32),
+	                          sf::Vector2<int>(1, 1));
+
+	researchSpawner = new CTexture("res/Rooms/researchSpawner.png",
+	                               sf::Vector2<int>(64, 32),
+	                               sf::Vector2<int>(1, 1));
+
+	supportSpawner = new CTexture("res/Rooms/supportSpawner.png",
+	                              sf::Vector2<int>(32, 32),
+	                              sf::Vector2<int>(1, 1));
+}
+
+
+void CRoom_Container::SRoomTextures::delete_RoomTextures()
+{
 	delete debug;
 	debug = NULL;
 
@@ -69,6 +92,15 @@ void CRoom_Container::SRoomTextures::delete_RoomTextures() {
 
 	delete powerPlant;
 	powerPlant = NULL;
+
+	delete warSpawner;
+	warSpawner = NULL;
+
+	delete researchSpawner;
+	researchSpawner = NULL;
+
+	delete supportSpawner;
+	supportSpawner = NULL;
 }
 
 CRoom_Container::~CRoom_Container()
@@ -128,32 +160,7 @@ bool CRoom_Container::userInput_keyPress(sf::Event* pEvent)
 	m_sSpawnInfo.keyPressState = true;
 	m_sSpawnInfo.pEvent = pEvent;
 
-	// WAREHOUSE
-	// set specific values
-	setInfo_warehouse();
-	if (canSpawnRoom())
-	{
-		return true;
-	}
-
-	// KITCHEN
-	// set specific values
-	setInfo_kitchen();
-	if (canSpawnRoom())
-	{
-		return true;
-	}
-
-	// SMITHY
-	setInfo_smithy();
-	if (canSpawnRoom())
-	{
-		return true;
-	}
-
-	// POWER PLANT
-	setInfo_powerPlant();
-	if (canSpawnRoom())
+	if (roomSwitchboard() == true)
 	{
 		return true;
 	}
@@ -174,30 +181,7 @@ bool CRoom_Container::userInput_keyRelease(sf::Event* pEvent)
 	m_sSpawnInfo.keyPressState = false;
 	m_sSpawnInfo.pEvent = pEvent;
 
-	// WAREHOUSE
-	setInfo_warehouse();
-	if (canSpawnRoom())
-	{
-		return true;
-	}
-
-	// KITCHEN
-	setInfo_kitchen();
-	if (canSpawnRoom())
-	{
-		return true;
-	}
-
-	// SMITHY
-	setInfo_smithy();
-	if (canSpawnRoom())
-	{
-		return true;
-	}
-
-	// POWER PLANT
-	setInfo_powerPlant();
-	if (canSpawnRoom())
+	if (roomSwitchboard() == true)
 	{
 		return true;
 	}
@@ -220,30 +204,7 @@ bool CRoom_Container::userInput_mousePress(sf::Event* pEvent)
 		m_sSpawnInfo.keyPressState = true;
 		m_sSpawnInfo.pEvent = pEvent;
 
-		// WAREHOUSE
-		setInfo_warehouse();
-		if (canSpawnRoom())
-		{
-			return true;
-		}
-
-		// KITCHEN
-		setInfo_kitchen();
-		if (canSpawnRoom())
-		{
-			return true;
-		}
-
-		// SMITHY
-		setInfo_smithy();
-		if (canSpawnRoom())
-		{
-			return true;
-		}
-
-		// POWER PLANT
-		setInfo_powerPlant();
-		if (canSpawnRoom())
+		if (roomSwitchboard() == true)
 		{
 			return true;
 		}
@@ -296,7 +257,63 @@ bool CRoom_Container::isCollision(const sf::Rect<float>& rect, CRoom*& pRoom)
 }
 
 
-bool CRoom_Container::canSpawnRoom() {
+bool CRoom_Container::roomSwitchboard()
+{
+	// WAREHOUSE
+	setInfo_warehouse();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	// KITCHEN
+	setInfo_kitchen();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	// SMITHY
+	setInfo_smithy();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	// POWER PLANT
+	setInfo_powerPlant();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	// WAR SPAWNER
+	setInfo_warSpawner();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	// RESEARCH SPAWNER
+	setInfo_researchSpawner();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	// SUPPORT SPAWNER
+	setInfo_supportSpawner();
+	if (canSpawnRoom())
+	{
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CRoom_Container::canSpawnRoom()
+{
 	// mouse click (keyPressState describes whether or not it is on or off)
 	if (m_sSpawnInfo.isMouse == true)
 	{
@@ -305,7 +322,7 @@ bool CRoom_Container::canSpawnRoom() {
 
 		// click needs to be not in a room, and above a
 		//	room that is on the same x coords to pass
-		if (canSpawn(x, y) == false)
+		if (canSpawnAtPos(x, y) == false)
 		{
 			return false;
 		}
@@ -314,7 +331,8 @@ bool CRoom_Container::canSpawnRoom() {
 		normalizeToGrid(&x, &y);
 
 		// mouse was pressed
-		if (m_sSpawnInfo.keyPressState == true && *(m_sSpawnInfo.spawnKeyState) == true)
+		if (m_sSpawnInfo.keyPressState == true
+		        && *(m_sSpawnInfo.spawnKeyState) == true)
 		{
 			// call the specified spawner function by resolving scope to this object,
 			//	then derefferenceing the function pointer, and then passing the arguments
@@ -323,7 +341,8 @@ bool CRoom_Container::canSpawnRoom() {
 			return true;
 		}
 		// Mouse released
-		else if (m_sSpawnInfo.keyPressState == false && *(m_sSpawnInfo.spawnKeyState) == true)
+		else if (m_sSpawnInfo.keyPressState == false
+		         && *(m_sSpawnInfo.spawnKeyState) == true)
 		{
 
 		}
@@ -331,13 +350,15 @@ bool CRoom_Container::canSpawnRoom() {
 	else // key click
 	{
 		// key pressed
-		if (m_sSpawnInfo.keyPressState == true && m_sSpawnInfo.pEvent->key.code == *(m_sSpawnInfo.spawnKey))
+		if (m_sSpawnInfo.keyPressState == true
+		        && m_sSpawnInfo.pEvent->key.code == *(m_sSpawnInfo.spawnKey))
 		{
 			*(m_sSpawnInfo.spawnKeyState) = true;
 			return true;
 		}
 		// key released
-		else if (m_sSpawnInfo.keyPressState == false && m_sSpawnInfo.pEvent->key.code == *(m_sSpawnInfo.spawnKey))
+		else if (m_sSpawnInfo.keyPressState == false
+		         && m_sSpawnInfo.pEvent->key.code == *(m_sSpawnInfo.spawnKey))
 		{
 			*(m_sSpawnInfo.spawnKeyState) = false;
 			return true;
@@ -349,31 +370,59 @@ bool CRoom_Container::canSpawnRoom() {
 }
 
 
-void CRoom_Container::setInfo_warehouse() {
+void CRoom_Container::setInfo_warehouse()
+{
 	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.warehouse;
 	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.warehouse;
 	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_warehouse;
 }
 
 
-void CRoom_Container::setInfo_kitchen() {
+void CRoom_Container::setInfo_kitchen()
+{
 	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.kitchen;
 	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.kitchen;
 	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_kitchen;
 }
 
 
-void CRoom_Container::setInfo_smithy() {
+void CRoom_Container::setInfo_smithy()
+{
 	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.smithy;
 	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.smithy;
 	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_smithy;
 }
 
 
-void CRoom_Container::setInfo_powerPlant() {
+void CRoom_Container::setInfo_powerPlant()
+{
 	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.powerPlant;
 	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.powerPlant;
 	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_powerPlant;
+}
+
+
+void CRoom_Container::setInfo_warSpawner()
+{
+	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.warSpawner;
+	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.warSpawner;
+	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_warSpawner;
+}
+
+
+void CRoom_Container::setInfo_researchSpawner()
+{
+	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.researchSpawner;
+	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.researchSpawner;
+	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_researchSpawner;
+}
+
+
+void CRoom_Container::setInfo_supportSpawner()
+{
+	m_sSpawnInfo.spawnKey = &m_sRoomSpawnKeys.supportSpawner;
+	m_sSpawnInfo.spawnKeyState = &m_sRoomSpawnKeyStates.supportSpawner;
+	m_sSpawnInfo.spawnFunction = &CRoom_Container::spawnRoom_supportSpawner;
 }
 
 
@@ -387,7 +436,7 @@ bool CRoom_Container::canSpawnRoom_debug(bool keyPressState, bool isMouse, sf::E
 
 		// click needs to be not in a room, and above a
 		//	room that is on the same x coords to pass
-		if (canSpawn(x, y) == false)
+		if (canSpawnAtPos(x, y) == false)
 		{
 			return false;
 		}
@@ -423,7 +472,8 @@ bool CRoom_Container::canSpawnRoom_debug(bool keyPressState, bool isMouse, sf::E
 }
 
 
-bool CRoom_Container::canSpawn(int x, int y) {
+bool CRoom_Container::canSpawnAtPos(int x, int y)
+{
 	sf::FloatRect rect;
 	CRoom* pR;
 
@@ -475,7 +525,9 @@ void CRoom_Container::normalizeToGrid(int* x, int* y)
 
 void CRoom_Container::spawnRoom_debug(int x, int y)
 {
-	CRoom* pR = new CRoom(m_pWindow, m_sRoomTextures.debug, sf::Vector2<int>(1, 1));
+	CRoom* pR = new CRoom(m_pWindow,
+	                      m_sRoomTextures.debug,
+	                      sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
 }
@@ -483,7 +535,9 @@ void CRoom_Container::spawnRoom_debug(int x, int y)
 
 void CRoom_Container::spawnRoom_warehouse(int x, int y)
 {
-	CRoom_warehouse* pR = new CRoom_warehouse(m_pWindow, m_sRoomTextures.warehouse, sf::Vector2<int>(1, 1));
+	CRoom_warehouse* pR = new CRoom_warehouse(m_pWindow,
+	        m_sRoomTextures.warehouse,
+	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
 
@@ -493,7 +547,9 @@ void CRoom_Container::spawnRoom_warehouse(int x, int y)
 
 void CRoom_Container::spawnRoom_kitchen(int x, int y)
 {
-	CRoom_kitchen* pR = new CRoom_kitchen(m_pWindow, m_sRoomTextures.kitchen, sf::Vector2<int>(1, 1));
+	CRoom_kitchen* pR = new CRoom_kitchen(m_pWindow,
+	                                      m_sRoomTextures.kitchen,
+	                                      sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
 
@@ -503,20 +559,63 @@ void CRoom_Container::spawnRoom_kitchen(int x, int y)
 
 void CRoom_Container::spawnRoom_smithy(int x, int y)
 {
-	CRoom_smithy* pR = new CRoom_smithy(m_pWindow, m_sRoomTextures.smithy, sf::Vector2<int>(1, 1));
+	CRoom_smithy* pR = new CRoom_smithy(m_pWindow,
+	                                    m_sRoomTextures.smithy,
+	                                    sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
 
 	m_sNumRooms.smithy++;
 }
 
-void CRoom_Container::spawnRoom_powerPlant(int x, int y) {
-	CRoom_powerPlant* pR = new CRoom_powerPlant(m_pWindow, m_sRoomTextures.powerPlant, sf::Vector2<int>(1, 1));
+
+void CRoom_Container::spawnRoom_powerPlant(int x, int y)
+{
+	CRoom_powerPlant* pR = new CRoom_powerPlant(m_pWindow,
+	        m_sRoomTextures.powerPlant,
+	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
 
 	m_sNumRooms.powerPlant++;
 }
+
+
+void CRoom_Container::spawnRoom_warSpawner(int x, int y)
+{
+	CRoom_warSpawner* pR = new CRoom_warSpawner(m_pWindow,
+	        m_sRoomTextures.warSpawner,
+	        sf::Vector2<int>(1, 1));
+	pR->setPosition(x, y);
+	m_rooms.push_back(pR);
+
+	m_sNumRooms.warSpawner++;
+}
+
+
+void CRoom_Container::spawnRoom_researchSpawner(int x, int y)
+{
+	CRoom_researchSpawner* pR = new CRoom_researchSpawner(m_pWindow,
+	        m_sRoomTextures.researchSpawner,
+	        sf::Vector2<int>(1, 1));
+	pR->setPosition(x, y);
+	m_rooms.push_back(pR);
+
+	m_sNumRooms.researchSpawner++;
+}
+
+
+void CRoom_Container::spawnRoom_supportSpawner(int x, int y)
+{
+	CRoom_supportSpawner* pR = new CRoom_supportSpawner(m_pWindow,
+	        m_sRoomTextures.supportSpawner,
+	        sf::Vector2<int>(1, 1));
+	pR->setPosition(x, y);
+	m_rooms.push_back(pR);
+
+	m_sNumRooms.supportSpawner++;
+}
+
 
 bool CRoom_Container::deleteRoom(int x, int y)
 {
@@ -551,17 +650,27 @@ bool CRoom_Container::deleteRoom(int x, int y)
 
 void CRoom_Container::SNumRooms::nullAll()
 {
-	warehouse = 0;
-	kitchen = 0;
-	smithy = 0;
-	powerPlant = 0;
+	int val = 0;
+
+	warehouse 			= val;
+	kitchen 			= val;
+	smithy 				= val;
+	powerPlant 			= val;
+	warSpawner 			= val;
+	researchSpawner 	= val;
+	supportSpawner		= val;
 }
 
 
 void CRoom_Container::SRoomSpawnKeyStates::nullAll()
 {
-	warehouse = false;
-	kitchen = false;
-	smithy = false;
-	powerPlant = false;
+	bool val = false;
+
+	warehouse 			= val;
+	kitchen 			= val;
+	smithy 				= val;
+	powerPlant 			= val;
+	warSpawner 			= val;
+	researchSpawner 	= val;
+	supportSpawner		= val;
 }

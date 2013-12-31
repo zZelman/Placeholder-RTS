@@ -9,7 +9,6 @@
 #define CROOM_WAREHOUSE_H_
 
 #include "CRoom.h"
-#include "CSprite.h"
 #include "CTexture.h"
 #include "include_sfml.h"
 
