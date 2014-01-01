@@ -8,7 +8,7 @@
 #ifndef DPHYSICS_H_
 #define DPHYSICS_H_
 
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 
 class DPhysics
 {

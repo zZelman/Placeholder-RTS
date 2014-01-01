@@ -117,7 +117,8 @@ CRoom_Container::~CRoom_Container()
 }
 
 
-const SNumRooms* CRoom_Container::getNumRooms() const {
+const SNumRooms* CRoom_Container::getNumRooms() const
+{
 	return &m_sNumRooms;
 }
 

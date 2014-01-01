@@ -1,6 +1,6 @@
 src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
  ../src/Rooms/../Abstracts/ARender.h \
- ../src/Rooms/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Rooms/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -76,18 +76,17 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
- ../src/Rooms/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Rooms/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Rooms/../Abstracts/../Graphics/CSprite.h \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Rooms/../Abstracts/AUpdate.h \
  ../src/Rooms/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Rooms/../Graphics/CSprite.h ../src/Rooms/../Graphics/CTexture.h \
- ../src/Rooms/../Graphics/include_sfml.h \
- ../src/Rooms/../Physics/DPhysics.h \
- ../src/Rooms/../Physics/../Graphics/include_sfml.h \
+ ../src/Rooms/../include_sfml.h ../src/Rooms/../Physics/DPhysics.h \
+ ../src/Rooms/../Physics/../include_sfml.h \
  ../src/Rooms/../Tiles/CTile_Container.h \
- ../src/Rooms/../Tiles/../Graphics/include_sfml.h \
+ ../src/Rooms/../Tiles/../include_sfml.h \
  ../src/Rooms/../Tiles/../Interfaces/IUpdateable.h \
  ../src/Rooms/../Tiles/../Interfaces/IRenderable.h \
  ../src/Rooms/../Tiles/../Graphics/CTexture.h \
@@ -113,7 +112,7 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
 
 ../src/Rooms/../Abstracts/ARender.h:
 
-../src/Rooms/../Abstracts/../Graphics/include_sfml.h:
+../src/Rooms/../Abstracts/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -265,7 +264,7 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
 
 ../src/Rooms/../Abstracts/../Graphics/CTexture.h:
 
-../src/Rooms/../Abstracts/../Graphics/include_sfml.h:
+../src/Rooms/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Rooms/../Abstracts/../Graphics/CSprite.h:
 
@@ -281,15 +280,15 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
 
 ../src/Rooms/../Graphics/CTexture.h:
 
-../src/Rooms/../Graphics/include_sfml.h:
+../src/Rooms/../include_sfml.h:
 
 ../src/Rooms/../Physics/DPhysics.h:
 
-../src/Rooms/../Physics/../Graphics/include_sfml.h:
+../src/Rooms/../Physics/../include_sfml.h:
 
 ../src/Rooms/../Tiles/CTile_Container.h:
 
-../src/Rooms/../Tiles/../Graphics/include_sfml.h:
+../src/Rooms/../Tiles/../include_sfml.h:
 
 ../src/Rooms/../Tiles/../Interfaces/IUpdateable.h:
 

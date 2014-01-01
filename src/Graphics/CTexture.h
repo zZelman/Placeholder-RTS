@@ -8,7 +8,7 @@
 #ifndef CTEXTURE_H_
 #define CTEXTURE_H_
 
-#include "include_sfml.h"
+#include "../include_sfml.h"
 
 class CTexture : public sf::Texture
 {

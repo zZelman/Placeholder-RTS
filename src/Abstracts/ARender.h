@@ -8,7 +8,7 @@
 #ifndef ARENDER_H_
 #define ARENDER_H_
 
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Graphics/CTexture.h"
 #include "../Graphics/CSprite.h"
 

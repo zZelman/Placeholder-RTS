@@ -11,7 +11,7 @@
 #include "../Abstracts/ARender.h"
 #include "../Abstracts/AUpdate.h"
 #include "../Graphics/CSprite.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Tiles/CTile_Container.h"
 #include "../Utills.h"
 #include "../Physics/DPhysics.h"

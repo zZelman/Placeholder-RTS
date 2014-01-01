@@ -1,5 +1,5 @@
 src/Graphics/CTexture.d: ../src/Graphics/CTexture.cpp \
- ../src/Graphics/CTexture.h ../src/Graphics/include_sfml.h \
+ ../src/Graphics/CTexture.h ../src/Graphics/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -77,7 +77,7 @@ src/Graphics/CTexture.d: ../src/Graphics/CTexture.cpp \
 
 ../src/Graphics/CTexture.h:
 
-../src/Graphics/include_sfml.h:
+../src/Graphics/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 

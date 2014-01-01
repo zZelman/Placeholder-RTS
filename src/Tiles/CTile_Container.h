@@ -8,7 +8,7 @@
 #ifndef CTILE_CONTAINER_H_
 #define CTILE_CONTAINER_H_
 
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Interfaces/IUpdateable.h"
 #include "../Interfaces/IRenderable.h"
 #include "../Graphics/CTexture.h"

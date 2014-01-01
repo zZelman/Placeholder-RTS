@@ -8,7 +8,7 @@
 #ifndef CGAME_H_
 #define CGAME_H_
 
-#include "Graphics/include_sfml.h"
+#include "include_sfml.h"
 #include "Graphics/CSprite.h"
 #include "Graphics/CTexture.h"
 #include "Interfaces/IUpdateable.h"
@@ -16,6 +16,7 @@
 #include "Units/CUnit_Container.h"
 #include "Rooms/CRoom_Container.h"
 #include "Physics/CPhysicsEngine.h"
+#include "Logic/CGameLogic.h"
 #include "HUD/CHUD.h"
 
 class CGame : public IUpdateable
@@ -38,6 +39,7 @@ private:
 	CUnit_Container* m_pUnit_Container;
 	CRoom_Container* m_pRoom_Container;
 	CPhysicsEngine* m_pPhysicsEngine;
+	CGameLogic* m_pGameLogic;
 	CHUD* m_pHUD;
 
 	bool isRunning;

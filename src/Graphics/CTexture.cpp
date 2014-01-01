@@ -6,7 +6,7 @@
  */
 
 #include "CTexture.h"
-#include "include_sfml.h"
+#include "../include_sfml.h"
 #include <assert.h>
 
 

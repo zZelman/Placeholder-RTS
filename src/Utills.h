@@ -8,7 +8,7 @@
 #ifndef UTILLS_H_
 #define UTILLS_H_
 
-#include "Graphics/include_sfml.h"
+#include "include_sfml.h"
 
 // arbitrary direction bools
 struct SDirections

@@ -8,7 +8,7 @@
 #ifndef CQUADTREE_H_
 #define CQUADTREE_H_
 
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Abstracts/ARender.h"
 
 #include <vector>

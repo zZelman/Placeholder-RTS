@@ -1,5 +1,5 @@
 src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
- ../src/Tiles/CTile_Container.h ../src/Tiles/../Graphics/include_sfml.h \
+ ../src/Tiles/CTile_Container.h ../src/Tiles/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -77,25 +77,25 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
  ../src/Tiles/../Interfaces/IUpdateable.h \
  ../src/Tiles/../Interfaces/IRenderable.h \
  ../src/Tiles/../Graphics/CTexture.h \
- ../src/Tiles/../Graphics/include_sfml.h \
+ ../src/Tiles/../Graphics/../include_sfml.h \
  ../src/Tiles/../Graphics/CSprite.h ../src/Tiles/../Graphics/CTexture.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Tiles/CTile.h ../src/Tiles/../Abstracts/ARender.h \
- ../src/Tiles/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Tiles/../Abstracts/../include_sfml.h \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
  ../src/Tiles/../Abstracts/../Graphics/CSprite.h \
  ../src/Tiles/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Tiles/../Abstracts/AUpdate.h \
  ../src/Tiles/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Tiles/../Physics/DPhysics.h \
- ../src/Tiles/../Physics/../Graphics/include_sfml.h \
+ ../src/Tiles/../Physics/../include_sfml.h \
  ../src/Tiles/../Interfaces/IGetCollisionData.h \
  ../src/Tiles/../Interfaces/../Abstracts/ARender.h
 
 ../src/Tiles/CTile_Container.h:
 
-../src/Tiles/../Graphics/include_sfml.h:
+../src/Tiles/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -251,7 +251,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
 
 ../src/Tiles/../Graphics/CTexture.h:
 
-../src/Tiles/../Graphics/include_sfml.h:
+../src/Tiles/../Graphics/../include_sfml.h:
 
 ../src/Tiles/../Graphics/CSprite.h:
 
@@ -265,7 +265,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
 
 ../src/Tiles/../Abstracts/ARender.h:
 
-../src/Tiles/../Abstracts/../Graphics/include_sfml.h:
+../src/Tiles/../Abstracts/../include_sfml.h:
 
 ../src/Tiles/../Abstracts/../Graphics/CTexture.h:
 
@@ -279,7 +279,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
 
 ../src/Tiles/../Physics/DPhysics.h:
 
-../src/Tiles/../Physics/../Graphics/include_sfml.h:
+../src/Tiles/../Physics/../include_sfml.h:
 
 ../src/Tiles/../Interfaces/IGetCollisionData.h:
 

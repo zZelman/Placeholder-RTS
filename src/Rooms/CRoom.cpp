@@ -6,7 +6,7 @@
  */
 
 #include "CRoom.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Tiles/CTile_Container.h"
 #include "CRoom_Container.h"
 #include <iostream>

@@ -9,18 +9,21 @@
 #define CHUD_H_
 
 #include "../Interfaces/IRenderable.h"
+
 #include "../Abstracts/AUpdate.h"
 #include "../Abstracts/AUserInput.h"
 
 #include "../Rooms/CRoom_Container.h"
 
-#include "../Graphics/include_sfml.h"
+#include "../Logic/CGameLogic.h"
 
-//struct SNumRooms;
+#include "../include_sfml.h"
 
-class CHUD: public IRenderable, public AUpdate, public AUserInput {
+
+class CHUD: public IRenderable, public AUpdate, public AUserInput
+{
 public:
-	CHUD(sf::RenderWindow* pWindow, CRoom_Container* pRoomContainer);
+	CHUD(sf::RenderWindow* pWindow, CGameLogic* pGameLogic);
 	~CHUD();
 
 	void render();
@@ -35,9 +38,10 @@ public:
 
 private:
 	sf::RenderWindow* m_pWindow;
-	CRoom_Container* m_pRoomContainer;
-	const struct SNumRooms* m_psNumRooms;
+	CGameLogic* m_pGameLogic;
 
+	static const int m_fontSize = 15;
+	sf::Color m_fontColor;
 	sf::Font m_font;
 	sf::Text m_text;
 };

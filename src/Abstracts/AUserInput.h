@@ -8,7 +8,7 @@
 #ifndef AUSERINPUT_H_
 #define AUSERINPUT_H_
 
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 
 class AUserInput
 {

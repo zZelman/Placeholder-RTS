@@ -10,7 +10,7 @@
 
 #include "CRoom.h"
 #include "../Graphics/CTexture.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 
 class CRoom_warehouse: public CRoom
 {

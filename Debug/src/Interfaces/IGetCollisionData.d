@@ -2,7 +2,7 @@ src/Interfaces/IGetCollisionData.d: \
  ../src/Interfaces/IGetCollisionData.cpp \
  ../src/Interfaces/IGetCollisionData.h \
  ../src/Interfaces/../Abstracts/ARender.h \
- ../src/Interfaces/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Interfaces/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -78,7 +78,7 @@ src/Interfaces/IGetCollisionData.d: \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Interfaces/../Abstracts/../Graphics/CTexture.h \
- ../src/Interfaces/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Interfaces/../Abstracts/../Graphics/CSprite.h \
  ../src/Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Interfaces/../Abstracts/../Interfaces/IRenderable.h
@@ -87,7 +87,7 @@ src/Interfaces/IGetCollisionData.d: \
 
 ../src/Interfaces/../Abstracts/ARender.h:
 
-../src/Interfaces/../Abstracts/../Graphics/include_sfml.h:
+../src/Interfaces/../Abstracts/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -239,7 +239,7 @@ src/Interfaces/IGetCollisionData.d: \
 
 ../src/Interfaces/../Abstracts/../Graphics/CTexture.h:
 
-../src/Interfaces/../Abstracts/../Graphics/include_sfml.h:
+../src/Interfaces/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Interfaces/../Abstracts/../Graphics/CSprite.h:
 

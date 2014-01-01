@@ -18,7 +18,9 @@ CGame::CGame()
 	                                      m_pRoom_Container,
 	                                      m_pUnit_Container);
 
-	m_pHUD = new CHUD(m_pWindow, m_pRoom_Container);
+	m_pGameLogic = new CGameLogic(m_pRoom_Container);
+
+	m_pHUD = new CHUD(m_pWindow, m_pGameLogic);
 
 
 	// re-work the window to be dependent on the amount of tiles in the world
@@ -54,6 +56,9 @@ CGame::~CGame()
 
 	delete m_pHUD;
 	m_pHUD = NULL;
+
+	delete m_pGameLogic;
+	m_pGameLogic = NULL;
 }
 
 
@@ -255,6 +260,8 @@ void CGame::update()
 	m_pRoom_Container->update();
 
 	m_pPhysicsEngine->update();
+
+	m_pGameLogic->update();
 
 	m_pHUD->update();
 

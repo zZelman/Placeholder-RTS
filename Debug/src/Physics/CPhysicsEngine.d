@@ -1,6 +1,6 @@
 src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/CPhysicsEngine.h ../src/Physics/CQuadTree.h \
- ../src/Physics/../Graphics/include_sfml.h \
+ ../src/Physics/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -76,14 +76,14 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Physics/../Abstracts/ARender.h \
- ../src/Physics/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Physics/../Abstracts/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
- ../src/Physics/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Physics/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CSprite.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
  ../src/Physics/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Physics/../Tiles/CTile_Container.h \
- ../src/Physics/../Tiles/../Graphics/include_sfml.h \
+ ../src/Physics/../Tiles/../include_sfml.h \
  ../src/Physics/../Tiles/../Interfaces/IUpdateable.h \
  ../src/Physics/../Tiles/../Interfaces/IRenderable.h \
  ../src/Physics/../Tiles/../Graphics/CTexture.h \
@@ -95,7 +95,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Tiles/../Abstracts/AUpdate.h \
  ../src/Physics/../Tiles/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Physics/../Tiles/../Physics/DPhysics.h \
- ../src/Physics/../Tiles/../Physics/../Graphics/include_sfml.h \
+ ../src/Physics/../Tiles/../Physics/../include_sfml.h \
  ../src/Physics/../Tiles/../Interfaces/IGetCollisionData.h \
  ../src/Physics/../Tiles/../Interfaces/../Abstracts/ARender.h \
  ../src/Physics/../Rooms/CRoom_Container.h \
@@ -103,8 +103,8 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Rooms/../Interfaces/IRenderable.h \
  ../src/Physics/../Rooms/../Interfaces/IGetCollisionData.h \
  ../src/Physics/../Rooms/../Abstracts/AUserInput.h \
- ../src/Physics/../Rooms/../Abstracts/../Graphics/include_sfml.h \
- ../src/Physics/../Rooms/../Graphics/include_sfml.h \
+ ../src/Physics/../Rooms/../Abstracts/../include_sfml.h \
+ ../src/Physics/../Rooms/../include_sfml.h \
  ../src/Physics/../Rooms/include_rooms.h ../src/Physics/../Rooms/CRoom.h \
  ../src/Physics/../Rooms/../Abstracts/ARender.h \
  ../src/Physics/../Rooms/../Abstracts/AUpdate.h \
@@ -123,14 +123,14 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Units/../Interfaces/IUpdateable.h \
  ../src/Physics/../Units/../Abstracts/AUserInput.h \
  ../src/Physics/../Units/../Interfaces/IRenderable.h \
- ../src/Physics/../Units/../Graphics/include_sfml.h \
+ ../src/Physics/../Units/../include_sfml.h \
  ../src/Physics/../Units/CUnit.h \
  ../src/Physics/../Units/../Abstracts/ARender.h \
  ../src/Physics/../Units/../Abstracts/AUpdate.h \
  ../src/Physics/../Units/../Graphics/CSprite.h \
  ../src/Physics/../Units/../Tiles/CTile_Container.h \
  ../src/Physics/../Units/../Utills.h \
- ../src/Physics/../Units/../Graphics/include_sfml.h \
+ ../src/Physics/../Units/../include_sfml.h \
  ../src/Physics/../Units/../Physics/DPhysics.h \
  ../src/Physics/../Units/../Interfaces/IGetCollisionData.h \
  ../src/Physics/../Interfaces/IUpdateable.h \
@@ -140,7 +140,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/CQuadTree.h:
 
-../src/Physics/../Graphics/include_sfml.h:
+../src/Physics/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -292,11 +292,11 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Abstracts/ARender.h:
 
-../src/Physics/../Abstracts/../Graphics/include_sfml.h:
+../src/Physics/../Abstracts/../include_sfml.h:
 
 ../src/Physics/../Abstracts/../Graphics/CTexture.h:
 
-../src/Physics/../Abstracts/../Graphics/include_sfml.h:
+../src/Physics/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Physics/../Abstracts/../Graphics/CSprite.h:
 
@@ -306,7 +306,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Tiles/CTile_Container.h:
 
-../src/Physics/../Tiles/../Graphics/include_sfml.h:
+../src/Physics/../Tiles/../include_sfml.h:
 
 ../src/Physics/../Tiles/../Interfaces/IUpdateable.h:
 
@@ -330,7 +330,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Tiles/../Physics/DPhysics.h:
 
-../src/Physics/../Tiles/../Physics/../Graphics/include_sfml.h:
+../src/Physics/../Tiles/../Physics/../include_sfml.h:
 
 ../src/Physics/../Tiles/../Interfaces/IGetCollisionData.h:
 
@@ -346,9 +346,9 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Rooms/../Abstracts/AUserInput.h:
 
-../src/Physics/../Rooms/../Abstracts/../Graphics/include_sfml.h:
+../src/Physics/../Rooms/../Abstracts/../include_sfml.h:
 
-../src/Physics/../Rooms/../Graphics/include_sfml.h:
+../src/Physics/../Rooms/../include_sfml.h:
 
 ../src/Physics/../Rooms/include_rooms.h:
 
@@ -388,7 +388,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Units/../Interfaces/IRenderable.h:
 
-../src/Physics/../Units/../Graphics/include_sfml.h:
+../src/Physics/../Units/../include_sfml.h:
 
 ../src/Physics/../Units/CUnit.h:
 
@@ -402,7 +402,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Units/../Utills.h:
 
-../src/Physics/../Units/../Graphics/include_sfml.h:
+../src/Physics/../Units/../include_sfml.h:
 
 ../src/Physics/../Units/../Physics/DPhysics.h:
 

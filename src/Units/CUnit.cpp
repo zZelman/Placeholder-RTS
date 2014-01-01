@@ -9,7 +9,7 @@
 #include "../Graphics/CTexture.h"
 #include "../Graphics/CSprite.h"
 #include "../Tiles/CTile_Container.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include <iostream>
 
 CUnit::CUnit(sf::RenderWindow* pWindow,

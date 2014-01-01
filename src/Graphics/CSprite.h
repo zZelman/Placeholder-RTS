@@ -8,7 +8,7 @@
 #ifndef CSPRITE_H_
 #define CSPRITE_H_
 
-#include "include_sfml.h"
+#include "../include_sfml.h"
 #include "CTexture.h"
 
 class CSprite : public sf::Sprite

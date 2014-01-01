@@ -12,6 +12,7 @@ RM := rm -rf
 -include src/Tiles/subdir.mk
 -include src/Rooms/subdir.mk
 -include src/Physics/subdir.mk
+-include src/Logic/subdir.mk
 -include src/Interfaces/subdir.mk
 -include src/HUD/subdir.mk
 -include src/Graphics/subdir.mk

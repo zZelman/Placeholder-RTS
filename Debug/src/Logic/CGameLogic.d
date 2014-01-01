@@ -1,5 +1,7 @@
-src/Abstracts/AUserInput.d: ../src/Abstracts/AUserInput.cpp \
- ../src/Abstracts/AUserInput.h ../src/Abstracts/../include_sfml.h \
+src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
+ ../src/Logic/CGameLogic.h ../src/Logic/../Abstracts/AUpdate.h \
+ ../src/Logic/../Abstracts/../Interfaces/IUpdateable.h \
+ ../src/Logic/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -73,11 +75,56 @@ src/Abstracts/AUserInput.d: ../src/Abstracts/AUserInput.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/Sound.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
- /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp
+ /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
+ ../src/Logic/../Rooms/CRoom_Container.h \
+ ../src/Logic/../Rooms/../Interfaces/IUpdateable.h \
+ ../src/Logic/../Rooms/../Interfaces/IRenderable.h \
+ ../src/Logic/../Rooms/../Interfaces/IGetCollisionData.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/ARender.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../include_sfml.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h \
+ ../src/Logic/../Rooms/../Abstracts/AUserInput.h \
+ ../src/Logic/../Rooms/../Abstracts/../include_sfml.h \
+ ../src/Logic/../Rooms/../include_sfml.h \
+ ../src/Logic/../Rooms/include_rooms.h ../src/Logic/../Rooms/CRoom.h \
+ ../src/Logic/../Rooms/../Abstracts/ARender.h \
+ ../src/Logic/../Rooms/../Abstracts/AUpdate.h \
+ ../src/Logic/../Rooms/../Graphics/CSprite.h \
+ ../src/Logic/../Rooms/../Graphics/CTexture.h \
+ ../src/Logic/../Rooms/../Physics/DPhysics.h \
+ ../src/Logic/../Rooms/../Physics/../include_sfml.h \
+ ../src/Logic/../Rooms/CRoom_warehouse.h \
+ ../src/Logic/../Rooms/CRoom_kitchen.h \
+ ../src/Logic/../Rooms/CRoom_smithy.h \
+ ../src/Logic/../Rooms/CRoom_powerPlant.h \
+ ../src/Logic/../Rooms/CRoom_warSpawner.h \
+ ../src/Logic/../Rooms/CRoom_researchSpawner.h \
+ ../src/Logic/../Rooms/CRoom_supportSpawner.h \
+ ../src/Logic/../Rooms/../Tiles/CTile_Container.h \
+ ../src/Logic/../Rooms/../Tiles/../include_sfml.h \
+ ../src/Logic/../Rooms/../Tiles/../Interfaces/IUpdateable.h \
+ ../src/Logic/../Rooms/../Tiles/../Interfaces/IRenderable.h \
+ ../src/Logic/../Rooms/../Tiles/../Graphics/CTexture.h \
+ ../src/Logic/../Rooms/../Tiles/../Graphics/CSprite.h \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
+ ../src/Logic/../Rooms/../Tiles/CTile.h \
+ ../src/Logic/../Rooms/../Tiles/../Abstracts/ARender.h \
+ ../src/Logic/../Rooms/../Tiles/../Abstracts/AUpdate.h \
+ ../src/Logic/../Rooms/../Tiles/../Physics/DPhysics.h \
+ ../src/Logic/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h
 
-../src/Abstracts/AUserInput.h:
+../src/Logic/CGameLogic.h:
 
-../src/Abstracts/../include_sfml.h:
+../src/Logic/../Abstracts/AUpdate.h:
+
+../src/Logic/../Abstracts/../Interfaces/IUpdateable.h:
+
+../src/Logic/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -226,3 +273,87 @@ src/Abstracts/AUserInput.d: ../src/Abstracts/AUserInput.cpp \
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
+
+../src/Logic/../Rooms/CRoom_Container.h:
+
+../src/Logic/../Rooms/../Interfaces/IUpdateable.h:
+
+../src/Logic/../Rooms/../Interfaces/IRenderable.h:
+
+../src/Logic/../Rooms/../Interfaces/IGetCollisionData.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/ARender.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../include_sfml.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
+
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h:
+
+../src/Logic/../Rooms/../Abstracts/AUserInput.h:
+
+../src/Logic/../Rooms/../Abstracts/../include_sfml.h:
+
+../src/Logic/../Rooms/../include_sfml.h:
+
+../src/Logic/../Rooms/include_rooms.h:
+
+../src/Logic/../Rooms/CRoom.h:
+
+../src/Logic/../Rooms/../Abstracts/ARender.h:
+
+../src/Logic/../Rooms/../Abstracts/AUpdate.h:
+
+../src/Logic/../Rooms/../Graphics/CSprite.h:
+
+../src/Logic/../Rooms/../Graphics/CTexture.h:
+
+../src/Logic/../Rooms/../Physics/DPhysics.h:
+
+../src/Logic/../Rooms/../Physics/../include_sfml.h:
+
+../src/Logic/../Rooms/CRoom_warehouse.h:
+
+../src/Logic/../Rooms/CRoom_kitchen.h:
+
+../src/Logic/../Rooms/CRoom_smithy.h:
+
+../src/Logic/../Rooms/CRoom_powerPlant.h:
+
+../src/Logic/../Rooms/CRoom_warSpawner.h:
+
+../src/Logic/../Rooms/CRoom_researchSpawner.h:
+
+../src/Logic/../Rooms/CRoom_supportSpawner.h:
+
+../src/Logic/../Rooms/../Tiles/CTile_Container.h:
+
+../src/Logic/../Rooms/../Tiles/../include_sfml.h:
+
+../src/Logic/../Rooms/../Tiles/../Interfaces/IUpdateable.h:
+
+../src/Logic/../Rooms/../Tiles/../Interfaces/IRenderable.h:
+
+../src/Logic/../Rooms/../Tiles/../Graphics/CTexture.h:
+
+../src/Logic/../Rooms/../Tiles/../Graphics/CSprite.h:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
+
+../src/Logic/../Rooms/../Tiles/CTile.h:
+
+../src/Logic/../Rooms/../Tiles/../Abstracts/ARender.h:
+
+../src/Logic/../Rooms/../Tiles/../Abstracts/AUpdate.h:
+
+../src/Logic/../Rooms/../Tiles/../Physics/DPhysics.h:
+
+../src/Logic/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h:

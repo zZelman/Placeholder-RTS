@@ -7,7 +7,7 @@
 
 #include "CUnit_Container.h"
 #include "../Graphics/CTexture.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 
 
 CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CTile_Container* pGrid)

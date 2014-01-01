@@ -28,6 +28,7 @@ src/Units \
 src/Tiles \
 src/Rooms \
 src/Physics \
+src/Logic \
 src/Interfaces \
 src/HUD \
 src/Graphics \

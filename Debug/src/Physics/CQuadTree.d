@@ -1,5 +1,5 @@
 src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
- ../src/Physics/CQuadTree.h ../src/Physics/../Graphics/include_sfml.h \
+ ../src/Physics/CQuadTree.h ../src/Physics/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -75,16 +75,16 @@ src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Physics/../Abstracts/ARender.h \
- ../src/Physics/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Physics/../Abstracts/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
- ../src/Physics/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Physics/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CSprite.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
  ../src/Physics/../Abstracts/../Interfaces/IRenderable.h
 
 ../src/Physics/CQuadTree.h:
 
-../src/Physics/../Graphics/include_sfml.h:
+../src/Physics/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -236,11 +236,11 @@ src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
 
 ../src/Physics/../Abstracts/ARender.h:
 
-../src/Physics/../Abstracts/../Graphics/include_sfml.h:
+../src/Physics/../Abstracts/../include_sfml.h:
 
 ../src/Physics/../Abstracts/../Graphics/CTexture.h:
 
-../src/Physics/../Abstracts/../Graphics/include_sfml.h:
+../src/Physics/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Physics/../Abstracts/../Graphics/CSprite.h:
 

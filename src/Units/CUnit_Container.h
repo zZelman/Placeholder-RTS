@@ -11,7 +11,7 @@
 #include "../Interfaces/IUpdateable.h"
 #include "../Abstracts/AUserInput.h"
 #include "../Interfaces/IRenderable.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "CUnit.h"
 #include "../Tiles/CTile_Container.h"
 #include <vector>

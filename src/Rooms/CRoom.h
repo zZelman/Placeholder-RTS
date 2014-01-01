@@ -12,7 +12,7 @@
 #include "../Abstracts/AUpdate.h"
 #include "../Graphics/CSprite.h"
 #include "../Graphics/CTexture.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Physics/DPhysics.h"
 
 // forward declare to prevent circular includes

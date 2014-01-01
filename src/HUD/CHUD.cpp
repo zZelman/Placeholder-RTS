@@ -9,34 +9,37 @@
 #include <string>
 #include <sstream>
 
-CHUD::CHUD(sf::RenderWindow* pWindow, CRoom_Container* pRoomContainer) {
+CHUD::CHUD(sf::RenderWindow* pWindow, CGameLogic* pGameLogic)
+{
 	m_pWindow = pWindow;
-	m_pRoomContainer = pRoomContainer;
-	m_psNumRooms = pRoomContainer->getNumRooms();
+	m_pGameLogic = pGameLogic;
 
 	m_font.loadFromFile("res/Fonts/Luxi-Mono/luximb.ttf");
 
+	m_fontColor = sf::Color::Red;
+
 	m_text.setFont(m_font);
-	m_text.setCharacterSize(18);
-	m_text.setColor(sf::Color::Red);
+	m_text.setCharacterSize(m_fontSize);
+	m_text.setColor(m_fontColor);
 }
 
-CHUD::~CHUD() {
+CHUD::~CHUD()
+{
 }
 
 
-void CHUD::render() {
+void CHUD::render()
+{
 	m_pWindow->draw(m_text);
 }
 
 
-void CHUD::update() {
-	int totalRooms = m_psNumRooms->warehouse;
-
-	std::string total("Total rooms: ");
+void CHUD::update()
+{
+	std::string total("Total resource cap: ");
 
 	std::stringstream ss;
-	ss << totalRooms;
+	ss << m_pGameLogic->getResources()->storage_cap;
 
 	total += ss.str();
 
@@ -45,21 +48,25 @@ void CHUD::update() {
 }
 
 
-bool CHUD::userInput_keyPress(sf::Event* pEvent) {
+bool CHUD::userInput_keyPress(sf::Event* pEvent)
+{
 	return false;
 }
 
 
-bool CHUD::userInput_keyRelease(sf::Event* pEvent) {
+bool CHUD::userInput_keyRelease(sf::Event* pEvent)
+{
 	return false;
 }
 
 
-bool CHUD::userInput_mousePress(sf::Event* pEvent) {
+bool CHUD::userInput_mousePress(sf::Event* pEvent)
+{
 	return false;
 }
 
 
-bool CHUD::userInput_mouseRelease(sf::Event* pEvent) {
+bool CHUD::userInput_mouseRelease(sf::Event* pEvent)
+{
 	return false;
 }

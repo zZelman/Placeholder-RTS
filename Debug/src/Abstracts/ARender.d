@@ -1,5 +1,5 @@
 src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
- ../src/Abstracts/ARender.h ../src/Abstracts/../Graphics/include_sfml.h \
+ ../src/Abstracts/ARender.h ../src/Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -75,14 +75,14 @@ src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Abstracts/../Graphics/CTexture.h \
- ../src/Abstracts/../Graphics/include_sfml.h \
+ ../src/Abstracts/../Graphics/../include_sfml.h \
  ../src/Abstracts/../Graphics/CSprite.h \
  ../src/Abstracts/../Graphics/CTexture.h \
  ../src/Abstracts/../Interfaces/IRenderable.h
 
 ../src/Abstracts/ARender.h:
 
-../src/Abstracts/../Graphics/include_sfml.h:
+../src/Abstracts/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -234,7 +234,7 @@ src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
 
 ../src/Abstracts/../Graphics/CTexture.h:
 
-../src/Abstracts/../Graphics/include_sfml.h:
+../src/Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Abstracts/../Graphics/CSprite.h:
 

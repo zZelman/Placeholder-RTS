@@ -14,7 +14,7 @@
 
 #include "../Abstracts/AUserInput.h"
 
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "include_rooms.h"
 
 #include "../Tiles/CTile_Container.h"

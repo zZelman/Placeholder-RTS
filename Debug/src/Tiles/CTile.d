@@ -1,6 +1,6 @@
 src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
  ../src/Tiles/../Abstracts/ARender.h \
- ../src/Tiles/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Tiles/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -76,21 +76,21 @@ src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
- ../src/Tiles/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Tiles/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Tiles/../Abstracts/../Graphics/CSprite.h \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
  ../src/Tiles/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Tiles/../Abstracts/AUpdate.h \
  ../src/Tiles/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Tiles/../Physics/DPhysics.h \
- ../src/Tiles/../Physics/../Graphics/include_sfml.h \
+ ../src/Tiles/../Physics/../include_sfml.h \
  ../src/Tiles/../Graphics/CSprite.h
 
 ../src/Tiles/CTile.h:
 
 ../src/Tiles/../Abstracts/ARender.h:
 
-../src/Tiles/../Abstracts/../Graphics/include_sfml.h:
+../src/Tiles/../Abstracts/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -242,7 +242,7 @@ src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
 
 ../src/Tiles/../Abstracts/../Graphics/CTexture.h:
 
-../src/Tiles/../Abstracts/../Graphics/include_sfml.h:
+../src/Tiles/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Tiles/../Abstracts/../Graphics/CSprite.h:
 
@@ -256,6 +256,6 @@ src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
 
 ../src/Tiles/../Physics/DPhysics.h:
 
-../src/Tiles/../Physics/../Graphics/include_sfml.h:
+../src/Tiles/../Physics/../include_sfml.h:
 
 ../src/Tiles/../Graphics/CSprite.h:

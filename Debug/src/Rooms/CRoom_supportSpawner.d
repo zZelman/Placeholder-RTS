@@ -1,7 +1,7 @@
 src/Rooms/CRoom_supportSpawner.d: ../src/Rooms/CRoom_supportSpawner.cpp \
  ../src/Rooms/CRoom_supportSpawner.h ../src/Rooms/CRoom.h \
  ../src/Rooms/../Abstracts/ARender.h \
- ../src/Rooms/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Rooms/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -77,16 +77,15 @@ src/Rooms/CRoom_supportSpawner.d: ../src/Rooms/CRoom_supportSpawner.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
- ../src/Rooms/../Abstracts/../Graphics/include_sfml.h \
+ ../src/Rooms/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Rooms/../Abstracts/../Graphics/CSprite.h \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Rooms/../Abstracts/AUpdate.h \
  ../src/Rooms/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Rooms/../Graphics/CSprite.h ../src/Rooms/../Graphics/CTexture.h \
- ../src/Rooms/../Graphics/include_sfml.h \
- ../src/Rooms/../Physics/DPhysics.h \
- ../src/Rooms/../Physics/../Graphics/include_sfml.h
+ ../src/Rooms/../include_sfml.h ../src/Rooms/../Physics/DPhysics.h \
+ ../src/Rooms/../Physics/../include_sfml.h
 
 ../src/Rooms/CRoom_supportSpawner.h:
 
@@ -94,7 +93,7 @@ src/Rooms/CRoom_supportSpawner.d: ../src/Rooms/CRoom_supportSpawner.cpp \
 
 ../src/Rooms/../Abstracts/ARender.h:
 
-../src/Rooms/../Abstracts/../Graphics/include_sfml.h:
+../src/Rooms/../Abstracts/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -246,7 +245,7 @@ src/Rooms/CRoom_supportSpawner.d: ../src/Rooms/CRoom_supportSpawner.cpp \
 
 ../src/Rooms/../Abstracts/../Graphics/CTexture.h:
 
-../src/Rooms/../Abstracts/../Graphics/include_sfml.h:
+../src/Rooms/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Rooms/../Abstracts/../Graphics/CSprite.h:
 
@@ -262,8 +261,8 @@ src/Rooms/CRoom_supportSpawner.d: ../src/Rooms/CRoom_supportSpawner.cpp \
 
 ../src/Rooms/../Graphics/CTexture.h:
 
-../src/Rooms/../Graphics/include_sfml.h:
+../src/Rooms/../include_sfml.h:
 
 ../src/Rooms/../Physics/DPhysics.h:
 
-../src/Rooms/../Physics/../Graphics/include_sfml.h:
+../src/Rooms/../Physics/../include_sfml.h:

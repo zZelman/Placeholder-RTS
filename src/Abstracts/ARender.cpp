@@ -6,7 +6,7 @@
  */
 
 #include "ARender.h"
-#include "../Graphics/include_sfml.h"
+#include "../include_sfml.h"
 #include "../Graphics/CTexture.h"
 #include "../Graphics/CSprite.h"
 
