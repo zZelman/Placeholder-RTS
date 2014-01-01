@@ -28,7 +28,7 @@ fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>128</x>
       <y>0</y>
       <w>168</w>
       <h>200</h>
@@ -60,7 +60,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>64</x>
+      <x>192</x>
       <y>176</y>
       <w>224</w>
       <h>96</h>
@@ -71,7 +71,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>64</x>
+      <x>192</x>
       <y>176</y>
       <w>400</w>
       <h>96</h>
@@ -82,7 +82,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>64</x>
+      <x>192</x>
       <y>176</y>
       <w>40</w>
       <h>96</h>
@@ -93,7 +93,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>64</x>
+      <x>192</x>
       <y>176</y>
       <w>768</w>
       <h>96</h>
@@ -104,7 +104,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>64</x>
+      <x>192</x>
       <y>176</y>
       <w>952</w>
       <h>96</h>
@@ -115,7 +115,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>128</x>
       <y>256</y>
       <w>168</w>
       <h>200</h>
@@ -147,7 +147,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>728</x>
+      <x>856</x>
       <y>256</y>
       <w>168</w>
       <h>216</h>
@@ -180,7 +180,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>184</x>
+      <x>312</x>
       <y>256</y>
       <w>168</w>
       <h>200</h>
@@ -212,7 +212,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>368</x>
+      <x>496</x>
       <y>256</y>
       <w>168</w>
       <h>200</h>
@@ -244,7 +244,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>912</x>
+      <x>1040</x>
       <y>256</y>
       <w>184</w>
       <h>224</h>
@@ -278,7 +278,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>128</x>
       <y>648</y>
       <w>168</w>
       <h>200</h>
@@ -310,7 +310,7 @@ Required resources to make
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>128</x>
       <y>952</y>
       <w>280</w>
       <h>256</h>
@@ -347,7 +347,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>296</x>
+      <x>424</x>
       <y>952</y>
       <w>256</w>
       <h>256</h>
@@ -384,7 +384,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>728</x>
+      <x>856</x>
       <y>952</y>
       <w>256</w>
       <h>232</h>
@@ -418,7 +418,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1000</x>
+      <x>1128</x>
       <y>952</y>
       <w>256</w>
       <h>232</h>
@@ -452,7 +452,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>72</x>
+      <x>200</x>
       <y>824</y>
       <w>40</w>
       <h>144</h>
@@ -463,7 +463,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>72</x>
+      <x>200</x>
       <y>824</y>
       <w>344</w>
       <h>144</h>
@@ -474,7 +474,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>72</x>
+      <x>200</x>
       <y>824</y>
       <w>784</w>
       <h>144</h>
@@ -485,7 +485,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>72</x>
+      <x>200</x>
       <y>824</y>
       <w>1064</w>
       <h>144</h>
@@ -496,7 +496,7 @@ Effect of bing in room
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>128</x>
       <y>1336</y>
       <w>272</w>
       <h>264</h>
@@ -536,7 +536,7 @@ Special Abilities
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>128</x>
       <y>1664</y>
       <w>208</w>
       <h>232</h>
@@ -570,7 +570,7 @@ Special Ability
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>232</x>
+      <x>360</x>
       <y>1664</y>
       <w>240</w>
       <h>232</h>
@@ -603,7 +603,7 @@ Special Ability
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>496</x>
+      <x>624</x>
       <y>1664</y>
       <w>256</w>
       <h>232</h>
@@ -637,7 +637,7 @@ Special Ability
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>48</x>
+      <x>176</x>
       <y>1576</y>
       <w>40</w>
       <h>104</h>
@@ -648,7 +648,7 @@ Special Ability
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>48</x>
+      <x>176</x>
       <y>1576</y>
       <w>304</w>
       <h>104</h>
@@ -659,7 +659,7 @@ Special Ability
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>48</x>
+      <x>176</x>
       <y>1576</y>
       <w>576</w>
       <h>104</h>

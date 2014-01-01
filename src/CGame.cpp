@@ -1,10 +1,4 @@
 #include "CGame.h"
-#include "include_sfml.h"
-#include "CSprite.h"
-#include "CTexture.h"
-#include "CUnit_Container.h"
-#include "CRoom_Container.h"
-#include "CPhysicsEngine.h"
 #include <iostream>
 #include <assert.h>
 
@@ -23,6 +17,8 @@ CGame::CGame()
 	m_pPhysicsEngine = new CPhysicsEngine(m_pTile_Container,
 	                                      m_pRoom_Container,
 	                                      m_pUnit_Container);
+
+	m_pHUD = new CHUD(m_pWindow, m_pRoom_Container);
 
 
 	// re-work the window to be dependent on the amount of tiles in the world
@@ -55,6 +51,9 @@ CGame::~CGame()
 
 	delete m_pPhysicsEngine;
 	m_pPhysicsEngine = NULL;
+
+	delete m_pHUD;
+	m_pHUD = NULL;
 }
 
 
@@ -162,6 +161,10 @@ bool CGame::input_user(sf::Event* pEvent)
 		{
 			return true;
 		}
+		else if (m_pHUD->userInput_keyPress(pEvent))
+		{
+			return true;
+		}
 
 	}
 	else if (pEvent->type == sf::Event::KeyReleased) // release
@@ -171,6 +174,10 @@ bool CGame::input_user(sf::Event* pEvent)
 			return true;
 		}
 		else if (m_pRoom_Container->userInput_keyRelease(pEvent))
+		{
+			return true;
+		}
+		else if (m_pHUD->userInput_keyRelease(pEvent))
 		{
 			return true;
 		}
@@ -188,6 +195,10 @@ bool CGame::input_user(sf::Event* pEvent)
 		{
 			return true;
 		}
+		if (m_pHUD->userInput_mousePress(pEvent))
+		{
+			return true;
+		}
 	}
 	else if (pEvent->type == sf::Event::MouseButtonReleased) // release
 	{
@@ -196,6 +207,10 @@ bool CGame::input_user(sf::Event* pEvent)
 //			return true;
 //		}
 		if (m_pRoom_Container->userInput_mouseRelease(pEvent))
+		{
+			return true;
+		}
+		else if (m_pHUD->userInput_mouseRelease(pEvent))
 		{
 			return true;
 		}
@@ -241,6 +256,8 @@ void CGame::update()
 
 	m_pPhysicsEngine->update();
 
+	m_pHUD->update();
+
 }
 
 
@@ -252,6 +269,8 @@ void CGame::render()
 	m_pTile_Container->render();
 	m_pRoom_Container->render();
 	m_pUnit_Container->render();
+
+	m_pHUD->render();
 
 	m_pWindow->display(); // displays what has been rendered since last clear
 }

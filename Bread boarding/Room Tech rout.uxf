@@ -29,7 +29,7 @@ fontfamily=Monospaced //possible: SansSerif,Serif,Monospaced
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>369</x>
-      <y>72</y>
+      <y>63</y>
       <w>207</w>
       <h>63</h>
     </coordinates>
@@ -43,7 +43,7 @@ Generates the power resource
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>720</x>
-      <y>72</y>
+      <y>63</y>
       <w>207</w>
       <h>63</h>
     </coordinates>
@@ -57,7 +57,7 @@ Generates the metal resource
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>1197</x>
-      <y>72</y>
+      <y>63</y>
       <w>360</w>
       <h>63</h>
     </coordinates>
@@ -71,7 +71,7 @@ Increases the total resources able to be held at once
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>963</x>
-      <y>72</y>
+      <y>63</y>
       <w>207</w>
       <h>63</h>
     </coordinates>
@@ -85,11 +85,11 @@ Generates the food resource
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>306</x>
-      <y>234</y>
+      <y>225</y>
       <w>108</w>
       <h>54</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;War&gt;&gt;
+    <panel_attributes>&lt;&lt;War spawner&gt;&gt;
 --
 Spawns
     - Recruits</panel_attributes>
@@ -99,11 +99,11 @@ Spawns
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>594</x>
-      <y>234</y>
+      <y>225</y>
       <w>135</w>
       <h>54</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Research&gt;&gt;
+    <panel_attributes>&lt;&lt;Research spawner&gt;&gt;
 --
 Spawns
     - Grad Students</panel_attributes>
@@ -113,11 +113,11 @@ Spawns
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>864</x>
-      <y>234</y>
-      <w>99</w>
+      <y>225</y>
+      <w>126</w>
       <h>54</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Support&gt;&gt;
+    <panel_attributes>&lt;&lt;Support spawner&gt;&gt;
 --
 Spawns
     - Workers</panel_attributes>
@@ -127,7 +127,7 @@ Spawns
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>261</x>
-      <y>342</y>
+      <y>333</y>
       <w>243</w>
       <h>171</h>
     </coordinates>
@@ -147,7 +147,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>567</x>
-      <y>342</y>
+      <y>333</y>
       <w>243</w>
       <h>171</h>
     </coordinates>
@@ -166,7 +166,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>873</x>
-      <y>342</y>
+      <y>333</y>
       <w>243</w>
       <h>171</h>
     </coordinates>
@@ -183,7 +183,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>333</x>
-      <y>621</y>
+      <y>612</y>
       <w>63</w>
       <h>27</h>
     </coordinates>
@@ -194,7 +194,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>612</x>
-      <y>621</y>
+      <y>612</y>
       <w>72</w>
       <h>27</h>
     </coordinates>
@@ -205,7 +205,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>918</x>
-      <y>621</y>
+      <y>612</y>
       <w>90</w>
       <h>27</h>
     </coordinates>
@@ -216,7 +216,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>558</x>
-      <y>738</y>
+      <y>729</y>
       <w>243</w>
       <h>54</h>
     </coordinates>
@@ -230,7 +230,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>315</x>
-      <y>738</y>
+      <y>729</y>
       <w>225</w>
       <h>54</h>
     </coordinates>
@@ -244,7 +244,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>864</x>
-      <y>792</y>
+      <y>783</y>
       <w>198</w>
       <h>36</h>
     </coordinates>
@@ -257,7 +257,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>1080</x>
-      <y>792</y>
+      <y>783</y>
       <w>153</w>
       <h>36</h>
     </coordinates>
@@ -270,7 +270,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>684</x>
-      <y>855</y>
+      <y>846</y>
       <w>189</w>
       <h>36</h>
     </coordinates>
@@ -283,7 +283,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>432</x>
-      <y>855</y>
+      <y>846</y>
       <w>189</w>
       <h>36</h>
     </coordinates>
@@ -296,7 +296,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>324</x>
-      <y>162</y>
+      <y>153</y>
       <w>350</w>
       <h>89</h>
     </coordinates>
@@ -307,7 +307,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>630</x>
-      <y>162</y>
+      <y>153</y>
       <w>44</w>
       <h>89</h>
     </coordinates>
@@ -318,7 +318,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>630</x>
-      <y>162</y>
+      <y>153</y>
       <w>296</w>
       <h>89</h>
     </coordinates>
@@ -329,7 +329,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>441</x>
-      <y>108</y>
+      <y>99</y>
       <w>233</w>
       <h>98</h>
     </coordinates>
@@ -340,7 +340,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>630</x>
-      <y>108</y>
+      <y>99</y>
       <w>197</w>
       <h>98</h>
     </coordinates>
@@ -351,7 +351,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>324</x>
-      <y>261</y>
+      <y>252</y>
       <w>44</w>
       <h>98</h>
     </coordinates>
@@ -362,7 +362,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>639</x>
-      <y>261</y>
+      <y>252</y>
       <w>44</w>
       <h>98</h>
     </coordinates>
@@ -373,7 +373,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>891</x>
-      <y>261</y>
+      <y>252</y>
       <w>44</w>
       <h>98</h>
     </coordinates>
@@ -384,7 +384,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>333</x>
-      <y>486</y>
+      <y>477</y>
       <w>44</w>
       <h>152</h>
     </coordinates>
@@ -395,7 +395,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>630</x>
-      <y>486</y>
+      <y>477</y>
       <w>44</w>
       <h>152</h>
     </coordinates>
@@ -406,7 +406,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>360</x>
-      <y>486</y>
+      <y>477</y>
       <w>314</w>
       <h>152</h>
     </coordinates>
@@ -417,7 +417,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>648</x>
-      <y>486</y>
+      <y>477</y>
       <w>332</w>
       <h>152</h>
     </coordinates>
@@ -428,7 +428,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>936</x>
-      <y>486</y>
+      <y>477</y>
       <w>44</w>
       <h>152</h>
     </coordinates>
@@ -439,7 +439,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>342</x>
-      <y>621</y>
+      <y>612</y>
       <w>44</w>
       <h>134</h>
     </coordinates>
@@ -450,7 +450,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>405</x>
-      <y>621</y>
+      <y>612</y>
       <w>575</w>
       <h>134</h>
     </coordinates>
@@ -461,7 +461,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>342</x>
-      <y>621</y>
+      <y>612</y>
       <w>251</w>
       <h>134</h>
     </coordinates>
@@ -472,7 +472,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>621</x>
-      <y>621</y>
+      <y>612</y>
       <w>44</w>
       <h>134</h>
     </coordinates>
@@ -483,7 +483,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>621</x>
-      <y>621</y>
+      <y>612</y>
       <w>323</w>
       <h>188</h>
     </coordinates>
@@ -494,7 +494,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>621</x>
-      <y>621</y>
+      <y>612</y>
       <w>503</w>
       <h>188</h>
     </coordinates>
@@ -505,7 +505,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>936</x>
-      <y>621</y>
+      <y>612</y>
       <w>44</w>
       <h>188</h>
     </coordinates>
@@ -516,7 +516,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>936</x>
-      <y>621</y>
+      <y>612</y>
       <w>161</w>
       <h>188</h>
     </coordinates>
@@ -527,7 +527,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>486</x>
-      <y>765</y>
+      <y>756</y>
       <w>179</w>
       <h>107</h>
     </coordinates>
@@ -538,7 +538,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>621</x>
-      <y>765</y>
+      <y>756</y>
       <w>170</w>
       <h>107</h>
     </coordinates>
@@ -549,7 +549,7 @@ Must be researched before outfitted
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>81</y>
+      <y>72</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
@@ -561,7 +561,7 @@ Always Available</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>234</y>
+      <y>225</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
@@ -574,7 +574,7 @@ Spawners
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>378</y>
+      <y>369</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
@@ -587,7 +587,7 @@ Outfitters
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>612</y>
+      <y>603</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
@@ -600,7 +600,7 @@ Research
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>729</y>
+      <y>720</y>
       <w>135</w>
       <h>27</h>
     </coordinates>
@@ -613,7 +613,7 @@ Research (advanced)
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>828</y>
+      <y>819</y>
       <w>135</w>
       <h>27</h>
     </coordinates>

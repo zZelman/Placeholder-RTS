@@ -24,4 +24,12 @@ C_UPPER_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src \
+src/Units \
+src/Tiles \
+src/Rooms \
+src/Physics \
+src/Interfaces \
+src/HUD \
+src/Graphics \
+src/Abstracts \
 

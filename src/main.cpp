@@ -1,6 +1,6 @@
 #include "CGame.h"
 
-#include "include_sfml.h"
+#include "Graphics/include_sfml.h"
 #include <iostream>
 
 void testingBasics()

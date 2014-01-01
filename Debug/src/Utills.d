@@ -1,4 +1,5 @@
-src/Utills.d: ../src/Utills.cpp ../src/Utills.h ../src/include_sfml.h \
+src/Utills.d: ../src/Utills.cpp ../src/Utills.h \
+ ../src/Graphics/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -76,7 +77,7 @@ src/Utills.d: ../src/Utills.cpp ../src/Utills.h ../src/include_sfml.h \
 
 ../src/Utills.h:
 
-../src/include_sfml.h:
+../src/Graphics/include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 

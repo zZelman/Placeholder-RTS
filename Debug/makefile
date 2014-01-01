@@ -8,6 +8,14 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/Units/subdir.mk
+-include src/Tiles/subdir.mk
+-include src/Rooms/subdir.mk
+-include src/Physics/subdir.mk
+-include src/Interfaces/subdir.mk
+-include src/HUD/subdir.mk
+-include src/Graphics/subdir.mk
+-include src/Abstracts/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk
