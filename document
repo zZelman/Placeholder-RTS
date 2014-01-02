@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd Documentation/
+doxygen Doxyfile
+firefox html/index.html
