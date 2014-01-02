@@ -4,14 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/Graphics/CRenderEngine.cpp \
 ../src/Graphics/CSprite.cpp \
 ../src/Graphics/CTexture.cpp 
 
 OBJS += \
+./src/Graphics/CRenderEngine.o \
 ./src/Graphics/CSprite.o \
 ./src/Graphics/CTexture.o 
 
 CPP_DEPS += \
+./src/Graphics/CRenderEngine.d \
 ./src/Graphics/CSprite.d \
 ./src/Graphics/CTexture.d 
 

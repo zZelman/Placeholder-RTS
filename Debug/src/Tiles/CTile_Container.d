@@ -78,7 +78,9 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
  ../src/Tiles/../Interfaces/IRenderable.h \
  ../src/Tiles/../Graphics/CTexture.h \
  ../src/Tiles/../Graphics/../include_sfml.h \
- ../src/Tiles/../Graphics/CSprite.h ../src/Tiles/../Graphics/CTexture.h \
+ ../src/Tiles/../Graphics/CSprite.h \
+ ../src/Tiles/../Graphics/../Interfaces/IRenderable.h \
+ ../src/Tiles/../Graphics/CTexture.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Tiles/CTile.h ../src/Tiles/../Abstracts/ARender.h \
@@ -254,6 +256,8 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
 ../src/Tiles/../Graphics/../include_sfml.h:
 
 ../src/Tiles/../Graphics/CSprite.h:
+
+../src/Tiles/../Graphics/../Interfaces/IRenderable.h:
 
 ../src/Tiles/../Graphics/CTexture.h:
 

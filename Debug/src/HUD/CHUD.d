@@ -86,8 +86,11 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
+ ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h \
+ ../src/HUD/../Rooms/../Interfaces/IGetRenderData.h \
+ ../src/HUD/../Rooms/../Interfaces/../include_sfml.h \
  ../src/HUD/../Rooms/../Abstracts/AUserInput.h \
  ../src/HUD/../Rooms/../include_sfml.h \
  ../src/HUD/../Rooms/include_rooms.h ../src/HUD/../Rooms/CRoom.h \
@@ -300,9 +303,15 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
 
 ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
 
+../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
+
 ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
 
 ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h:
+
+../src/HUD/../Rooms/../Interfaces/IGetRenderData.h:
+
+../src/HUD/../Rooms/../Interfaces/../include_sfml.h:
 
 ../src/HUD/../Rooms/../Abstracts/AUserInput.h:
 

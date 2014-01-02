@@ -74,7 +74,7 @@ src/Graphics/CSprite.d: ../src/Graphics/CSprite.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/Graphics/CTexture.h
+ ../src/Graphics/../Interfaces/IRenderable.h ../src/Graphics/CTexture.h
 
 ../src/Graphics/CSprite.h:
 
@@ -227,5 +227,7 @@ src/Graphics/CSprite.d: ../src/Graphics/CSprite.cpp \
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
+
+../src/Graphics/../Interfaces/IRenderable.h:
 
 ../src/Graphics/CTexture.h:

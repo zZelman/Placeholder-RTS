@@ -78,6 +78,7 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
  ../src/Units/../Abstracts/../Graphics/CTexture.h \
  ../src/Units/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Units/../Abstracts/../Graphics/CSprite.h \
+ ../src/Units/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Units/../Abstracts/../Graphics/CTexture.h \
  ../src/Units/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Units/../Abstracts/AUpdate.h \
@@ -260,6 +261,8 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
 ../src/Units/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Units/../Abstracts/../Graphics/CSprite.h:
+
+../src/Units/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
 
 ../src/Units/../Abstracts/../Graphics/CTexture.h:
 

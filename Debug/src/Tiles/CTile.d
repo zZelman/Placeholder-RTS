@@ -78,6 +78,7 @@ src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
  ../src/Tiles/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Tiles/../Abstracts/../Graphics/CSprite.h \
+ ../src/Tiles/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
  ../src/Tiles/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Tiles/../Abstracts/AUpdate.h \
@@ -245,6 +246,8 @@ src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
 ../src/Tiles/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Tiles/../Abstracts/../Graphics/CSprite.h:
+
+../src/Tiles/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
 
 ../src/Tiles/../Abstracts/../Graphics/CTexture.h:
 

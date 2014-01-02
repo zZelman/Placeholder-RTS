@@ -159,6 +159,17 @@ void CRoom_Container::getCollisiondata(std::list<ARender*>* pList)
 }
 
 
+void CRoom_Container::getRenderData(std::list<ARender*>* pList)
+{
+	for (std::list<CRoom*>::iterator itr = m_rooms.begin();
+	        itr != m_rooms.end();
+	        ++itr)
+	{
+		pList->push_front((*itr));
+	}
+}
+
+
 bool CRoom_Container::userInput_keyPress(sf::Event* pEvent)
 {
 	// set generic (function wide) values
@@ -680,3 +691,4 @@ void CRoom_Container::SRoomSpawnKeyStates::nullAll()
 	researchSpawner 	= val;
 	supportSpawner		= val;
 }
+

@@ -22,6 +22,12 @@ CGame::CGame()
 
 	m_pHUD = new CHUD(m_pWindow, m_pGameLogic);
 
+	m_pRenderEngine = new CRenderEngine(m_pWindow,
+	                                    m_pRoom_Container,
+	                                    m_pUnit_Container,
+	                                    m_pTile_Container,
+	                                    m_pHUD);
+
 
 	// re-work the window to be dependent on the amount of tiles in the world
 	// work toward finding the whole world width/height
@@ -59,6 +65,9 @@ CGame::~CGame()
 
 	delete m_pGameLogic;
 	m_pGameLogic = NULL;
+
+	delete m_pRenderEngine;
+	m_pRenderEngine = NULL;
 }
 
 
@@ -96,11 +105,19 @@ void CGame::initWindow()
 {
 	int numTiles = 25;
 	int sizeTile = 32;
-	m_pWindow 	= new sf::RenderWindow(sf::VideoMode(sizeTile * numTiles, sizeTile * numTiles), "Independent Study");
+	int size = sizeTile * numTiles;
+	m_pWindow 	= new sf::RenderWindow(sf::VideoMode(size, size), "Independent Study");
 
 	// NOTE: do not use Virtual Sync and fixed frame rate at once
 //	m_pGameWindow->setVerticalSyncEnabled(true);
 	m_pWindow->setFramerateLimit(60);
+
+	sf::FloatRect viewRect(0, 0, size, size);
+	sf::View view;
+	view.reset(viewRect);
+	m_pWindow->setView(view);
+
+	m_pWindow->setVisible(true);
 }
 
 
@@ -274,10 +291,12 @@ void CGame::render()
 
 	// drawing here...
 	m_pTile_Container->render();
-	m_pRoom_Container->render();
+//	m_pRoom_Container->render();
 	m_pUnit_Container->render();
 
 	m_pHUD->render();
+
+	m_pRenderEngine->render();
 
 	m_pWindow->display(); // displays what has been rendered since last clear
 }

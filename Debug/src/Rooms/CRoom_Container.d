@@ -81,8 +81,11 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
+ ../src/Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h \
+ ../src/Rooms/../Interfaces/IGetRenderData.h \
+ ../src/Rooms/../Interfaces/../include_sfml.h \
  ../src/Rooms/../Abstracts/AUserInput.h \
  ../src/Rooms/../Abstracts/../include_sfml.h \
  ../src/Rooms/../include_sfml.h ../src/Rooms/include_rooms.h \
@@ -275,9 +278,15 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 
 ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
 
+../src/Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
+
 ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
 
 ../src/Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h:
+
+../src/Rooms/../Interfaces/IGetRenderData.h:
+
+../src/Rooms/../Interfaces/../include_sfml.h:
 
 ../src/Rooms/../Abstracts/AUserInput.h:
 

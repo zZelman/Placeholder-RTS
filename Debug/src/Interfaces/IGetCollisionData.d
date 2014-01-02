@@ -80,6 +80,7 @@ src/Interfaces/IGetCollisionData.d: \
  ../src/Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Interfaces/../Abstracts/../Graphics/CSprite.h \
+ ../src/Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Interfaces/../Abstracts/../Interfaces/IRenderable.h
 
@@ -242,6 +243,8 @@ src/Interfaces/IGetCollisionData.d: \
 ../src/Interfaces/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Interfaces/../Abstracts/../Graphics/CSprite.h:
+
+../src/Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
 
 ../src/Interfaces/../Abstracts/../Graphics/CTexture.h:
 

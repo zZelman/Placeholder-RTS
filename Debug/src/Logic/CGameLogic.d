@@ -85,8 +85,11 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h \
+ ../src/Logic/../Rooms/../Interfaces/IGetRenderData.h \
+ ../src/Logic/../Rooms/../Interfaces/../include_sfml.h \
  ../src/Logic/../Rooms/../Abstracts/AUserInput.h \
  ../src/Logic/../Rooms/../Abstracts/../include_sfml.h \
  ../src/Logic/../Rooms/../include_sfml.h \
@@ -292,9 +295,15 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
 
+../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
+
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
 
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h:
+
+../src/Logic/../Rooms/../Interfaces/IGetRenderData.h:
+
+../src/Logic/../Rooms/../Interfaces/../include_sfml.h:
 
 ../src/Logic/../Rooms/../Abstracts/AUserInput.h:
 

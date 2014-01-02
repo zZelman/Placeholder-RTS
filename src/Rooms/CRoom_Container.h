@@ -11,6 +11,7 @@
 #include "../Interfaces/IUpdateable.h"
 #include "../Interfaces/IRenderable.h"
 #include "../Interfaces/IGetCollisionData.h"
+#include "../Interfaces/IGetRenderData.h"
 
 #include "../Abstracts/AUserInput.h"
 
@@ -37,7 +38,7 @@ struct SNumRooms
 
 
 
-class CRoom_Container: public IUpdateable, public IRenderable, public IGetCollisionData,
+class CRoom_Container: public IUpdateable, public IRenderable, public IGetRenderData, public IGetCollisionData,
 	public AUserInput
 {
 public:
@@ -51,6 +52,7 @@ public:
 	void render();
 
 	void getCollisiondata(std::list<ARender*>* pList);
+	void getRenderData(std::list<ARender*>* pList);
 
 	bool userInput_keyPress(sf::Event* pEvent);
 	bool userInput_keyRelease(sf::Event* pEvent);

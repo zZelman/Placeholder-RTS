@@ -16,6 +16,7 @@
 #include "Units/CUnit_Container.h"
 #include "Rooms/CRoom_Container.h"
 #include "Physics/CPhysicsEngine.h"
+#include "Graphics/CRenderEngine.h"
 #include "Logic/CGameLogic.h"
 #include "HUD/CHUD.h"
 
@@ -38,9 +39,11 @@ private:
 	CTile_Container* m_pTile_Container;
 	CUnit_Container* m_pUnit_Container;
 	CRoom_Container* m_pRoom_Container;
-	CPhysicsEngine* m_pPhysicsEngine;
 	CGameLogic* m_pGameLogic;
 	CHUD* m_pHUD;
+
+	CPhysicsEngine* m_pPhysicsEngine;
+	CRenderEngine* m_pRenderEngine;
 
 	bool isRunning;
 	bool isPaused;

@@ -77,6 +77,7 @@ src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
  ../src/Abstracts/../Graphics/CTexture.h \
  ../src/Abstracts/../Graphics/../include_sfml.h \
  ../src/Abstracts/../Graphics/CSprite.h \
+ ../src/Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Abstracts/../Graphics/CTexture.h \
  ../src/Abstracts/../Interfaces/IRenderable.h
 
@@ -237,6 +238,8 @@ src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
 ../src/Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Abstracts/../Graphics/CSprite.h:
+
+../src/Abstracts/../Graphics/../Interfaces/IRenderable.h:
 
 ../src/Abstracts/../Graphics/CTexture.h:
 

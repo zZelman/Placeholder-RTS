@@ -79,6 +79,7 @@ src/Rooms/CRoom_warSpawner.d: ../src/Rooms/CRoom_warSpawner.cpp \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Rooms/../Abstracts/../Graphics/CSprite.h \
+ ../src/Rooms/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Rooms/../Abstracts/AUpdate.h \
@@ -248,6 +249,8 @@ src/Rooms/CRoom_warSpawner.d: ../src/Rooms/CRoom_warSpawner.cpp \
 ../src/Rooms/../Abstracts/../Graphics/../include_sfml.h:
 
 ../src/Rooms/../Abstracts/../Graphics/CSprite.h:
+
+../src/Rooms/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
 
 ../src/Rooms/../Abstracts/../Graphics/CTexture.h:
 
