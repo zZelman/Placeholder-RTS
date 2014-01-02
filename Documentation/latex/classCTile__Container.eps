@@ -175,7 +175,7 @@ boxfont setfont
 1 boundaspect scale
 (CTile_Container) cw
 (IUpdateable) cw
-(IRenderable) cw
+(IGetRenderData) cw
 (IGetCollisionData) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -190,7 +190,7 @@ boundx scalefactor div boundy scalefactor div scale
 
  (CTile_Container) 1.000000 0.000000 box
  (IUpdateable) 0.000000 1.000000 box
- (IRenderable) 1.000000 1.000000 box
+ (IGetRenderData) 1.000000 1.000000 box
  (IGetCollisionData) 2.000000 1.000000 box
 
 % ----- relations -----

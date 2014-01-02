@@ -97,16 +97,16 @@ Inheritance diagram for CTile_Container:</div>
   <img src="classCTile__Container.png" usemap="#CTile_Container_map" alt=""/>
   <map id="CTile_Container_map" name="CTile_Container_map">
 <area href="classIUpdateable.html" alt="IUpdateable" shape="rect" coords="0,0,108,24"/>
-<area href="classIRenderable.html" alt="IRenderable" shape="rect" coords="118,0,226,24"/>
+<area href="classIGetRenderData.html" alt="IGetRenderData" shape="rect" coords="118,0,226,24"/>
 <area href="classIGetCollisionData.html" alt="IGetCollisionData" shape="rect" coords="236,0,344,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abc66100f1acf33f6f5cec726533b583e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc66100f1acf33f6f5cec726533b583e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CTile_Container</b> (<a class="el" href="classsf_1_1RenderWindow.html">sf::RenderWindow</a> *pWindow, std::string fileName)</td></tr>
-<tr class="separator:abc66100f1acf33f6f5cec726533b583e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f79e82961b644d422874eb558ea312"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3f79e82961b644d422874eb558ea312"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CTile_Container</b> (std::string fileName)</td></tr>
+<tr class="separator:ab3f79e82961b644d422874eb558ea312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a4d2b6e49fbec47d92cbb19bb9d3c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8a4d2b6e49fbec47d92cbb19bb9d3c7"></a>
 <a class="el" href="classsf_1_1Vector2.html">sf::Vector2</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getGridSize</b> ()</td></tr>
 <tr class="separator:ae8a4d2b6e49fbec47d92cbb19bb9d3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,12 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe6e19de544f042671094697bb83fde9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe6e19de544f042671094697bb83fde9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
 <tr class="separator:abe6e19de544f042671094697bb83fde9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23db13d6879e46e8441df2de2d522e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab23db13d6879e46e8441df2de2d522e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
-<tr class="separator:ab23db13d6879e46e8441df2de2d522e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad22112332743b050e08dda43b9c1e167"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad22112332743b050e08dda43b9c1e167"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getCollisiondata</b> (std::list&lt; <a class="el" href="classARender.html">ARender</a> * &gt; *pList)</td></tr>
-<tr class="separator:ad22112332743b050e08dda43b9c1e167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61b573ed7b47bea750040a26b492632"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae61b573ed7b47bea750040a26b492632"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getCollisiondata</b> (std::list&lt; <a class="el" href="classARenderable.html">ARenderable</a> * &gt; *pList)</td></tr>
+<tr class="separator:ae61b573ed7b47bea750040a26b492632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c74611efadee522595362a79620bff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48c74611efadee522595362a79620bff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getRenderData</b> (std::list&lt; <a class="el" href="classARenderable.html">ARenderable</a> * &gt; *pList)</td></tr>
+<tr class="separator:a48c74611efadee522595362a79620bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f90644c3a992813a629cea3e81aa38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14f90644c3a992813a629cea3e81aa38"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>screenToGrid</b> (int *posX, int *posY)</td></tr>
 <tr class="separator:a14f90644c3a992813a629cea3e81aa38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +145,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCollision</b> (floa
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 2 2014 08:19:22 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 2 2014 13:25:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -15,8 +15,7 @@
 class CRoom_warehouse: public CRoom
 {
 public:
-	CRoom_warehouse(sf::RenderWindow* pWindow,
-	                CTexture* pTexture,
+	CRoom_warehouse(CTexture* pTexture,
 	                const sf::Vector2<int>& currSub);
 	~CRoom_warehouse();
 

@@ -1,6 +1,5 @@
 src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/CRoom_Container.h ../src/Rooms/../Interfaces/IUpdateable.h \
- ../src/Rooms/../Interfaces/IRenderable.h \
  ../src/Rooms/../Interfaces/IGetCollisionData.h \
  ../src/Rooms/../Interfaces/../Abstracts/ARender.h \
  ../src/Rooms/../Interfaces/../Abstracts/../include_sfml.h \
@@ -81,9 +80,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
- ../src/Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
- ../src/Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Rooms/../Interfaces/IGetRenderData.h \
  ../src/Rooms/../Interfaces/../include_sfml.h \
  ../src/Rooms/../Abstracts/AUserInput.h \
@@ -101,7 +98,6 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/../Tiles/CTile_Container.h \
  ../src/Rooms/../Tiles/../include_sfml.h \
  ../src/Rooms/../Tiles/../Interfaces/IUpdateable.h \
- ../src/Rooms/../Tiles/../Interfaces/IRenderable.h \
  ../src/Rooms/../Tiles/../Graphics/CTexture.h \
  ../src/Rooms/../Tiles/../Graphics/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
@@ -110,13 +106,12 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/../Tiles/../Abstracts/ARender.h \
  ../src/Rooms/../Tiles/../Abstracts/AUpdate.h \
  ../src/Rooms/../Tiles/../Physics/DPhysics.h \
- ../src/Rooms/../Tiles/../Interfaces/IGetCollisionData.h
+ ../src/Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
+ ../src/Rooms/../Tiles/../Interfaces/IGetRenderData.h
 
 ../src/Rooms/CRoom_Container.h:
 
 ../src/Rooms/../Interfaces/IUpdateable.h:
-
-../src/Rooms/../Interfaces/IRenderable.h:
 
 ../src/Rooms/../Interfaces/IGetCollisionData.h:
 
@@ -278,11 +273,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 
 ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
 
-../src/Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
-
 ../src/Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
-
-../src/Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h:
 
 ../src/Rooms/../Interfaces/IGetRenderData.h:
 
@@ -332,8 +323,6 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 
 ../src/Rooms/../Tiles/../Interfaces/IUpdateable.h:
 
-../src/Rooms/../Tiles/../Interfaces/IRenderable.h:
-
 ../src/Rooms/../Tiles/../Graphics/CTexture.h:
 
 ../src/Rooms/../Tiles/../Graphics/CSprite.h:
@@ -351,3 +340,5 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 ../src/Rooms/../Tiles/../Physics/DPhysics.h:
 
 ../src/Rooms/../Tiles/../Interfaces/IGetCollisionData.h:
+
+../src/Rooms/../Tiles/../Interfaces/IGetRenderData.h:

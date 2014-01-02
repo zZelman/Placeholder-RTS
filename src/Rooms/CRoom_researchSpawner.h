@@ -13,8 +13,7 @@
 class CRoom_researchSpawner: public CRoom
 {
 public:
-	CRoom_researchSpawner(sf::RenderWindow* pWindow,
-	                      CTexture* pTexture,
+	CRoom_researchSpawner(CTexture* pTexture,
 	                      const sf::Vector2<int>& currSub);
 	~CRoom_researchSpawner();
 

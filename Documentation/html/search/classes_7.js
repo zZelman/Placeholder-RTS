@@ -5,6 +5,5 @@ var searchData=
   ['image',['Image',['../classsf_1_1Image.html',1,'sf']]],
   ['inputstream',['InputStream',['../classsf_1_1InputStream.html',1,'sf']]],
   ['ipaddress',['IpAddress',['../classsf_1_1IpAddress.html',1,'sf']]],
-  ['irenderable',['IRenderable',['../classIRenderable.html',1,'']]],
   ['iupdateable',['IUpdateable',['../classIUpdateable.html',1,'']]]
 ];

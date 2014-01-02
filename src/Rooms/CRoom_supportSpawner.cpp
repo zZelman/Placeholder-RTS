@@ -7,10 +7,9 @@
 
 #include "CRoom_supportSpawner.h"
 
-CRoom_supportSpawner::CRoom_supportSpawner(sf::RenderWindow* pWindow,
-        CTexture* pTexture,
+CRoom_supportSpawner::CRoom_supportSpawner(CTexture* pTexture,
         const sf::Vector2<int>& currSub)
-	: CRoom(pWindow, pTexture, currSub)
+	: CRoom(pTexture, currSub)
 {
 
 }

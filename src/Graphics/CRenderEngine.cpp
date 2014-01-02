@@ -39,9 +39,9 @@ void CRenderEngine::render()
 	//		later will be on top
 	// * each individually determines whether or not the object
 	//		can be seen by calling canBeSeen(...);
-	render_tiles();
-	render_rooms();
-	render_units();
+	render_obj(&m_tiles);
+	render_obj(&m_rooms);
+	render_obj(&m_units);
 	render_UI();
 	render_HUD();
 	render_menu();
@@ -50,11 +50,18 @@ void CRenderEngine::render()
 
 void CRenderEngine::getData()
 {
+	m_rooms.clear();
 	m_pRoom_Container->getRenderData(&m_rooms);
+
+	m_units.clear();
+	m_pUnit_Container->getRenderData(&m_units);
+
+	m_tiles.clear();
+	m_pTile_Container->getRenderData(&m_tiles);
 }
 
 
-bool CRenderEngine::canBeSeen(ARender* pRender)
+bool CRenderEngine::canBeSeen(ARenderable* pRender)
 {
 	// retrieve data
 	m_view = m_pWindow->getView();
@@ -80,15 +87,10 @@ bool CRenderEngine::canBeSeen(ARender* pRender)
 }
 
 
-void CRenderEngine::render_tiles()
+void CRenderEngine::render_obj(std::list<ARenderable*>* pList)
 {
-}
-
-
-void CRenderEngine::render_rooms()
-{
-	for (std::list<ARender*>::iterator itr = m_rooms.begin();
-	        itr != m_rooms.end();
+	for (std::list<ARenderable*>::iterator itr = pList->begin();
+	        itr != pList->end();
 	        ++itr)
 	{
 		if (canBeSeen(*itr))
@@ -100,11 +102,6 @@ void CRenderEngine::render_rooms()
 }
 
 
-void CRenderEngine::render_units()
-{
-}
-
-
 void CRenderEngine::render_UI()
 {
 }
@@ -112,6 +109,9 @@ void CRenderEngine::render_UI()
 
 void CRenderEngine::render_HUD()
 {
+	// HUD Rendering is more complex than just applying a sprite to a screen,
+	//		so that must be done internally in the HUD
+	m_pHUD->render();
 }
 
 

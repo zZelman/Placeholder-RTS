@@ -11,10 +11,9 @@
 #include "CRoom_Container.h"
 #include <iostream>
 
-CRoom::CRoom(sf::RenderWindow* pWindow,
-             CTexture* pTexture,
+CRoom::CRoom(CTexture* pTexture,
              const sf::Vector2<int>& currSub)
-	: ARender(pWindow, pTexture, currSub), AUpdate(), DPhysics()
+	: ARenderable(pTexture, currSub), AUpdate(), DPhysics()
 {
 //	m_pGrid = pGrid;
 //	m_pRoom_Container = pRoom_Container;

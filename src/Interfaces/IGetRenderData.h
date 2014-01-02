@@ -18,7 +18,7 @@ public:
 	virtual ~IGetRenderData();
 
 	// fills the list with objects that need to be rendered
-	virtual void getRenderData(std::list<ARender*>* pList) = 0;
+	virtual void getRenderData(std::list<ARenderable*>* pList) = 0;
 };
 
 #endif /* IGETRENDERDATA_H_ */

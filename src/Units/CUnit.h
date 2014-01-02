@@ -16,11 +16,10 @@
 #include "../Utills.h"
 #include "../Physics/DPhysics.h"
 
-class CUnit: public AUpdate, public ARender, public DPhysics
+class CUnit: public AUpdate, public ARenderable, public DPhysics
 {
 public:
-	CUnit(sf::RenderWindow* pWindow, 			// rendering window
-	      CTile_Container* pGrid,
+	CUnit(CTile_Container* pGrid,
 	      CTexture* pTexture, 				// texture that this sprite will render with
 	      const sf::Vector2<int>& currSub);	// LENGTH current sub image being rendered
 	~CUnit();

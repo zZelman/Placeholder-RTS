@@ -18,11 +18,10 @@
 // forward declare to prevent circular includes
 class CRoom_Container;
 
-class CRoom: public ARender, public AUpdate, public DPhysics
+class CRoom: public ARenderable, public AUpdate, public DPhysics
 {
 public:
-	CRoom(sf::RenderWindow* pWindow,
-	      CTexture* pTexture,
+	CRoom(CTexture* pTexture,
 	      const sf::Vector2<int>& currSub);
 	virtual ~CRoom();
 

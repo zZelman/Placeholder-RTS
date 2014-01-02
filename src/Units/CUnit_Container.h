@@ -10,25 +10,24 @@
 
 #include "../Interfaces/IUpdateable.h"
 #include "../Abstracts/AUserInput.h"
-#include "../Interfaces/IRenderable.h"
 #include "../include_sfml.h"
 #include "CUnit.h"
 #include "../Tiles/CTile_Container.h"
 #include <vector>
 #include "../Interfaces/IGetCollisionData.h"
+#include "../Interfaces/IGetRenderData.h"
 #include <list>
 
-class CUnit_Container: public IUpdateable, public IRenderable, public IGetCollisionData, public AUserInput
+class CUnit_Container: public IUpdateable, public IGetRenderData, public IGetCollisionData, public AUserInput
 {
 public:
-	CUnit_Container(sf::RenderWindow* pWindow,
-	                CTile_Container* pGrid);
+	CUnit_Container(CTile_Container* pGrid);
 	~CUnit_Container();
 
 	void update();
-	void render();
 
-	void getCollisiondata(std::list<ARender*>* pList);
+	void getCollisiondata(std::list<ARenderable*>* pList);
+	void getRenderData(std::list<ARenderable*>* pList);
 
 	bool userInput_keyPress(sf::Event* pEvent);
 	bool userInput_keyRelease(sf::Event* pEvent);
@@ -38,7 +37,6 @@ public:
 
 
 private:
-	sf::RenderWindow* m_pWindow;
 	CTile_Container* m_pGrid;
 
 	// Unit texture filepaths
@@ -46,7 +44,7 @@ private:
 	CTexture* m_pDebugTexture;
 
 	// container for all units
-	std::vector<CUnit*> m_units;
+	std::list<CUnit*> m_units;
 
 	// creates a new unit into m_units
 	void initUnit(int x, int y);

@@ -69,7 +69,7 @@ var searchData=
   ['setviewport',['setViewport',['../classsf_1_1View.html#a8eaec46b7d332fe834f016d0187d4b4a',1,'sf::View']]],
   ['setvisible',['setVisible',['../classsf_1_1Window.html#a160f7f11a207603d7e99ce606e749703',1,'sf::Window']]],
   ['setvolume',['setVolume',['../classsf_1_1SoundSource.html#a2f192f2b49fb8e2b82f3498d3663fcc2',1,'sf::SoundSource']]],
-  ['shader',['Shader',['../classsf_1_1Shader.html#a1d7f28f26b4122959fcafec871c2c3c5',1,'sf::Shader::Shader()'],['../classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8',1,'sf::RenderStates::shader()']]],
+  ['shader',['shader',['../classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8',1,'sf::RenderStates::shader()'],['../classsf_1_1Shader.html#a1d7f28f26b4122959fcafec871c2c3c5',1,'sf::Shader::Shader()']]],
   ['shader',['Shader',['../classsf_1_1Shader.html',1,'sf']]],
   ['shape',['Shape',['../classsf_1_1Shape.html#a413a457f720835b9f5d8e97ca8b80960',1,'sf::Shape']]],
   ['shape',['Shape',['../classsf_1_1Shape.html',1,'sf']]],

@@ -7,10 +7,8 @@
 
 #include "CRoom_Container.h"
 
-CRoom_Container::CRoom_Container(sf::RenderWindow* pWindow,
-                                 CTile_Container* pGrid) : AUserInput()
+CRoom_Container::CRoom_Container(CTile_Container* pGrid) : AUserInput()
 {
-	m_pWindow = pWindow;
 	m_pGrid = pGrid;
 
 	m_sRoomTextures.init_RoomTextures();
@@ -137,18 +135,7 @@ void CRoom_Container::update()
 }
 
 
-void CRoom_Container::render()
-{
-	for (std::list<CRoom*>::iterator itr = m_rooms.begin();
-	        itr != m_rooms.end();
-	        ++itr)
-	{
-		(*itr)->render();
-	}
-}
-
-
-void CRoom_Container::getCollisiondata(std::list<ARender*>* pList)
+void CRoom_Container::getCollisiondata(std::list<ARenderable*>* pList)
 {
 	for (std::list<CRoom*>::iterator itr = m_rooms.begin();
 	        itr != m_rooms.end();
@@ -159,7 +146,7 @@ void CRoom_Container::getCollisiondata(std::list<ARender*>* pList)
 }
 
 
-void CRoom_Container::getRenderData(std::list<ARender*>* pList)
+void CRoom_Container::getRenderData(std::list<ARenderable*>* pList)
 {
 	for (std::list<CRoom*>::iterator itr = m_rooms.begin();
 	        itr != m_rooms.end();
@@ -542,8 +529,7 @@ void CRoom_Container::normalizeToGrid(int* x, int* y)
 
 void CRoom_Container::spawnRoom_debug(int x, int y)
 {
-	CRoom* pR = new CRoom(m_pWindow,
-	                      m_sRoomTextures.debug,
+	CRoom* pR = new CRoom(m_sRoomTextures.debug,
 	                      sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -552,8 +538,7 @@ void CRoom_Container::spawnRoom_debug(int x, int y)
 
 void CRoom_Container::spawnRoom_warehouse(int x, int y)
 {
-	CRoom_warehouse* pR = new CRoom_warehouse(m_pWindow,
-	        m_sRoomTextures.warehouse,
+	CRoom_warehouse* pR = new CRoom_warehouse(m_sRoomTextures.warehouse,
 	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -564,8 +549,7 @@ void CRoom_Container::spawnRoom_warehouse(int x, int y)
 
 void CRoom_Container::spawnRoom_kitchen(int x, int y)
 {
-	CRoom_kitchen* pR = new CRoom_kitchen(m_pWindow,
-	                                      m_sRoomTextures.kitchen,
+	CRoom_kitchen* pR = new CRoom_kitchen(m_sRoomTextures.kitchen,
 	                                      sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -576,8 +560,7 @@ void CRoom_Container::spawnRoom_kitchen(int x, int y)
 
 void CRoom_Container::spawnRoom_smithy(int x, int y)
 {
-	CRoom_smithy* pR = new CRoom_smithy(m_pWindow,
-	                                    m_sRoomTextures.smithy,
+	CRoom_smithy* pR = new CRoom_smithy(m_sRoomTextures.smithy,
 	                                    sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -588,8 +571,7 @@ void CRoom_Container::spawnRoom_smithy(int x, int y)
 
 void CRoom_Container::spawnRoom_powerPlant(int x, int y)
 {
-	CRoom_powerPlant* pR = new CRoom_powerPlant(m_pWindow,
-	        m_sRoomTextures.powerPlant,
+	CRoom_powerPlant* pR = new CRoom_powerPlant(m_sRoomTextures.powerPlant,
 	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -600,8 +582,7 @@ void CRoom_Container::spawnRoom_powerPlant(int x, int y)
 
 void CRoom_Container::spawnRoom_warSpawner(int x, int y)
 {
-	CRoom_warSpawner* pR = new CRoom_warSpawner(m_pWindow,
-	        m_sRoomTextures.warSpawner,
+	CRoom_warSpawner* pR = new CRoom_warSpawner(m_sRoomTextures.warSpawner,
 	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -612,8 +593,7 @@ void CRoom_Container::spawnRoom_warSpawner(int x, int y)
 
 void CRoom_Container::spawnRoom_researchSpawner(int x, int y)
 {
-	CRoom_researchSpawner* pR = new CRoom_researchSpawner(m_pWindow,
-	        m_sRoomTextures.researchSpawner,
+	CRoom_researchSpawner* pR = new CRoom_researchSpawner(m_sRoomTextures.researchSpawner,
 	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);
@@ -624,8 +604,7 @@ void CRoom_Container::spawnRoom_researchSpawner(int x, int y)
 
 void CRoom_Container::spawnRoom_supportSpawner(int x, int y)
 {
-	CRoom_supportSpawner* pR = new CRoom_supportSpawner(m_pWindow,
-	        m_sRoomTextures.supportSpawner,
+	CRoom_supportSpawner* pR = new CRoom_supportSpawner(m_sRoomTextures.supportSpawner,
 	        sf::Vector2<int>(1, 1));
 	pR->setPosition(x, y);
 	m_rooms.push_back(pR);

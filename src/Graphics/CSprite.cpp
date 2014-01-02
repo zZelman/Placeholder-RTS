@@ -13,17 +13,13 @@
 
 CSprite::CSprite()
 {
-	m_pWindow = NULL;
 	m_pTexture = NULL;
 }
 
 
-CSprite::CSprite(sf::RenderWindow* pWindow,
-                 CTexture* pTexture,
+CSprite::CSprite(CTexture* pTexture,
                  const sf::Vector2<int>& currSub)
 {
-	m_pWindow	= pWindow;
-
 	m_pTexture = pTexture;
 
 	setTexture(*m_pTexture);
@@ -43,8 +39,6 @@ CSprite::CSprite(const CSprite& other) : Sprite(other)
 {
 	// [QUESTION] if a pointer is managed externally, do you need to allocate
 	//		a 'new' in a copy constructor/copy assignment?
-
-	m_pWindow = other.m_pWindow; // managed externally
 
 	m_pTexture = other.m_pTexture; // managed externally
 }
@@ -79,11 +73,6 @@ void CSprite::setSubImage(const sf::Vector2<int>* newSub)
 	chooseSubImage();
 }
 
-
-void CSprite::render()
-{
-	m_pWindow->draw(*this);
-}
 
 void CSprite::chooseSubImage()
 {

@@ -48,11 +48,11 @@ public:
 	// * Insert the object into the quadtree
 	// * if node exceeds its compacity, it will be split and all objects will be
 	//		distributed into their respective sub-nodes
-	void insert(ARender* pObject);
+	void insert(ARenderable* pObject);
 
 	// * returns all objects in all nodes that the given pObject could potentially collide with
 	// * this is the method that helps reduce the number of pairs to check collision against
-	void retrieve(std::list<ARender*>* returnedObjects, ARender* pObject);
+	void retrieve(std::list<ARenderable*>* returnedObjects, ARenderable* pObject);
 
 
 private:
@@ -66,7 +66,7 @@ private:
 	int m_level;
 
 	// Objects within this QuadTree
-	std::vector<ARender*> m_objects;
+	std::vector<ARenderable*> m_objects;
 
 	// Bounds of this quad tree that all m_objects are within
 	sf::IntRect m_bounds;
@@ -88,7 +88,7 @@ private:
 	//		node the object can fit into
 	// * returns -1 if the given object cant fit into any of the sub-nodes of
 	//		this quadtree, so it must fit into the parent of this quadtree
-	int getIndex(ARender* pObject);
+	int getIndex(ARenderable* pObject);
 };
 
 #endif /* CQUADTREE_H_ */

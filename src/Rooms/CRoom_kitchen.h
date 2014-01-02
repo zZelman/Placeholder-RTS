@@ -13,8 +13,7 @@
 class CRoom_kitchen: public CRoom
 {
 public:
-	CRoom_kitchen(sf::RenderWindow* pWindow,
-	              CTexture* pTexture,
+	CRoom_kitchen(CTexture* pTexture,
 	              const sf::Vector2<int>& currSub);
 	~CRoom_kitchen();
 

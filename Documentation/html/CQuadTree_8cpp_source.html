@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> CQuadTree::insert(<a class="code" href="classARender.html">ARender</a>* pObject)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> CQuadTree::insert(<a class="code" href="classARenderable.html">ARenderable</a>* pObject)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (m_nodes[0] != NULL)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
@@ -178,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">while</span> (i &lt; m_objects.size())</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="classARender.html">ARender</a>* pObjIndex = m_objects.at(i);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="classARenderable.html">ARenderable</a>* pObjIndex = m_objects.at(i);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordtype">int</span> index = getIndex(pObjIndex);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">if</span> (index != IN_PARENT)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            {</div>
@@ -194,8 +194,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> CQuadTree::retrieve(std::list&lt;ARender*&gt;* returnedObjects,</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                         <a class="code" href="classARender.html">ARender</a>* pObject)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> CQuadTree::retrieve(std::list&lt;ARenderable*&gt;* returnedObjects,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                         <a class="code" href="classARenderable.html">ARenderable</a>* pObject)</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> index = getIndex(pObject);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (index != IN_PARENT &amp;&amp; m_nodes[0] != NULL)</div>
@@ -242,7 +242,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">int</span> CQuadTree::getIndex(<a class="code" href="classARender.html">ARender</a>* pObject)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">int</span> CQuadTree::getIndex(<a class="code" href="classARenderable.html">ARenderable</a>* pObject)</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span> index = IN_PARENT;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">double</span> verticalMidpoint = m_bounds.<a class="code" href="classsf_1_1Rect.html#aa49960fa465103d9cb7069ceb25c7c32">left</a> + (m_bounds.<a class="code" href="classsf_1_1Rect.html#a4dd5b9d4333bebbc51bd309298fd500f">width</a> / 2);</div>
@@ -284,7 +284,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
 <div class="ttc" id="classsf_1_1Rect_html_a6fa0fc7de1636d78cae1a1b54eef95cd"><div class="ttname"><a href="classsf_1_1Rect.html#a6fa0fc7de1636d78cae1a1b54eef95cd">sf::Rect::height</a></div><div class="ttdeci">T height</div><div class="ttdoc">Height of the rectangle. </div><div class="ttdef"><b>Definition:</b> <a href="Rect_8hpp_source.html#l00154">Rect.hpp:154</a></div></div>
 <div class="ttc" id="classsf_1_1Rect_html_a4dd5b9d4333bebbc51bd309298fd500f"><div class="ttname"><a href="classsf_1_1Rect.html#a4dd5b9d4333bebbc51bd309298fd500f">sf::Rect::width</a></div><div class="ttdeci">T width</div><div class="ttdoc">Width of the rectangle. </div><div class="ttdef"><b>Definition:</b> <a href="Rect_8hpp_source.html#l00153">Rect.hpp:153</a></div></div>
-<div class="ttc" id="classARender_html"><div class="ttname"><a href="classARender.html">ARender</a></div><div class="ttdef"><b>Definition:</b> <a href="ARender_8h_source.html#l00017">ARender.h:17</a></div></div>
+<div class="ttc" id="classARenderable_html"><div class="ttname"><a href="classARenderable.html">ARenderable</a></div><div class="ttdef"><b>Definition:</b> <a href="ARender_8h_source.html#l00015">ARender.h:15</a></div></div>
 <div class="ttc" id="classsf_1_1Sprite_html_a203d2d8087bfdca2ebc3c0485cdb7409"><div class="ttname"><a href="classsf_1_1Sprite.html#a203d2d8087bfdca2ebc3c0485cdb7409">sf::Sprite::getGlobalBounds</a></div><div class="ttdeci">FloatRect getGlobalBounds() const </div><div class="ttdoc">Get the global bounding rectangle of the entity. </div></div>
 <div class="ttc" id="classCQuadTree_html"><div class="ttname"><a href="classCQuadTree.html">CQuadTree</a></div><div class="ttdef"><b>Definition:</b> <a href="CQuadTree_8h_source.html#l00034">CQuadTree.h:34</a></div></div>
 <div class="ttc" id="classsf_1_1Rect_html"><div class="ttname"><a href="classsf_1_1Rect.html">sf::Rect&lt; int &gt;</a></div></div>
@@ -293,7 +293,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 2 2014 08:19:22 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 2 2014 13:25:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

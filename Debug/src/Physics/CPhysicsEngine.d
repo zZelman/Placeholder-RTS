@@ -80,13 +80,10 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
  ../src/Physics/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CSprite.h \
- ../src/Physics/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
- ../src/Physics/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Physics/../Tiles/CTile_Container.h \
  ../src/Physics/../Tiles/../include_sfml.h \
  ../src/Physics/../Tiles/../Interfaces/IUpdateable.h \
- ../src/Physics/../Tiles/../Interfaces/IRenderable.h \
  ../src/Physics/../Tiles/../Graphics/CTexture.h \
  ../src/Physics/../Tiles/../Graphics/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
@@ -99,13 +96,12 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Tiles/../Physics/../include_sfml.h \
  ../src/Physics/../Tiles/../Interfaces/IGetCollisionData.h \
  ../src/Physics/../Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Physics/../Tiles/../Interfaces/IGetRenderData.h \
+ ../src/Physics/../Tiles/../Interfaces/../include_sfml.h \
  ../src/Physics/../Rooms/CRoom_Container.h \
  ../src/Physics/../Rooms/../Interfaces/IUpdateable.h \
- ../src/Physics/../Rooms/../Interfaces/IRenderable.h \
  ../src/Physics/../Rooms/../Interfaces/IGetCollisionData.h \
  ../src/Physics/../Rooms/../Interfaces/IGetRenderData.h \
- ../src/Physics/../Rooms/../Interfaces/../include_sfml.h \
- ../src/Physics/../Rooms/../Interfaces/../Abstracts/ARender.h \
  ../src/Physics/../Rooms/../Abstracts/AUserInput.h \
  ../src/Physics/../Rooms/../Abstracts/../include_sfml.h \
  ../src/Physics/../Rooms/../include_sfml.h \
@@ -126,7 +122,6 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Units/CUnit_Container.h \
  ../src/Physics/../Units/../Interfaces/IUpdateable.h \
  ../src/Physics/../Units/../Abstracts/AUserInput.h \
- ../src/Physics/../Units/../Interfaces/IRenderable.h \
  ../src/Physics/../Units/../include_sfml.h \
  ../src/Physics/../Units/CUnit.h \
  ../src/Physics/../Units/../Abstracts/ARender.h \
@@ -137,6 +132,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Units/../include_sfml.h \
  ../src/Physics/../Units/../Physics/DPhysics.h \
  ../src/Physics/../Units/../Interfaces/IGetCollisionData.h \
+ ../src/Physics/../Units/../Interfaces/IGetRenderData.h \
  ../src/Physics/../Interfaces/IUpdateable.h \
  ../src/Physics/../Physics/DPhysics.h
 
@@ -304,19 +300,13 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Abstracts/../Graphics/CSprite.h:
 
-../src/Physics/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
-
 ../src/Physics/../Abstracts/../Graphics/CTexture.h:
-
-../src/Physics/../Abstracts/../Interfaces/IRenderable.h:
 
 ../src/Physics/../Tiles/CTile_Container.h:
 
 ../src/Physics/../Tiles/../include_sfml.h:
 
 ../src/Physics/../Tiles/../Interfaces/IUpdateable.h:
-
-../src/Physics/../Tiles/../Interfaces/IRenderable.h:
 
 ../src/Physics/../Tiles/../Graphics/CTexture.h:
 
@@ -342,19 +332,17 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Tiles/../Interfaces/../Abstracts/ARender.h:
 
+../src/Physics/../Tiles/../Interfaces/IGetRenderData.h:
+
+../src/Physics/../Tiles/../Interfaces/../include_sfml.h:
+
 ../src/Physics/../Rooms/CRoom_Container.h:
 
 ../src/Physics/../Rooms/../Interfaces/IUpdateable.h:
 
-../src/Physics/../Rooms/../Interfaces/IRenderable.h:
-
 ../src/Physics/../Rooms/../Interfaces/IGetCollisionData.h:
 
 ../src/Physics/../Rooms/../Interfaces/IGetRenderData.h:
-
-../src/Physics/../Rooms/../Interfaces/../include_sfml.h:
-
-../src/Physics/../Rooms/../Interfaces/../Abstracts/ARender.h:
 
 ../src/Physics/../Rooms/../Abstracts/AUserInput.h:
 
@@ -398,8 +386,6 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Units/../Abstracts/AUserInput.h:
 
-../src/Physics/../Units/../Interfaces/IRenderable.h:
-
 ../src/Physics/../Units/../include_sfml.h:
 
 ../src/Physics/../Units/CUnit.h:
@@ -419,6 +405,8 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 ../src/Physics/../Units/../Physics/DPhysics.h:
 
 ../src/Physics/../Units/../Interfaces/IGetCollisionData.h:
+
+../src/Physics/../Units/../Interfaces/IGetRenderData.h:
 
 ../src/Physics/../Interfaces/IUpdateable.h:
 

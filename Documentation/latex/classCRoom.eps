@@ -174,10 +174,9 @@
 boxfont setfont
 1 boundaspect scale
 (CRoom) cw
-(ARender) cw
+(ARenderable) cw
 (AUpdate) cw
 (DPhysics) cw
-(IRenderable) cw
 (IUpdateable) cw
 (CRoom_kitchen) cw
 (CRoom_powerPlant) cw
@@ -198,10 +197,9 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- classes -----
 
  (CRoom) 3.000000 1.000000 box
- (ARender) 2.000000 2.000000 box
+ (ARenderable) 2.000000 2.000000 box
  (AUpdate) 3.000000 2.000000 box
  (DPhysics) 4.000000 2.000000 box
- (IRenderable) 2.000000 3.000000 box
  (IUpdateable) 3.000000 3.000000 box
  (CRoom_kitchen) 0.000000 0.000000 box
  (CRoom_powerPlant) 1.000000 0.000000 box
@@ -220,15 +218,11 @@ solid
 solid
 1 2.000000 2.000000 in
 solid
-0 2.000000 2.000000 out
-solid
 1 3.000000 2.000000 in
 solid
 0 3.000000 2.000000 out
 solid
 1 4.000000 2.000000 in
-solid
-1 2.000000 3.000000 in
 solid
 1 3.000000 3.000000 in
 solid

@@ -7,10 +7,9 @@
 
 #include "CRoom_smithy.h"
 
-CRoom_smithy::CRoom_smithy(sf::RenderWindow* pWindow,
-                           CTexture* pTexture,
+CRoom_smithy::CRoom_smithy(CTexture* pTexture,
                            const sf::Vector2<int>& currSub)
-	: CRoom(pWindow, pTexture, currSub)
+	: CRoom(pTexture, currSub)
 {
 
 }

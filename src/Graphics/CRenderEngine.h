@@ -45,9 +45,9 @@ private:
 	//		(and not in one massive ARenderable list) because
 	//		there is a priority in the rendering:
 	//		([top] menu, HUD, UI, Units, Rooms, Tiles [bottom])
-	std::list<ARender*> m_rooms;
-	std::list<ARender*> m_units;
-	std::list<ARender*> m_tiles;
+	std::list<ARenderable*> m_rooms;
+	std::list<ARenderable*> m_units;
+	std::list<ARenderable*> m_tiles;
 
 	// * the current sprite being rendered
 	// * allocated here because it is common to all of the render functions
@@ -69,12 +69,10 @@ private:
 	//		subsection of the overall world (able to be seen)
 	// * true = render the thing (done in calling function)
 	// * false = dont render because it would be a waste because it cant be seen
-	bool canBeSeen(ARender* pRender);
+	bool canBeSeen(ARenderable* pRender);
 
 	// individual rendering functions
-	void render_tiles();
-	void render_rooms();
-	void render_units();
+	void render_obj(std::list<ARenderable*>* pList); // takes care of Tile, Unit, and Room
 	void render_UI();
 	void render_HUD();
 	void render_menu();

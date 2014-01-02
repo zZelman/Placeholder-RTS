@@ -9,15 +9,13 @@
 #define CSPRITE_H_
 
 #include "../include_sfml.h"
-#include "../Interfaces/IRenderable.h"
 #include "CTexture.h"
 
-class CSprite : public sf::Sprite, public IRenderable
+class CSprite : public sf::Sprite
 {
 public:
 	CSprite();
-	CSprite(sf::RenderWindow* pWindow,	// rendering window
-	        CTexture* pTexture,			// texture that this sprite will be rendering with
+	CSprite(CTexture* pTexture,			// texture that this sprite will be rendering with
 	        const sf::Vector2<int>& currSub);	// LENGTH current sub-image being rendered
 	~CSprite();
 	CSprite(const CSprite& other);
@@ -26,12 +24,7 @@ public:
 	void setSubImage(int col, int row);
 	void setSubImage(const sf::Vector2<int>* newSub);
 
-	// renders the sprite to the target window
-	void render();
-
-
 private:
-	sf::RenderWindow* m_pWindow;	// target rendering window
 	CTexture* m_pTexture;			// full texture of this sprite
 
 	// * LENGTH Current sub section that is being rendered

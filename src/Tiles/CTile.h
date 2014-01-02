@@ -13,11 +13,10 @@
 #include "../Physics/DPhysics.h"
 #include "../Graphics/CSprite.h"
 
-class CTile: public ARender, public AUpdate
+class CTile: public ARenderable, public AUpdate
 {
 public:
-	CTile(sf::RenderWindow* pWindow,
-	      CTexture* pTexture,
+	CTile(CTexture* pTexture,
 	      const sf::Vector2<int>& currSub);
 
 	// if this constructor is used, note that this object then takes responsibility

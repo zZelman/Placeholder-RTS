@@ -8,8 +8,6 @@
 #ifndef CHUD_H_
 #define CHUD_H_
 
-#include "../Interfaces/IRenderable.h"
-
 #include "../Abstracts/AUpdate.h"
 #include "../Abstracts/AUserInput.h"
 
@@ -20,7 +18,7 @@
 #include "../include_sfml.h"
 
 
-class CHUD: public IRenderable, public AUpdate, public AUserInput
+class CHUD: public AUpdate, public AUserInput
 {
 public:
 	CHUD(sf::RenderWindow* pWindow, CGameLogic* pGameLogic);

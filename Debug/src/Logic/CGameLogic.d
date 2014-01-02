@@ -78,16 +78,13 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Logic/../Rooms/CRoom_Container.h \
  ../src/Logic/../Rooms/../Interfaces/IUpdateable.h \
- ../src/Logic/../Rooms/../Interfaces/IRenderable.h \
  ../src/Logic/../Rooms/../Interfaces/IGetCollisionData.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/ARender.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../include_sfml.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
- ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
- ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Logic/../Rooms/../Interfaces/IGetRenderData.h \
  ../src/Logic/../Rooms/../Interfaces/../include_sfml.h \
  ../src/Logic/../Rooms/../Abstracts/AUserInput.h \
@@ -110,7 +107,6 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  ../src/Logic/../Rooms/../Tiles/CTile_Container.h \
  ../src/Logic/../Rooms/../Tiles/../include_sfml.h \
  ../src/Logic/../Rooms/../Tiles/../Interfaces/IUpdateable.h \
- ../src/Logic/../Rooms/../Tiles/../Interfaces/IRenderable.h \
  ../src/Logic/../Rooms/../Tiles/../Graphics/CTexture.h \
  ../src/Logic/../Rooms/../Tiles/../Graphics/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
@@ -119,7 +115,8 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  ../src/Logic/../Rooms/../Tiles/../Abstracts/ARender.h \
  ../src/Logic/../Rooms/../Tiles/../Abstracts/AUpdate.h \
  ../src/Logic/../Rooms/../Tiles/../Physics/DPhysics.h \
- ../src/Logic/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h
+ ../src/Logic/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
+ ../src/Logic/../Rooms/../Tiles/../Interfaces/IGetRenderData.h
 
 ../src/Logic/CGameLogic.h:
 
@@ -281,8 +278,6 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/../Interfaces/IUpdateable.h:
 
-../src/Logic/../Rooms/../Interfaces/IRenderable.h:
-
 ../src/Logic/../Rooms/../Interfaces/IGetCollisionData.h:
 
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/ARender.h:
@@ -295,11 +290,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
 
-../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
-
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
-
-../src/Logic/../Rooms/../Interfaces/../Abstracts/../Interfaces/IRenderable.h:
 
 ../src/Logic/../Rooms/../Interfaces/IGetRenderData.h:
 
@@ -347,8 +338,6 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/../Tiles/../Interfaces/IUpdateable.h:
 
-../src/Logic/../Rooms/../Tiles/../Interfaces/IRenderable.h:
-
 ../src/Logic/../Rooms/../Tiles/../Graphics/CTexture.h:
 
 ../src/Logic/../Rooms/../Tiles/../Graphics/CSprite.h:
@@ -366,3 +355,5 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 ../src/Logic/../Rooms/../Tiles/../Physics/DPhysics.h:
 
 ../src/Logic/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h:
+
+../src/Logic/../Rooms/../Tiles/../Interfaces/IGetRenderData.h:

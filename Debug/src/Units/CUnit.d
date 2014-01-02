@@ -78,16 +78,13 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
  ../src/Units/../Abstracts/../Graphics/CTexture.h \
  ../src/Units/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Units/../Abstracts/../Graphics/CSprite.h \
- ../src/Units/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Units/../Abstracts/../Graphics/CTexture.h \
- ../src/Units/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Units/../Abstracts/AUpdate.h \
  ../src/Units/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Units/../Graphics/CSprite.h ../src/Units/../include_sfml.h \
  ../src/Units/../Tiles/CTile_Container.h \
  ../src/Units/../Tiles/../include_sfml.h \
  ../src/Units/../Tiles/../Interfaces/IUpdateable.h \
- ../src/Units/../Tiles/../Interfaces/IRenderable.h \
  ../src/Units/../Tiles/../Graphics/CTexture.h \
  ../src/Units/../Tiles/../Graphics/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
@@ -99,6 +96,8 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
  ../src/Units/../Tiles/../Physics/../include_sfml.h \
  ../src/Units/../Tiles/../Interfaces/IGetCollisionData.h \
  ../src/Units/../Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Units/../Tiles/../Interfaces/IGetRenderData.h \
+ ../src/Units/../Tiles/../Interfaces/../include_sfml.h \
  ../src/Units/../Utills.h ../src/Units/../include_sfml.h \
  ../src/Units/../Physics/DPhysics.h ../src/Units/../Graphics/CTexture.h
 
@@ -262,11 +261,7 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
 
 ../src/Units/../Abstracts/../Graphics/CSprite.h:
 
-../src/Units/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
-
 ../src/Units/../Abstracts/../Graphics/CTexture.h:
-
-../src/Units/../Abstracts/../Interfaces/IRenderable.h:
 
 ../src/Units/../Abstracts/AUpdate.h:
 
@@ -281,8 +276,6 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
 ../src/Units/../Tiles/../include_sfml.h:
 
 ../src/Units/../Tiles/../Interfaces/IUpdateable.h:
-
-../src/Units/../Tiles/../Interfaces/IRenderable.h:
 
 ../src/Units/../Tiles/../Graphics/CTexture.h:
 
@@ -305,6 +298,10 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
 ../src/Units/../Tiles/../Interfaces/IGetCollisionData.h:
 
 ../src/Units/../Tiles/../Interfaces/../Abstracts/ARender.h:
+
+../src/Units/../Tiles/../Interfaces/IGetRenderData.h:
+
+../src/Units/../Tiles/../Interfaces/../include_sfml.h:
 
 ../src/Units/../Utills.h:
 

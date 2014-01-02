@@ -10,10 +10,9 @@
 #include "../include_sfml.h"
 
 
-CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CTile_Container* pGrid)
+CUnit_Container::CUnit_Container(CTile_Container* pGrid)
 	: AUserInput()
 {
-	m_pWindow = pWindow;
 	m_pGrid = pGrid;
 	m_pDebugTexture = new CTexture("res/Unit Tilesets/debug unit.png",
 	                               sf::Vector2<int>(16, 16),
@@ -28,9 +27,11 @@ CUnit_Container::CUnit_Container(sf::RenderWindow* pWindow, CTile_Container* pGr
 
 CUnit_Container::~CUnit_Container()
 {
-	for (unsigned int i = 0; i < m_units.size(); ++i)
+	for (std::list<CUnit*>::iterator itr = m_units.begin();
+	        itr != m_units.end();
+	        ++itr)
 	{
-		delete m_units.at(i);
+		delete(*itr);
 	}
 	m_units.clear();
 
@@ -41,9 +42,11 @@ CUnit_Container::~CUnit_Container()
 
 void CUnit_Container::update()
 {
-	for (unsigned int i = 0; i < m_units.size(); ++i)
+	for (std::list<CUnit*>::iterator itr = m_units.begin();
+	        itr != m_units.end();
+	        ++itr)
 	{
-		CUnit* pU = m_units.at(i);
+		CUnit* pU = (*itr);
 
 //		applyPhysics(pU);
 		pU->update();
@@ -51,20 +54,24 @@ void CUnit_Container::update()
 }
 
 
-void CUnit_Container::render()
+void CUnit_Container::getCollisiondata(std::list<ARenderable*>* pList)
 {
-	for (unsigned int i = 0; i < m_units.size(); ++i)
+	for (std::list<CUnit*>::iterator itr = m_units.begin();
+	        itr != m_units.end();
+	        ++itr)
 	{
-		m_units.at(i)->render();
+		pList->push_front((*itr));
 	}
 }
 
 
-void CUnit_Container::getCollisiondata(std::list<ARender*>* pList)
+void CUnit_Container::getRenderData(std::list<ARenderable*>* pList)
 {
-	for (unsigned int i = 0; i < m_units.size(); ++i)
+	for (std::list<CUnit*>::iterator itr = m_units.begin();
+	        itr != m_units.end();
+	        ++itr)
 	{
-		pList->push_front(m_units[i]);
+		pList->push_front((*itr));
 	}
 }
 
@@ -96,7 +103,7 @@ bool CUnit_Container::userInput_mouseRelease(sf::Event* pEvent)
 
 void CUnit_Container::initUnit(int x, int y)
 {
-	CUnit* pU = new CUnit(m_pWindow, m_pGrid, m_pDebugTexture, sf::Vector2<int>(1, 1));
+	CUnit* pU = new CUnit(m_pGrid, m_pDebugTexture, sf::Vector2<int>(1, 1));
 	pU->getSprite()->setPosition(x, y);
 	m_units.push_back(pU);
 }

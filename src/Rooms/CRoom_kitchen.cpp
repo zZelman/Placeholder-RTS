@@ -7,10 +7,9 @@
 
 #include "CRoom_kitchen.h"
 
-CRoom_kitchen::CRoom_kitchen(sf::RenderWindow* pWindow,
-                             CTexture* pTexture,
+CRoom_kitchen::CRoom_kitchen(CTexture* pTexture,
                              const sf::Vector2<int>& currSub)
-	: CRoom(pWindow, pTexture, currSub)
+	: CRoom(pTexture, currSub)
 {
 
 }

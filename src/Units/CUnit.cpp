@@ -12,11 +12,10 @@
 #include "../include_sfml.h"
 #include <iostream>
 
-CUnit::CUnit(sf::RenderWindow* pWindow,
-             CTile_Container* pGrid,
+CUnit::CUnit(CTile_Container* pGrid,
              CTexture* pTexture,
              const sf::Vector2<int>& currSub)
-	: AUpdate(), ARender(pWindow, pTexture, currSub), DPhysics()
+	: AUpdate(), ARenderable(pTexture, currSub), DPhysics()
 {
 	m_pGrid = pGrid;
 

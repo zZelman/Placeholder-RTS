@@ -99,58 +99,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../Interfaces/IUpdateable.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../Abstracts/AUserInput.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../Interfaces/IRenderable.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../include_sfml.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;CUnit.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../Tiles/CTile_Container.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../Interfaces/IGetCollisionData.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../include_sfml.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;CUnit.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../Tiles/CTile_Container.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../Interfaces/IGetCollisionData.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../Interfaces/IGetRenderData.h&quot;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classCUnit__Container.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCUnit__Container.html">CUnit_Container</a>: <span class="keyword">public</span> <a class="code" href="classIUpdateable.html">IUpdateable</a>, <span class="keyword">public</span> <a class="code" href="classIRenderable.html">IRenderable</a>, <span class="keyword">public</span> <a class="code" href="classIGetCollisionData.html">IGetCollisionData</a>, <span class="keyword">public</span> <a class="code" href="classAUserInput.html">AUserInput</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classCUnit__Container.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCUnit__Container.html">CUnit_Container</a>: <span class="keyword">public</span> <a class="code" href="classIUpdateable.html">IUpdateable</a>, <span class="keyword">public</span> <a class="code" href="classIGetRenderData.html">IGetRenderData</a>, <span class="keyword">public</span> <a class="code" href="classIGetCollisionData.html">IGetCollisionData</a>, <span class="keyword">public</span> <a class="code" href="classAUserInput.html">AUserInput</a></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classCUnit__Container.html">CUnit_Container</a>(<a class="code" href="classsf_1_1RenderWindow.html">sf::RenderWindow</a>* pWindow,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                    <a class="code" href="classCTile__Container.html">CTile_Container</a>* pGrid);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    ~<a class="code" href="classCUnit__Container.html">CUnit_Container</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> update();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> render();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> getCollisiondata(std::list&lt;ARender*&gt;* pList);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> userInput_keyPress(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> userInput_keyRelease(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> userInput_mousePress(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> userInput_mouseRelease(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classCUnit__Container.html">CUnit_Container</a>(<a class="code" href="classCTile__Container.html">CTile_Container</a>* pGrid);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    ~<a class="code" href="classCUnit__Container.html">CUnit_Container</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> update();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> getCollisiondata(std::list&lt;ARenderable*&gt;* pList);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> getRenderData(std::list&lt;ARenderable*&gt;* pList);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> userInput_keyPress(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> userInput_keyRelease(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> userInput_mousePress(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> userInput_mouseRelease(<a class="code" href="classsf_1_1Event.html">sf::Event</a>* pEvent);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="classsf_1_1RenderWindow.html">sf::RenderWindow</a>* m_pWindow;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classCTile__Container.html">CTile_Container</a>* m_pGrid;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Unit texture filepaths</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    std::string m_debugTexture_path;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classCTexture.html">CTexture</a>* m_pDebugTexture;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// container for all units</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::vector&lt;CUnit*&gt; m_units;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// creates a new unit into m_units</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> initUnit(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classCTile__Container.html">CTile_Container</a>* m_pGrid;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Unit texture filepaths</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::string m_debugTexture_path;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classCTexture.html">CTexture</a>* m_pDebugTexture;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// container for all units</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::list&lt;CUnit*&gt; m_units;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// creates a new unit into m_units</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> initUnit(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> applyPhysics(<a class="code" href="classCUnit.html">CUnit</a>* pUnit);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> applyPhysics(<a class="code" href="classCUnit.html">CUnit</a>* pUnit);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CUNIT_CONTAINER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CUNIT_CONTAINER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classCUnit__Container_html"><div class="ttname"><a href="classCUnit__Container.html">CUnit_Container</a></div><div class="ttdef"><b>Definition:</b> <a href="CUnit__Container_8h_source.html#l00021">CUnit_Container.h:21</a></div></div>
 <div class="ttc" id="classCUnit_html"><div class="ttname"><a href="classCUnit.html">CUnit</a></div><div class="ttdef"><b>Definition:</b> <a href="CUnit_8h_source.html#l00019">CUnit.h:19</a></div></div>
+<div class="ttc" id="classIGetRenderData_html"><div class="ttname"><a href="classIGetRenderData.html">IGetRenderData</a></div><div class="ttdef"><b>Definition:</b> <a href="IGetRenderData_8h_source.html#l00015">IGetRenderData.h:15</a></div></div>
 <div class="ttc" id="classIGetCollisionData_html"><div class="ttname"><a href="classIGetCollisionData.html">IGetCollisionData</a></div><div class="ttdef"><b>Definition:</b> <a href="IGetCollisionData_8h_source.html#l00014">IGetCollisionData.h:14</a></div></div>
-<div class="ttc" id="classIRenderable_html"><div class="ttname"><a href="classIRenderable.html">IRenderable</a></div><div class="ttdef"><b>Definition:</b> <a href="IRenderable_8h_source.html#l00012">IRenderable.h:12</a></div></div>
 <div class="ttc" id="classCTexture_html"><div class="ttname"><a href="classCTexture.html">CTexture</a></div><div class="ttdef"><b>Definition:</b> <a href="CTexture_8h_source.html#l00013">CTexture.h:13</a></div></div>
-<div class="ttc" id="classsf_1_1RenderWindow_html"><div class="ttname"><a href="classsf_1_1RenderWindow.html">sf::RenderWindow</a></div><div class="ttdoc">Window that can serve as a target for 2D drawing. </div><div class="ttdef"><b>Definition:</b> <a href="RenderWindow_8hpp_source.html#l00044">RenderWindow.hpp:44</a></div></div>
 <div class="ttc" id="classsf_1_1Event_html"><div class="ttname"><a href="classsf_1_1Event.html">sf::Event</a></div><div class="ttdoc">Defines a system event and its parameters. </div><div class="ttdef"><b>Definition:</b> <a href="Event_8hpp_source.html#l00043">Event.hpp:43</a></div></div>
 <div class="ttc" id="classAUserInput_html"><div class="ttname"><a href="classAUserInput.html">AUserInput</a></div><div class="ttdef"><b>Definition:</b> <a href="AUserInput_8h_source.html#l00013">AUserInput.h:13</a></div></div>
 <div class="ttc" id="classIUpdateable_html"><div class="ttname"><a href="classIUpdateable.html">IUpdateable</a></div><div class="ttdef"><b>Definition:</b> <a href="IUpdateable_8h_source.html#l00012">IUpdateable.h:12</a></div></div>
@@ -158,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 2 2014 08:19:22 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 2 2014 13:25:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

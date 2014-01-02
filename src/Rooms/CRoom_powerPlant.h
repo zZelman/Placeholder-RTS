@@ -13,8 +13,7 @@
 class CRoom_powerPlant: public CRoom
 {
 public:
-	CRoom_powerPlant(sf::RenderWindow* pWindow,
-	                 CTexture* pTexture,
+	CRoom_powerPlant(CTexture* pTexture,
 	                 const sf::Vector2<int>& currSub);
 	~CRoom_powerPlant();
 

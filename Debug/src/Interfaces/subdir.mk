@@ -6,19 +6,16 @@
 CPP_SRCS += \
 ../src/Interfaces/IGetCollisionData.cpp \
 ../src/Interfaces/IGetRenderData.cpp \
-../src/Interfaces/IRenderable.cpp \
 ../src/Interfaces/IUpdateable.cpp 
 
 OBJS += \
 ./src/Interfaces/IGetCollisionData.o \
 ./src/Interfaces/IGetRenderData.o \
-./src/Interfaces/IRenderable.o \
 ./src/Interfaces/IUpdateable.o 
 
 CPP_DEPS += \
 ./src/Interfaces/IGetCollisionData.d \
 ./src/Interfaces/IGetRenderData.d \
-./src/Interfaces/IRenderable.d \
 ./src/Interfaces/IUpdateable.d 
 
 

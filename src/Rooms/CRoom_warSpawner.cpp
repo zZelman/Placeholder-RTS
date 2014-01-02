@@ -7,10 +7,9 @@
 
 #include "CRoom_warSpawner.h"
 
-CRoom_warSpawner::CRoom_warSpawner(sf::RenderWindow* pWindow,
-                                   CTexture* pTexture,
+CRoom_warSpawner::CRoom_warSpawner(CTexture* pTexture,
                                    const sf::Vector2<int>& currSub)
-	: CRoom(pWindow, pTexture, currSub)
+	: CRoom(pTexture, currSub)
 {
 
 }

@@ -7,15 +7,14 @@
 
 #include "CTile.h"
 
-CTile::CTile(sf::RenderWindow* pWindow,
-             CTexture* pTexture,
+CTile::CTile(CTexture* pTexture,
              const sf::Vector2<int>& currSub)
-	: ARender(pWindow, pTexture, currSub), AUpdate()
+	: ARenderable(pTexture, currSub), AUpdate()
 {
 }
 
 CTile::CTile(CSprite* pSprite)
-	: ARender(pSprite), AUpdate()
+	: ARenderable(pSprite), AUpdate()
 {
 }
 

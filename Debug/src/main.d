@@ -74,11 +74,9 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Graphics/CSprite.h ../src/Graphics/../include_sfml.h \
- ../src/Graphics/../Interfaces/IRenderable.h ../src/Graphics/CTexture.h \
- ../src/Graphics/CTexture.h ../src/Interfaces/IUpdateable.h \
- ../src/Tiles/CTile_Container.h ../src/Tiles/../include_sfml.h \
- ../src/Tiles/../Interfaces/IUpdateable.h \
- ../src/Tiles/../Interfaces/IRenderable.h \
+ ../src/Graphics/CTexture.h ../src/Graphics/CTexture.h \
+ ../src/Interfaces/IUpdateable.h ../src/Tiles/CTile_Container.h \
+ ../src/Tiles/../include_sfml.h ../src/Tiles/../Interfaces/IUpdateable.h \
  ../src/Tiles/../Graphics/CTexture.h ../src/Tiles/../Graphics/CSprite.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
@@ -86,28 +84,27 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  ../src/Tiles/../Abstracts/../include_sfml.h \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
  ../src/Tiles/../Abstracts/../Graphics/CSprite.h \
- ../src/Tiles/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Tiles/../Abstracts/AUpdate.h \
  ../src/Tiles/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Tiles/../Physics/DPhysics.h \
  ../src/Tiles/../Physics/../include_sfml.h \
  ../src/Tiles/../Interfaces/IGetCollisionData.h \
  ../src/Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Tiles/../Interfaces/IGetRenderData.h \
+ ../src/Tiles/../Interfaces/../include_sfml.h \
  ../src/Units/CUnit_Container.h ../src/Units/../Interfaces/IUpdateable.h \
  ../src/Units/../Abstracts/AUserInput.h \
  ../src/Units/../Abstracts/../include_sfml.h \
- ../src/Units/../Interfaces/IRenderable.h ../src/Units/../include_sfml.h \
- ../src/Units/CUnit.h ../src/Units/../Abstracts/ARender.h \
- ../src/Units/../Abstracts/AUpdate.h ../src/Units/../Graphics/CSprite.h \
+ ../src/Units/../include_sfml.h ../src/Units/CUnit.h \
+ ../src/Units/../Abstracts/ARender.h ../src/Units/../Abstracts/AUpdate.h \
+ ../src/Units/../Graphics/CSprite.h \
  ../src/Units/../Tiles/CTile_Container.h ../src/Units/../Utills.h \
  ../src/Units/../include_sfml.h ../src/Units/../Physics/DPhysics.h \
  ../src/Units/../Interfaces/IGetCollisionData.h \
+ ../src/Units/../Interfaces/IGetRenderData.h \
  ../src/Rooms/CRoom_Container.h ../src/Rooms/../Interfaces/IUpdateable.h \
- ../src/Rooms/../Interfaces/IRenderable.h \
  ../src/Rooms/../Interfaces/IGetCollisionData.h \
  ../src/Rooms/../Interfaces/IGetRenderData.h \
- ../src/Rooms/../Interfaces/../include_sfml.h \
- ../src/Rooms/../Interfaces/../Abstracts/ARender.h \
  ../src/Rooms/../Abstracts/AUserInput.h ../src/Rooms/../include_sfml.h \
  ../src/Rooms/include_rooms.h ../src/Rooms/CRoom.h \
  ../src/Rooms/../Abstracts/ARender.h ../src/Rooms/../Abstracts/AUpdate.h \
@@ -131,7 +128,6 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
  ../src/Graphics/../Tiles/include_tiles.h \
  ../src/Graphics/../Tiles/CTile_Container.h \
  ../src/Graphics/../Tiles/CTile.h ../src/Graphics/../HUD/CHUD.h \
- ../src/Graphics/../HUD/../Interfaces/IRenderable.h \
  ../src/Graphics/../HUD/../Abstracts/AUpdate.h \
  ../src/Graphics/../HUD/../Abstracts/AUserInput.h \
  ../src/Graphics/../HUD/../Rooms/CRoom_Container.h \
@@ -298,8 +294,6 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 
 ../src/Graphics/../include_sfml.h:
 
-../src/Graphics/../Interfaces/IRenderable.h:
-
 ../src/Graphics/CTexture.h:
 
 ../src/Graphics/CTexture.h:
@@ -311,8 +305,6 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/Tiles/../include_sfml.h:
 
 ../src/Tiles/../Interfaces/IUpdateable.h:
-
-../src/Tiles/../Interfaces/IRenderable.h:
 
 ../src/Tiles/../Graphics/CTexture.h:
 
@@ -332,8 +324,6 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 
 ../src/Tiles/../Abstracts/../Graphics/CSprite.h:
 
-../src/Tiles/../Abstracts/../Interfaces/IRenderable.h:
-
 ../src/Tiles/../Abstracts/AUpdate.h:
 
 ../src/Tiles/../Abstracts/../Interfaces/IUpdateable.h:
@@ -346,6 +336,10 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 
 ../src/Tiles/../Interfaces/../Abstracts/ARender.h:
 
+../src/Tiles/../Interfaces/IGetRenderData.h:
+
+../src/Tiles/../Interfaces/../include_sfml.h:
+
 ../src/Units/CUnit_Container.h:
 
 ../src/Units/../Interfaces/IUpdateable.h:
@@ -353,8 +347,6 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/Units/../Abstracts/AUserInput.h:
 
 ../src/Units/../Abstracts/../include_sfml.h:
-
-../src/Units/../Interfaces/IRenderable.h:
 
 ../src/Units/../include_sfml.h:
 
@@ -376,19 +368,15 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 
 ../src/Units/../Interfaces/IGetCollisionData.h:
 
+../src/Units/../Interfaces/IGetRenderData.h:
+
 ../src/Rooms/CRoom_Container.h:
 
 ../src/Rooms/../Interfaces/IUpdateable.h:
 
-../src/Rooms/../Interfaces/IRenderable.h:
-
 ../src/Rooms/../Interfaces/IGetCollisionData.h:
 
 ../src/Rooms/../Interfaces/IGetRenderData.h:
-
-../src/Rooms/../Interfaces/../include_sfml.h:
-
-../src/Rooms/../Interfaces/../Abstracts/ARender.h:
 
 ../src/Rooms/../Abstracts/AUserInput.h:
 
@@ -459,8 +447,6 @@ src/main.d: ../src/main.cpp ../src/CGame.h ../src/include_sfml.h \
 ../src/Graphics/../Tiles/CTile.h:
 
 ../src/Graphics/../HUD/CHUD.h:
-
-../src/Graphics/../HUD/../Interfaces/IRenderable.h:
 
 ../src/Graphics/../HUD/../Abstracts/AUpdate.h:
 

@@ -10,7 +10,6 @@
 
 #include "../include_sfml.h"
 #include "../Interfaces/IUpdateable.h"
-#include "../Interfaces/IRenderable.h"
 #include "../Graphics/CTexture.h"
 #include "../Graphics/CSprite.h"
 #include <iostream>
@@ -18,21 +17,22 @@
 #include "rapidxml_utils.hpp"
 #include "CTile.h"
 #include "../Interfaces/IGetCollisionData.h"
+#include "../Interfaces/IGetRenderData.h"
 #include <list>
 
-class CTile_Container : public IUpdateable, public IRenderable, public IGetCollisionData
+class CTile_Container : public IUpdateable, public IGetRenderData, public IGetCollisionData
 {
 public:
-	CTile_Container(sf::RenderWindow* pWindow, std::string fileName);
+	CTile_Container(std::string fileName);
 	~CTile_Container();
 
 	sf::Vector2<int> getGridSize(); // returns the total number of squares in (x, y)
 	sf::Vector2<int> getGridSubSize(); // returns the individual tile size
 
 	void update();
-	void render();
 
-	void getCollisiondata(std::list<ARender*>* pList);
+	void getCollisiondata(std::list<ARenderable*>* pList);
+	void getRenderData(std::list<ARenderable*>* pList);
 
 	// * manipulates the screen values given into (x, y) grid coords
 	// * values of posX and posY ARE OVERRIDEN
@@ -45,15 +45,13 @@ public:
 	bool isCollision(float x, float y, CSprite*& pSprite);
 
 private:
-	sf::RenderWindow* m_pWindow;
-
 	// Initial (relative) file path to the Tiled XML map file directory
 	std::string m_filePath;
 	std::string m_fileName;			// name within the map file directory that is used for this CGrid
 	std::string m_tileSetPath;		// path to the directory containing the tilesets
 
 	CTexture* m_pTexture;
-	std::vector<CTile*> m_tiles;
+	std::list<CTile*> m_tiles;
 
 	// uses the information gathered AFTER "parseFile()" has been called, and creates all of the
 	//		tile objects that will be interacted with by the game

@@ -13,8 +13,7 @@
 class CRoom_warSpawner: public CRoom
 {
 public:
-	CRoom_warSpawner(sf::RenderWindow* pWindow,
-	                 CTexture* pTexture,
+	CRoom_warSpawner(CTexture* pTexture,
 	                 const sf::Vector2<int>& currSub);
 	~CRoom_warSpawner();
 

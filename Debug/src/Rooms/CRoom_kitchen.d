@@ -79,9 +79,7 @@ src/Rooms/CRoom_kitchen.d: ../src/Rooms/CRoom_kitchen.cpp \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
  ../src/Rooms/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Rooms/../Abstracts/../Graphics/CSprite.h \
- ../src/Rooms/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
  ../src/Rooms/../Abstracts/../Graphics/CTexture.h \
- ../src/Rooms/../Abstracts/../Interfaces/IRenderable.h \
  ../src/Rooms/../Abstracts/AUpdate.h \
  ../src/Rooms/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Rooms/../Graphics/CSprite.h ../src/Rooms/../Graphics/CTexture.h \
@@ -250,11 +248,7 @@ src/Rooms/CRoom_kitchen.d: ../src/Rooms/CRoom_kitchen.cpp \
 
 ../src/Rooms/../Abstracts/../Graphics/CSprite.h:
 
-../src/Rooms/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
-
 ../src/Rooms/../Abstracts/../Graphics/CTexture.h:
-
-../src/Rooms/../Abstracts/../Interfaces/IRenderable.h:
 
 ../src/Rooms/../Abstracts/AUpdate.h:
 

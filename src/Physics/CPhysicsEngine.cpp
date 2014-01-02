@@ -45,14 +45,14 @@ void CPhysicsEngine::update()
 void CPhysicsEngine::quadTree_collision()
 {
 	// retrieve all collidable objects
-	std::list<ARender*> totalObjects;
+	std::list<ARenderable*> totalObjects;
 	m_pTile_Container->getCollisiondata(&totalObjects);
 	m_pRoom_Container->getCollisiondata(&totalObjects);
 	m_pUnit_Container->getCollisiondata(&totalObjects);
 
 	// add all objects to the quad tree
 	m_pQuadTree->clear();
-	for (std::list<ARender*>::iterator itr = totalObjects.begin();
+	for (std::list<ARenderable*>::iterator itr = totalObjects.begin();
 	        itr != totalObjects.end();
 	        ++itr)
 	{
@@ -80,13 +80,13 @@ void CPhysicsEngine::quadTree_collision()
 	bool canStepNormally_unit = true;
 
 	// objects that the current object could collide with
-	std::list<ARender*> returnedObjects;
+	std::list<ARenderable*> returnedObjects;
 
 	// list of things that will not collide with anything on their next step
 	//	(can update normally)
 	std::list<DPhysics*> normals;
 
-	for (std::list<ARender*>::iterator all_itr = totalObjects.begin();
+	for (std::list<ARenderable*>::iterator all_itr = totalObjects.begin();
 	        all_itr != totalObjects.end();
 	        ++all_itr)
 	{
@@ -114,7 +114,7 @@ void CPhysicsEngine::quadTree_collision()
 		m_pQuadTree->retrieve(&returnedObjects, *all_itr);
 
 		// resolve collision detection
-		for (std::list<ARender*>::iterator collision_itr = returnedObjects.begin();
+		for (std::list<ARenderable*>::iterator collision_itr = returnedObjects.begin();
 		        collision_itr != returnedObjects.end();
 		        ++collision_itr)
 		{
@@ -182,10 +182,10 @@ void CPhysicsEngine::quadTree_collision()
 
 void CPhysicsEngine::n2_collision()
 {
-	std::list<ARender*> rooms;
+	std::list<ARenderable*> rooms;
 	m_pRoom_Container->getCollisiondata(&rooms);
 
-	std::list<ARender*> tiles;
+	std::list<ARenderable*> tiles;
 	m_pTile_Container->getCollisiondata(&tiles);
 
 	CRoom* pRoom_from = NULL;
@@ -193,7 +193,7 @@ void CPhysicsEngine::n2_collision()
 	CTile* pTile = NULL;
 	bool canStepNormally = true;
 	std::list<DPhysics*> normals; // objects that can step normally
-	for (std::list<ARender*>::iterator itr_rooms_from = rooms.begin();
+	for (std::list<ARenderable*>::iterator itr_rooms_from = rooms.begin();
 	        itr_rooms_from != rooms.end();
 	        ++itr_rooms_from)
 	{
@@ -205,7 +205,7 @@ void CPhysicsEngine::n2_collision()
 		//
 		// room -> tile collision detection
 		//
-		for (std::list<ARender*>::iterator itr_tiles = tiles.begin();
+		for (std::list<ARenderable*>::iterator itr_tiles = tiles.begin();
 		        itr_tiles != tiles.end();
 		        ++itr_tiles)
 		{
@@ -222,7 +222,7 @@ void CPhysicsEngine::n2_collision()
 		//
 		// room -> room collision detection
 		//
-		for (std::list<ARender*>::iterator itr_rooms_to = rooms.begin();
+		for (std::list<ARenderable*>::iterator itr_rooms_to = rooms.begin();
 		        itr_rooms_to != rooms.end();
 		        ++itr_rooms_to)
 		{

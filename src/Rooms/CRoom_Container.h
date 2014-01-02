@@ -9,7 +9,6 @@
 #define CROOM_CONTAINER_H_
 
 #include "../Interfaces/IUpdateable.h"
-#include "../Interfaces/IRenderable.h"
 #include "../Interfaces/IGetCollisionData.h"
 #include "../Interfaces/IGetRenderData.h"
 
@@ -38,21 +37,19 @@ struct SNumRooms
 
 
 
-class CRoom_Container: public IUpdateable, public IRenderable, public IGetRenderData, public IGetCollisionData,
+class CRoom_Container: public IUpdateable, public IGetRenderData, public IGetCollisionData,
 	public AUserInput
 {
 public:
-	CRoom_Container(sf::RenderWindow* pWindow,
-	                CTile_Container* pGrid);
+	CRoom_Container(CTile_Container* pGrid);
 	~CRoom_Container();
 
 	const SNumRooms* getNumRooms() const;
 
 	void update();
-	void render();
 
-	void getCollisiondata(std::list<ARender*>* pList);
-	void getRenderData(std::list<ARender*>* pList);
+	void getCollisiondata(std::list<ARenderable*>* pList);
+	void getRenderData(std::list<ARenderable*>* pList);
 
 	bool userInput_keyPress(sf::Event* pEvent);
 	bool userInput_keyRelease(sf::Event* pEvent);
@@ -64,7 +61,6 @@ public:
 
 
 private:
-	sf::RenderWindow* m_pWindow;
 	CTile_Container* m_pGrid;
 
 	// container for all units

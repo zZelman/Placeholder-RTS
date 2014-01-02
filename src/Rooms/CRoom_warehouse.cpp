@@ -7,10 +7,9 @@
 
 #include "CRoom_warehouse.h"
 
-CRoom_warehouse::CRoom_warehouse(sf::RenderWindow* pWindow,
-                                 CTexture* pTexture,
+CRoom_warehouse::CRoom_warehouse(CTexture* pTexture,
                                  const sf::Vector2<int>& currSub)
-	: CRoom(pWindow, pTexture, currSub)
+	: CRoom(pTexture, currSub)
 {
 
 }

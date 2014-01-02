@@ -8,11 +8,11 @@ CGame::CGame()
 	initWindow();
 
 
-	m_pTile_Container = new CTile_Container(m_pWindow, "simple map.tmx");
+	m_pTile_Container = new CTile_Container("simple map.tmx");
 
-	m_pUnit_Container = new CUnit_Container(m_pWindow, m_pTile_Container);
+	m_pUnit_Container = new CUnit_Container(m_pTile_Container);
 
-	m_pRoom_Container = new CRoom_Container(m_pWindow, m_pTile_Container);
+	m_pRoom_Container = new CRoom_Container(m_pTile_Container);
 
 	m_pPhysicsEngine = new CPhysicsEngine(m_pTile_Container,
 	                                      m_pRoom_Container,
@@ -288,13 +288,6 @@ void CGame::update()
 void CGame::render()
 {
 	m_pWindow->clear(sf::Color::White); // clear screen with a black background
-
-	// drawing here...
-	m_pTile_Container->render();
-//	m_pRoom_Container->render();
-	m_pUnit_Container->render();
-
-	m_pHUD->render();
 
 	m_pRenderEngine->render();
 

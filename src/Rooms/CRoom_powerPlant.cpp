@@ -7,10 +7,9 @@
 
 #include "CRoom_powerPlant.h"
 
-CRoom_powerPlant::CRoom_powerPlant(sf::RenderWindow* pWindow,
-                                   CTexture* pTexture,
+CRoom_powerPlant::CRoom_powerPlant(CTexture* pTexture,
                                    const sf::Vector2<int>& currSub)
-	: CRoom(pWindow, pTexture, currSub)
+	: CRoom(pTexture, currSub)
 {
 
 }

@@ -14,7 +14,7 @@ var searchData=
   ['append',['append',['../classsf_1_1VertexArray.html#a80c8f6865e53bd21fc6cb10fffa10035',1,'sf::VertexArray::append()'],['../classsf_1_1Packet.html#a7dd6e429b87520008326c4d71f1cf011',1,'sf::Packet::append()']]],
   ['append_5fattribute',['append_attribute',['../classrapidxml_1_1xml__node.html#a33ce3386f8c42dd4db658b75cbb6e6c4',1,'rapidxml::xml_node']]],
   ['append_5fnode',['append_node',['../classrapidxml_1_1xml__node.html#a8696d098ecc9c4d2a646b43e91d58e31',1,'rapidxml::xml_node']]],
-  ['arender',['ARender',['../classARender.html',1,'']]],
+  ['arenderable',['ARenderable',['../classARenderable.html',1,'']]],
   ['ascii',['Ascii',['../classsf_1_1Ftp.html#a1cd6b89ad23253f6d97e6d4ca4d558cbac9e544a22dce8ef3177449cb235d15c2',1,'sf::Ftp']]],
   ['asmicroseconds',['asMicroseconds',['../classsf_1_1Time.html#ae41a7e0ca73ceea771b3c150c12abdd2',1,'sf::Time']]],
   ['asmilliseconds',['asMilliseconds',['../classsf_1_1Time.html#a85e6deb41fa71896508ce0f64059a6ae',1,'sf::Time']]],

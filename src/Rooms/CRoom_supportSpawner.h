@@ -13,8 +13,7 @@
 class CRoom_supportSpawner: public CRoom
 {
 public:
-	CRoom_supportSpawner(sf::RenderWindow* pWindow,
-	                     CTexture* pTexture,
+	CRoom_supportSpawner(CTexture* pTexture,
 	                     const sf::Vector2<int>& currSub);
 	~CRoom_supportSpawner();
 

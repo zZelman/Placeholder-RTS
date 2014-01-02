@@ -13,8 +13,7 @@
 class CRoom_smithy: public CRoom
 {
 public:
-	CRoom_smithy(sf::RenderWindow* pWindow,
-	             CTexture* pTexture,
+	CRoom_smithy(CTexture* pTexture,
 	             const sf::Vector2<int>& currSub);
 	~CRoom_smithy();
 

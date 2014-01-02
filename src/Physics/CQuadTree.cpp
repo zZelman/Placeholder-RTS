@@ -64,7 +64,7 @@ void CQuadTree::clear()
 }
 
 
-void CQuadTree::insert(ARender* pObject)
+void CQuadTree::insert(ARenderable* pObject)
 {
 	if (m_nodes[0] != NULL)
 	{
@@ -89,7 +89,7 @@ void CQuadTree::insert(ARender* pObject)
 		unsigned int i = 0;
 		while (i < m_objects.size())
 		{
-			ARender* pObjIndex = m_objects.at(i);
+			ARenderable* pObjIndex = m_objects.at(i);
 			int index = getIndex(pObjIndex);
 			if (index != IN_PARENT)
 			{
@@ -105,8 +105,8 @@ void CQuadTree::insert(ARender* pObject)
 }
 
 
-void CQuadTree::retrieve(std::list<ARender*>* returnedObjects,
-                         ARender* pObject)
+void CQuadTree::retrieve(std::list<ARenderable*>* returnedObjects,
+                         ARenderable* pObject)
 {
 	int index = getIndex(pObject);
 	if (index != IN_PARENT && m_nodes[0] != NULL)
@@ -153,7 +153,7 @@ void CQuadTree::split()
 }
 
 
-int CQuadTree::getIndex(ARender* pObject)
+int CQuadTree::getIndex(ARenderable* pObject)
 {
 	int index = IN_PARENT;
 	double verticalMidpoint = m_bounds.left + (m_bounds.width / 2);

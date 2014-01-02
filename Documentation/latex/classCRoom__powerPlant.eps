@@ -175,10 +175,9 @@ boxfont setfont
 1 boundaspect scale
 (CRoom_powerPlant) cw
 (CRoom) cw
-(ARender) cw
+(ARenderable) cw
 (AUpdate) cw
 (DPhysics) cw
-(IRenderable) cw
 (IUpdateable) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
@@ -193,10 +192,9 @@ boundx scalefactor div boundy scalefactor div scale
 
  (CRoom_powerPlant) 1.000000 0.000000 box
  (CRoom) 1.000000 1.000000 box
- (ARender) 0.000000 2.000000 box
+ (ARenderable) 0.000000 2.000000 box
  (AUpdate) 1.000000 2.000000 box
  (DPhysics) 2.000000 2.000000 box
- (IRenderable) 0.000000 3.000000 box
  (IUpdateable) 1.000000 3.000000 box
 
 % ----- relations -----
@@ -212,14 +210,10 @@ solid
 solid
 1 0.000000 2.000000 in
 solid
-0 0.000000 2.000000 out
-solid
 1 1.000000 2.000000 in
 solid
 0 1.000000 2.000000 out
 solid
 1 2.000000 2.000000 in
-solid
-1 0.000000 3.000000 in
 solid
 1 1.000000 3.000000 in

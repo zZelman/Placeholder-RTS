@@ -137,11 +137,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// * Insert the object into the quadtree</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// * if node exceeds its compacity, it will be split and all objects will be</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//      distributed into their respective sub-nodes</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> insert(<a class="code" href="classARender.html">ARender</a>* pObject);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> insert(<a class="code" href="classARenderable.html">ARenderable</a>* pObject);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// * returns all objects in all nodes that the given pObject could potentially collide with</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// * this is the method that helps reduce the number of pairs to check collision against</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> retrieve(std::list&lt;ARender*&gt;* returnedObjects, <a class="code" href="classARender.html">ARender</a>* pObject);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> retrieve(std::list&lt;ARenderable*&gt;* returnedObjects, <a class="code" href="classARenderable.html">ARenderable</a>* pObject);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> m_level;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// Objects within this QuadTree</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::vector&lt;ARender*&gt; m_objects;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::vector&lt;ARenderable*&gt; m_objects;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// Bounds of this quad tree that all m_objects are within</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classsf_1_1Rect.html">sf::IntRect</a> m_bounds;</div>
@@ -177,17 +177,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">//      node the object can fit into</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// * returns -1 if the given object cant fit into any of the sub-nodes of</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">//      this quadtree, so it must fit into the parent of this quadtree</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> getIndex(<a class="code" href="classARender.html">ARender</a>* pObject);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> getIndex(<a class="code" href="classARenderable.html">ARenderable</a>* pObject);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CQUADTREE_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classARender_html"><div class="ttname"><a href="classARender.html">ARender</a></div><div class="ttdef"><b>Definition:</b> <a href="ARender_8h_source.html#l00017">ARender.h:17</a></div></div>
+<div class="ttc" id="classARenderable_html"><div class="ttname"><a href="classARenderable.html">ARenderable</a></div><div class="ttdef"><b>Definition:</b> <a href="ARender_8h_source.html#l00015">ARender.h:15</a></div></div>
 <div class="ttc" id="classCQuadTree_html"><div class="ttname"><a href="classCQuadTree.html">CQuadTree</a></div><div class="ttdef"><b>Definition:</b> <a href="CQuadTree_8h_source.html#l00034">CQuadTree.h:34</a></div></div>
 <div class="ttc" id="classsf_1_1Rect_html"><div class="ttname"><a href="classsf_1_1Rect.html">sf::Rect&lt; int &gt;</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 2 2014 08:19:22 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 2 2014 13:25:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

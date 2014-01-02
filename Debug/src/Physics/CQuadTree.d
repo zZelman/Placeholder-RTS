@@ -79,9 +79,7 @@ src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
  ../src/Physics/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CSprite.h \
- ../src/Physics/../Abstracts/../Graphics/../Interfaces/IRenderable.h \
- ../src/Physics/../Abstracts/../Graphics/CTexture.h \
- ../src/Physics/../Abstracts/../Interfaces/IRenderable.h
+ ../src/Physics/../Abstracts/../Graphics/CTexture.h
 
 ../src/Physics/CQuadTree.h:
 
@@ -245,8 +243,4 @@ src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
 
 ../src/Physics/../Abstracts/../Graphics/CSprite.h:
 
-../src/Physics/../Abstracts/../Graphics/../Interfaces/IRenderable.h:
-
 ../src/Physics/../Abstracts/../Graphics/CTexture.h:
-
-../src/Physics/../Abstracts/../Interfaces/IRenderable.h:

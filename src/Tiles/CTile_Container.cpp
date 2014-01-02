@@ -12,15 +12,12 @@
 #include <assert.h>
 #include <stdlib.h>
 #include "rapidxml_utils.hpp"
-#include "../Interfaces/IRenderable.h"
 #include "CTile.h"
 #include <vector>
 
 
-CTile_Container::CTile_Container(sf::RenderWindow* pWindow, std::string fileName)
+CTile_Container::CTile_Container(std::string fileName)
 {
-	m_pWindow = pWindow;
-
 	m_fileName = fileName;
 	m_filePath = "res/Maps/" + m_fileName;
 
@@ -37,10 +34,11 @@ CTile_Container::~CTile_Container()
 	delete m_pTexture;
 	m_pTexture = NULL;
 
-	for (unsigned int i = 0; i < m_tiles.size(); ++i)
+	for (std::list<CTile*>::iterator itr = m_tiles.begin();
+	        itr != m_tiles.end();
+	        ++itr)
 	{
-		delete m_tiles.at(i);
-		m_tiles.at(i) = NULL;
+		delete(*itr);
 	}
 	m_tiles.clear();
 }
@@ -63,20 +61,24 @@ void CTile_Container::update()
 }
 
 
-void CTile_Container::render()
+void CTile_Container::getRenderData(std::list<ARenderable*>* pList)
 {
-	for (unsigned int i = 0; i < m_tiles.size(); ++i)
+	for (std::list<CTile*>::iterator itr = m_tiles.begin();
+	        itr != m_tiles.end();
+	        ++itr)
 	{
-		m_tiles.at(i)->render();
+		pList->push_front((*itr));
 	}
 }
 
 
-void CTile_Container::getCollisiondata(std::list<ARender*>* pList)
+void CTile_Container::getCollisiondata(std::list<ARenderable*>* pList)
 {
-	for (unsigned int i = 0; i < m_tiles.size(); ++i)
+	for (std::list<CTile*>::iterator itr = m_tiles.begin();
+	        itr != m_tiles.end();
+	        ++itr)
 	{
-		pList->push_front(m_tiles[i]);
+		pList->push_front((*itr));
 	}
 }
 
@@ -101,9 +103,11 @@ bool CTile_Container::isCollision(const sf::Rect<float>& rect, CSprite*& pSprite
 {
 	sf::FloatRect tileRect;
 	CTile* pT;
-	for (unsigned int i = 0; i < m_tiles.size(); ++i)
+	for (std::list<CTile*>::iterator itr = m_tiles.begin();
+	        itr != m_tiles.end();
+	        ++itr)
 	{
-		pT = m_tiles.at(i);
+		pT = *itr;
 		tileRect = pT->getSprite()->getGlobalBounds();
 		if (tileRect.intersects(rect))
 		{
@@ -127,9 +131,11 @@ bool CTile_Container::isCollision(float x, float y, CSprite*& pSprite)
 {
 	sf::FloatRect tileRect;
 	CTile* pT;
-	for (unsigned int i = 0; i < m_tiles.size(); ++i)
+	for (std::list<CTile*>::iterator itr = m_tiles.begin();
+	        itr != m_tiles.end();
+	        ++itr)
 	{
-		pT = m_tiles.at(i);
+		pT = *itr;
 		tileRect = pT->getSprite()->getGlobalBounds();
 		if (tileRect.contains(x, y))
 		{
@@ -195,9 +201,6 @@ CTexture* CTile_Container::generateGrid_texture()
 
 CSprite* CTile_Container::generateGrid_sprite(int posX, int posY, int gridNum, CTexture* pTexture)
 {
-	// CSprite() data fileds, pulled out for readability
-	sf::RenderWindow* pWindow = m_pWindow;
-
 	// because "gridNum" is given as a single value (see Tiled documentation of sprite sheet breakdowns)
 	//		we need to devide the number out to find where on the sprite sheet it came from
 	sf::Vector2<int> subNum = m_pTexture->getSubNum();
@@ -206,7 +209,7 @@ CSprite* CTile_Container::generateGrid_sprite(int posX, int posY, int gridNum, C
 	sf::Vector2<int> currSub;
 	findSubImage(&subNum, startingLength, recievedNum, &currSub);
 
-	CSprite* s = new CSprite(pWindow, pTexture, currSub);
+	CSprite* s = new CSprite(pTexture, currSub);
 
 	positionTile(s, posX, posY);
 
