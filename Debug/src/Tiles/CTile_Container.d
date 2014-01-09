@@ -80,7 +80,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
  ../src/Tiles/../Graphics/CSprite.h ../src/Tiles/../Graphics/CTexture.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
- ../src/Tiles/CTile.h ../src/Tiles/../Abstracts/ARender.h \
+ ../src/Tiles/CTile.h ../src/Tiles/../Abstracts/ARenderable.h \
  ../src/Tiles/../Abstracts/../include_sfml.h \
  ../src/Tiles/../Abstracts/../Graphics/CTexture.h \
  ../src/Tiles/../Abstracts/../Graphics/CSprite.h \
@@ -89,7 +89,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
  ../src/Tiles/../Physics/DPhysics.h \
  ../src/Tiles/../Physics/../include_sfml.h \
  ../src/Tiles/../Interfaces/IGetCollisionData.h \
- ../src/Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Tiles/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Tiles/../Interfaces/IGetRenderData.h \
  ../src/Tiles/../Interfaces/../include_sfml.h
 
@@ -261,7 +261,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
 
 ../src/Tiles/CTile.h:
 
-../src/Tiles/../Abstracts/ARender.h:
+../src/Tiles/../Abstracts/ARenderable.h:
 
 ../src/Tiles/../Abstracts/../include_sfml.h:
 
@@ -279,7 +279,7 @@ src/Tiles/CTile_Container.d: ../src/Tiles/CTile_Container.cpp \
 
 ../src/Tiles/../Interfaces/IGetCollisionData.h:
 
-../src/Tiles/../Interfaces/../Abstracts/ARender.h:
+../src/Tiles/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Tiles/../Interfaces/IGetRenderData.h:
 

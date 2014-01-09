@@ -8,7 +8,7 @@
 #ifndef CTILE_H_
 #define CTILE_H_
 
-#include "../Abstracts/ARender.h"
+#include "../Abstracts/ARenderable.h"
 #include "../Abstracts/AUpdate.h"
 #include "../Physics/DPhysics.h"
 #include "../Graphics/CSprite.h"

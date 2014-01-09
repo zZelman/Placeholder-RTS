@@ -74,7 +74,7 @@ src/Interfaces/IGetRenderData.d: ../src/Interfaces/IGetRenderData.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/Interfaces/../Abstracts/ARender.h \
+ ../src/Interfaces/../Abstracts/ARenderable.h \
  ../src/Interfaces/../Abstracts/../include_sfml.h \
  ../src/Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Interfaces/../Abstracts/../Graphics/../include_sfml.h \
@@ -233,7 +233,7 @@ src/Interfaces/IGetRenderData.d: ../src/Interfaces/IGetRenderData.cpp \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/Interfaces/../Abstracts/ARender.h:
+../src/Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Interfaces/../Abstracts/../include_sfml.h:
 

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sdirections',['SDirections',['../structSDirections.html',1,'']]],
   ['shader',['Shader',['../classsf_1_1Shader.html',1,'sf']]],
   ['shape',['Shape',['../classsf_1_1Shape.html',1,'sf']]],
   ['sizeevent',['SizeEvent',['../structsf_1_1Event_1_1SizeEvent.html',1,'sf::Event']]],
@@ -15,8 +14,13 @@ var searchData=
   ['soundsource',['SoundSource',['../classsf_1_1SoundSource.html',1,'sf']]],
   ['soundstream',['SoundStream',['../classsf_1_1SoundStream.html',1,'sf']]],
   ['sphysics',['SPhysics',['../structDPhysics_1_1SPhysics.html',1,'DPhysics']]],
-  ['sphysics',['SPhysics',['../structSPhysics.html',1,'']]],
   ['sprite',['Sprite',['../classsf_1_1Sprite.html',1,'sf']]],
   ['sresources',['SResources',['../structSResources.html',1,'']]],
+  ['sroombookkeeping',['SRoomBookkeeping',['../structSRoomBookkeeping.html',1,'']]],
+  ['sroombookkeeping_3c_20bool_20_3e',['SRoomBookkeeping&lt; bool &gt;',['../structSRoomBookkeeping.html',1,'']]],
+  ['sroombookkeeping_3c_20ctexture_20_2a_20_3e',['SRoomBookkeeping&lt; CTexture * &gt;',['../structSRoomBookkeeping.html',1,'']]],
+  ['sroombookkeeping_3c_20sf_3a_3akeyboard_3a_3akey_20_3e',['SRoomBookkeeping&lt; sf::Keyboard::Key &gt;',['../structSRoomBookkeeping.html',1,'']]],
+  ['sspawninfo',['SSpawnInfo',['../structSSpawnInfo.html',1,'']]],
+  ['sspawninfo_3c_20cspawner_20_3e',['SSpawnInfo&lt; CSpawner &gt;',['../structSSpawnInfo.html',1,'']]],
   ['string',['String',['../classsf_1_1String.html',1,'sf']]]
 ];

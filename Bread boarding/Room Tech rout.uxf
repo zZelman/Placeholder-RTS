@@ -449,13 +449,13 @@ Must be researched before outfitted
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>405</x>
+      <x>423</x>
       <y>612</y>
-      <w>575</w>
+      <w>593</w>
       <h>134</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>27;117;27;81;558;81;558;27</additional_attributes>
+    <additional_attributes>27;117;27;99;576;72;540;27</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -506,11 +506,11 @@ Must be researched before outfitted
     <coordinates>
       <x>936</x>
       <y>612</y>
-      <w>44</w>
+      <w>80</w>
       <h>188</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>27;171;27;27</additional_attributes>
+    <additional_attributes>27;171;63;72;27;27</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -521,7 +521,7 @@ Must be researched before outfitted
       <h>188</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>144;171;144;81;27;81;27;27</additional_attributes>
+    <additional_attributes>144;171;27;27</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>

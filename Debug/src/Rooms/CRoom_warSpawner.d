@@ -1,6 +1,6 @@
 src/Rooms/CRoom_warSpawner.d: ../src/Rooms/CRoom_warSpawner.cpp \
  ../src/Rooms/CRoom_warSpawner.h ../src/Rooms/CRoom.h \
- ../src/Rooms/../Abstracts/ARender.h \
+ ../src/Rooms/../Abstracts/ARenderable.h \
  ../src/Rooms/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -90,7 +90,7 @@ src/Rooms/CRoom_warSpawner.d: ../src/Rooms/CRoom_warSpawner.cpp \
 
 ../src/Rooms/CRoom.h:
 
-../src/Rooms/../Abstracts/ARender.h:
+../src/Rooms/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Abstracts/../include_sfml.h:
 

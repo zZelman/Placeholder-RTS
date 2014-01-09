@@ -74,7 +74,7 @@ src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/Physics/../Abstracts/ARender.h \
+ ../src/Physics/../Abstracts/ARenderable.h \
  ../src/Physics/../Abstracts/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
  ../src/Physics/../Abstracts/../Graphics/../include_sfml.h \
@@ -233,7 +233,7 @@ src/Physics/CQuadTree.d: ../src/Physics/CQuadTree.cpp \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/Physics/../Abstracts/ARender.h:
+../src/Physics/../Abstracts/ARenderable.h:
 
 ../src/Physics/../Abstracts/../include_sfml.h:
 

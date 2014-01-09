@@ -9,7 +9,7 @@
 #define CQUADTREE_H_
 
 #include "../include_sfml.h"
-#include "../Abstracts/ARender.h"
+#include "../Abstracts/ARenderable.h"
 
 #include <vector>
 #include <list>

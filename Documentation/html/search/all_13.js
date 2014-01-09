@@ -46,7 +46,7 @@ var searchData=
   ['transferaborted',['TransferAborted',['../classsf_1_1Ftp_1_1Response.html#af81738f06b6f571761696291276acb3ba7cfefcc586c12ba70f752353fde7126e',1,'sf::Ftp::Response']]],
   ['transfermode',['TransferMode',['../classsf_1_1Ftp.html#a1cd6b89ad23253f6d97e6d4ca4d558cb',1,'sf::Ftp']]],
   ['transform',['Transform',['../classsf_1_1Transform.html',1,'sf']]],
-  ['transform',['Transform',['../classsf_1_1Transform.html#ac32de51bd0b9f3d52fbe0838225ee83b',1,'sf::Transform::Transform()'],['../classsf_1_1Transform.html#a78c48677712fcf41122d02f1301d71a3',1,'sf::Transform::Transform(float a00, float a01, float a02, float a10, float a11, float a12, float a20, float a21, float a22)'],['../classsf_1_1RenderStates.html#a1f737981a0f2f0d4bb8dac866a8d1149',1,'sf::RenderStates::transform()']]],
+  ['transform',['transform',['../classsf_1_1RenderStates.html#a1f737981a0f2f0d4bb8dac866a8d1149',1,'sf::RenderStates::transform()'],['../classsf_1_1Transform.html#ac32de51bd0b9f3d52fbe0838225ee83b',1,'sf::Transform::Transform()'],['../classsf_1_1Transform.html#a78c48677712fcf41122d02f1301d71a3',1,'sf::Transform::Transform(float a00, float a01, float a02, float a10, float a11, float a12, float a20, float a21, float a22)']]],
   ['transformable',['Transformable',['../classsf_1_1Transformable.html',1,'sf']]],
   ['transformable',['Transformable',['../classsf_1_1Transformable.html#ae71710de0fef423121bab1c684954a2e',1,'sf::Transformable']]],
   ['transformpoint',['transformPoint',['../classsf_1_1Transform.html#af20913c6a27087c26192c116397ab40a',1,'sf::Transform::transformPoint(float x, float y) const '],['../classsf_1_1Transform.html#ac322cd8f6d606598d1aacc4d1d160ad6',1,'sf::Transform::transformPoint(const Vector2f &amp;point) const ']]],

@@ -80,7 +80,7 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
  ../src/HUD/../Rooms/CRoom_Container.h \
  ../src/HUD/../Rooms/../Interfaces/IUpdateable.h \
  ../src/HUD/../Rooms/../Interfaces/IGetCollisionData.h \
- ../src/HUD/../Rooms/../Interfaces/../Abstracts/ARender.h \
+ ../src/HUD/../Rooms/../Interfaces/../Abstracts/ARenderable.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../include_sfml.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/HUD/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
@@ -91,7 +91,7 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
  ../src/HUD/../Rooms/../Abstracts/AUserInput.h \
  ../src/HUD/../Rooms/../include_sfml.h \
  ../src/HUD/../Rooms/include_rooms.h ../src/HUD/../Rooms/CRoom.h \
- ../src/HUD/../Rooms/../Abstracts/ARender.h \
+ ../src/HUD/../Rooms/../Abstracts/ARenderable.h \
  ../src/HUD/../Rooms/../Abstracts/AUpdate.h \
  ../src/HUD/../Rooms/../Graphics/CSprite.h \
  ../src/HUD/../Rooms/../Graphics/CTexture.h \
@@ -111,7 +111,7 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/HUD/../Rooms/../Tiles/CTile.h \
- ../src/HUD/../Rooms/../Tiles/../Abstracts/ARender.h \
+ ../src/HUD/../Rooms/../Tiles/../Abstracts/ARenderable.h \
  ../src/HUD/../Rooms/../Tiles/../Abstracts/AUpdate.h \
  ../src/HUD/../Rooms/../Tiles/../Physics/DPhysics.h \
  ../src/HUD/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
@@ -286,7 +286,7 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
 
 ../src/HUD/../Rooms/../Interfaces/IGetCollisionData.h:
 
-../src/HUD/../Rooms/../Interfaces/../Abstracts/ARender.h:
+../src/HUD/../Rooms/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/HUD/../Rooms/../Interfaces/../Abstracts/../include_sfml.h:
 
@@ -310,7 +310,7 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
 
 ../src/HUD/../Rooms/CRoom.h:
 
-../src/HUD/../Rooms/../Abstracts/ARender.h:
+../src/HUD/../Rooms/../Abstracts/ARenderable.h:
 
 ../src/HUD/../Rooms/../Abstracts/AUpdate.h:
 
@@ -352,7 +352,7 @@ src/HUD/CHUD.d: ../src/HUD/CHUD.cpp ../src/HUD/CHUD.h \
 
 ../src/HUD/../Rooms/../Tiles/CTile.h:
 
-../src/HUD/../Rooms/../Tiles/../Abstracts/ARender.h:
+../src/HUD/../Rooms/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/HUD/../Rooms/../Tiles/../Abstracts/AUpdate.h:
 

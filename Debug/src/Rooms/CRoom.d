@@ -1,5 +1,5 @@
 src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
- ../src/Rooms/../Abstracts/ARender.h \
+ ../src/Rooms/../Abstracts/ARenderable.h \
  ../src/Rooms/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -92,11 +92,11 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Rooms/../Tiles/CTile.h \
- ../src/Rooms/../Tiles/../Abstracts/ARender.h \
+ ../src/Rooms/../Tiles/../Abstracts/ARenderable.h \
  ../src/Rooms/../Tiles/../Abstracts/AUpdate.h \
  ../src/Rooms/../Tiles/../Physics/DPhysics.h \
  ../src/Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
- ../src/Rooms/../Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Rooms/../Tiles/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Rooms/../Tiles/../Interfaces/IGetRenderData.h \
  ../src/Rooms/../Tiles/../Interfaces/../include_sfml.h \
  ../src/Rooms/CRoom_Container.h ../src/Rooms/../Interfaces/IUpdateable.h \
@@ -110,7 +110,7 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
 
 ../src/Rooms/CRoom.h:
 
-../src/Rooms/../Abstracts/ARender.h:
+../src/Rooms/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Abstracts/../include_sfml.h:
 
@@ -300,7 +300,7 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
 
 ../src/Rooms/../Tiles/CTile.h:
 
-../src/Rooms/../Tiles/../Abstracts/ARender.h:
+../src/Rooms/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Tiles/../Abstracts/AUpdate.h:
 
@@ -308,7 +308,7 @@ src/Rooms/CRoom.d: ../src/Rooms/CRoom.cpp ../src/Rooms/CRoom.h \
 
 ../src/Rooms/../Tiles/../Interfaces/IGetCollisionData.h:
 
-../src/Rooms/../Tiles/../Interfaces/../Abstracts/ARender.h:
+../src/Rooms/../Tiles/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Tiles/../Interfaces/IGetRenderData.h:
 

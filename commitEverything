@@ -2,8 +2,6 @@
 
 ./runAstyle
 
-./document
-
 git add -A *
 find . -name '.[a-z]*' -exec git add '{}' ';'
 git commit -a -m "$*"

@@ -6,7 +6,6 @@
  */
 
 #include "CQuadTree.h"
-#include "../Abstracts/ARender.h"
 
 CQuadTree::CQuadTree(int level, sf::IntRect* bounds)
 {

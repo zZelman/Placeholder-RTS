@@ -8,12 +8,11 @@
 #ifndef CUNIT_H_
 #define CUNIT_H_
 
-#include "../Abstracts/ARender.h"
+#include "../Abstracts/ARenderable.h"
 #include "../Abstracts/AUpdate.h"
 #include "../Graphics/CSprite.h"
 #include "../include_sfml.h"
 #include "../Tiles/CTile_Container.h"
-#include "../Utills.h"
 #include "../Physics/DPhysics.h"
 
 class CUnit: public AUpdate, public ARenderable, public DPhysics
@@ -29,10 +28,6 @@ public:
 
 private:
 	CTile_Container* m_pGrid;
-
-	// * Controls how the sprite is moving during the update phase
-	// * these flags are set elsewhere, then passively acted on as they precist
-	struct SDirections m_sMovement;
 
 	// collision detection between
 	bool canMove_vertical();

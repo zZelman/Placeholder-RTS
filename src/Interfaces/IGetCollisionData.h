@@ -9,7 +9,7 @@
 #define IGETCOLLISIONDATA_H_
 
 #include <list>
-#include "../Abstracts/ARender.h"
+#include "../Abstracts/ARenderable.h"
 
 class IGetCollisionData
 {

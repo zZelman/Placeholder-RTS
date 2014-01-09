@@ -13,7 +13,10 @@ Inheritance diagram for C\-Room\-\_\-\-Container\-:\begin{figure}[H]
 \hypertarget{classCRoom__Container_a8ff9ed6e36687810fa9d3e75f8be311e}{{\bfseries C\-Room\-\_\-\-Container} (\hyperlink{classCTile__Container}{C\-Tile\-\_\-\-Container} $\ast$p\-Grid)}\label{classCRoom__Container_a8ff9ed6e36687810fa9d3e75f8be311e}
 
 \item 
-\hypertarget{classCRoom__Container_a4487394b5b73570abf3731200129e507}{const \hyperlink{structSNumRooms}{S\-Num\-Rooms} $\ast$ {\bfseries get\-Num\-Rooms} () const }\label{classCRoom__Container_a4487394b5b73570abf3731200129e507}
+\hypertarget{classCRoom__Container_a82aafa14e115d22530fbc70f88c5a224}{struct \hyperlink{structSNumRooms}{S\-Num\-Rooms} $\ast$ {\bfseries get\-Num\-Rooms} ()}\label{classCRoom__Container_a82aafa14e115d22530fbc70f88c5a224}
+
+\item 
+\hypertarget{classCRoom__Container_ad24e32e7fba1122db0c40aea2aeb0da2}{std\-::list$<$ \hyperlink{classCRoom}{C\-Room} $\ast$ $>$ $\ast$ {\bfseries get\-Rooms} ()}\label{classCRoom__Container_ad24e32e7fba1122db0c40aea2aeb0da2}
 
 \item 
 \hypertarget{classCRoom__Container_a976c43bd83d5416c3f3d286d09ebf89d}{void {\bfseries update} ()}\label{classCRoom__Container_a976c43bd83d5416c3f3d286d09ebf89d}
@@ -25,28 +28,37 @@ Inheritance diagram for C\-Room\-\_\-\-Container\-:\begin{figure}[H]
 \hypertarget{classCRoom__Container_a15cce22d7e258ca05eaa0605263bd743}{void {\bfseries get\-Render\-Data} (std\-::list$<$ \hyperlink{classARenderable}{A\-Renderable} $\ast$ $>$ $\ast$p\-List)}\label{classCRoom__Container_a15cce22d7e258ca05eaa0605263bd743}
 
 \item 
-\hypertarget{classCRoom__Container_aa220dc3fd30384ef9d3b13b0f7c0a417}{bool {\bfseries user\-Input\-\_\-key\-Press} (\hyperlink{classsf_1_1Event}{sf\-::\-Event} $\ast$p\-Event)}\label{classCRoom__Container_aa220dc3fd30384ef9d3b13b0f7c0a417}
-
-\item 
-\hypertarget{classCRoom__Container_a85bb9fcebc84e71bb90fb5c7d7c201a6}{bool {\bfseries user\-Input\-\_\-key\-Release} (\hyperlink{classsf_1_1Event}{sf\-::\-Event} $\ast$p\-Event)}\label{classCRoom__Container_a85bb9fcebc84e71bb90fb5c7d7c201a6}
-
-\item 
-\hypertarget{classCRoom__Container_a84080540b5cb7a400662aba47fee60fc}{bool {\bfseries user\-Input\-\_\-mouse\-Press} (\hyperlink{classsf_1_1Event}{sf\-::\-Event} $\ast$p\-Event)}\label{classCRoom__Container_a84080540b5cb7a400662aba47fee60fc}
-
-\item 
-\hypertarget{classCRoom__Container_adb9e0db332c48e7baabf55d7e14ac512}{bool {\bfseries user\-Input\-\_\-mouse\-Release} (\hyperlink{classsf_1_1Event}{sf\-::\-Event} $\ast$p\-Event)}\label{classCRoom__Container_adb9e0db332c48e7baabf55d7e14ac512}
-
-\item 
 \hypertarget{classCRoom__Container_a2eb1c5bc2aef2804cb15cbedd5fc649a}{bool {\bfseries is\-Collision} (const \hyperlink{classsf_1_1Rect}{sf\-::\-Rect}$<$ float $>$ \&rect, \hyperlink{classCRoom}{C\-Room} $\ast$\&p\-Room)}\label{classCRoom__Container_a2eb1c5bc2aef2804cb15cbedd5fc649a}
 
+\item 
+\hypertarget{classCRoom__Container_a706efb0198fe6a811d5065fa4de6ff75}{bool {\bfseries can\-Spawn\-At\-Pos} (int x, int y)}\label{classCRoom__Container_a706efb0198fe6a811d5065fa4de6ff75}
+
+\item 
+bool \hyperlink{classCRoom__Container_a7bc2bd08133c964fe7e21fa579b075d3}{delete\-Room} (int x, int y)
 \end{DoxyCompactItemize}
-\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
 
 
 Definition at line 40 of file C\-Room\-\_\-\-Container.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCRoom__Container_a7bc2bd08133c964fe7e21fa579b075d3}{\index{C\-Room\-\_\-\-Container@{C\-Room\-\_\-\-Container}!delete\-Room@{delete\-Room}}
+\index{delete\-Room@{delete\-Room}!CRoom_Container@{C\-Room\-\_\-\-Container}}
+\subsubsection[{delete\-Room}]{\setlength{\rightskip}{0pt plus 5cm}bool C\-Room\-\_\-\-Container\-::delete\-Room (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{classCRoom__Container_a7bc2bd08133c964fe7e21fa579b075d3}
+D\-E\-B\-U\-G.
+
+Deletes a room at mouse coords (x,y) if there exists one 
+
+Definition at line 137 of file C\-Room\-\_\-\-Container.\-cpp.
 
 
 

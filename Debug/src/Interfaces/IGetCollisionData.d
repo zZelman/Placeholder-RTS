@@ -1,7 +1,7 @@
 src/Interfaces/IGetCollisionData.d: \
  ../src/Interfaces/IGetCollisionData.cpp \
  ../src/Interfaces/IGetCollisionData.h \
- ../src/Interfaces/../Abstracts/ARender.h \
+ ../src/Interfaces/../Abstracts/ARenderable.h \
  ../src/Interfaces/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -84,7 +84,7 @@ src/Interfaces/IGetCollisionData.d: \
 
 ../src/Interfaces/IGetCollisionData.h:
 
-../src/Interfaces/../Abstracts/ARender.h:
+../src/Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Interfaces/../Abstracts/../include_sfml.h:
 

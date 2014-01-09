@@ -1,5 +1,5 @@
 src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
- ../src/Tiles/../Abstracts/ARender.h \
+ ../src/Tiles/../Abstracts/ARenderable.h \
  ../src/Tiles/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -87,7 +87,7 @@ src/Tiles/CTile.d: ../src/Tiles/CTile.cpp ../src/Tiles/CTile.h \
 
 ../src/Tiles/CTile.h:
 
-../src/Tiles/../Abstracts/ARender.h:
+../src/Tiles/../Abstracts/ARenderable.h:
 
 ../src/Tiles/../Abstracts/../include_sfml.h:
 

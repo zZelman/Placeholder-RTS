@@ -4,17 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Abstracts/ARender.cpp \
+../src/Abstracts/ARenderable.cpp \
 ../src/Abstracts/AUpdate.cpp \
 ../src/Abstracts/AUserInput.cpp 
 
 OBJS += \
-./src/Abstracts/ARender.o \
+./src/Abstracts/ARenderable.o \
 ./src/Abstracts/AUpdate.o \
 ./src/Abstracts/AUserInput.o 
 
 CPP_DEPS += \
-./src/Abstracts/ARender.d \
+./src/Abstracts/ARenderable.d \
 ./src/Abstracts/AUpdate.d \
 ./src/Abstracts/AUserInput.d 
 

@@ -25,7 +25,10 @@ C_UPPER_DEPS :=
 SUBDIRS := \
 src \
 src/Units \
+src/UI \
 src/Tiles \
+src/Templates \
+src/Spawner \
 src/Rooms \
 src/Physics \
 src/Logic \

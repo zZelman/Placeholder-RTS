@@ -1,5 +1,5 @@
 src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
- ../src/Units/../Abstracts/ARender.h \
+ ../src/Units/../Abstracts/ARenderable.h \
  ../src/Units/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -90,20 +90,19 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Units/../Tiles/CTile.h \
- ../src/Units/../Tiles/../Abstracts/ARender.h \
+ ../src/Units/../Tiles/../Abstracts/ARenderable.h \
  ../src/Units/../Tiles/../Abstracts/AUpdate.h \
  ../src/Units/../Tiles/../Physics/DPhysics.h \
  ../src/Units/../Tiles/../Physics/../include_sfml.h \
  ../src/Units/../Tiles/../Interfaces/IGetCollisionData.h \
- ../src/Units/../Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Units/../Tiles/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Units/../Tiles/../Interfaces/IGetRenderData.h \
  ../src/Units/../Tiles/../Interfaces/../include_sfml.h \
- ../src/Units/../Utills.h ../src/Units/../include_sfml.h \
  ../src/Units/../Physics/DPhysics.h ../src/Units/../Graphics/CTexture.h
 
 ../src/Units/CUnit.h:
 
-../src/Units/../Abstracts/ARender.h:
+../src/Units/../Abstracts/ARenderable.h:
 
 ../src/Units/../Abstracts/../include_sfml.h:
 
@@ -287,7 +286,7 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
 
 ../src/Units/../Tiles/CTile.h:
 
-../src/Units/../Tiles/../Abstracts/ARender.h:
+../src/Units/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/Units/../Tiles/../Abstracts/AUpdate.h:
 
@@ -297,15 +296,11 @@ src/Units/CUnit.d: ../src/Units/CUnit.cpp ../src/Units/CUnit.h \
 
 ../src/Units/../Tiles/../Interfaces/IGetCollisionData.h:
 
-../src/Units/../Tiles/../Interfaces/../Abstracts/ARender.h:
+../src/Units/../Tiles/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Units/../Tiles/../Interfaces/IGetRenderData.h:
 
 ../src/Units/../Tiles/../Interfaces/../include_sfml.h:
-
-../src/Units/../Utills.h:
-
-../src/Units/../include_sfml.h:
 
 ../src/Units/../Physics/DPhysics.h:
 

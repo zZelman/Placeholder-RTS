@@ -1,0 +1,108 @@
+\hypertarget{structSSpawnInfo}{\section{S\-Spawn\-Info$<$ T $>$ Struct Template Reference}
+\label{structSSpawnInfo}\index{S\-Spawn\-Info$<$ T $>$@{S\-Spawn\-Info$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$S\-Spawn\-Info.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structSSpawnInfo_acf3465415d75ff768104e0786e2fe32b}{void {\bfseries null\-All} ()}\label{structSSpawnInfo_acf3465415d75ff768104e0786e2fe32b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structSSpawnInfo_ac7031f22395eeabeaa0fd70106a6240d}{is\-Mouse}
+\item 
+bool \hyperlink{structSSpawnInfo_a170d2aab04fc1f6f8d47214f669c7fa8}{key\-Press\-State}
+\item 
+\hyperlink{classsf_1_1Event}{sf\-::\-Event} $\ast$ \hyperlink{structSSpawnInfo_a2049a025aa48f908865cb50a6e36555f}{p\-Event}
+\item 
+\hyperlink{classsf_1_1Keyboard_acb4cacd7cc5802dec45724cf3314a142}{sf\-::\-Keyboard\-::\-Key} $\ast$ \hyperlink{structSSpawnInfo_ac3dd746c7d07309d2c8a42aa6841e0ce}{spawn\-Key}
+\item 
+bool $\ast$ \hyperlink{structSSpawnInfo_aa29b90107ad7e0d6de9eecf5abf4193b}{spawn\-Key\-State}
+\item 
+void(T\-::$\ast$ \hyperlink{structSSpawnInfo_af73182a1abe40cbfc6d20c8d49e68caa}{spawn\-Function} )(int, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$struct S\-Spawn\-Info$<$ T $>$}
+
+Bookkeeping struct passed between functions to determine what the user intended to spawn
+
+A\-L\-L are intended to be temporary 
+\begin{DoxyParams}{Parameters}
+{\em T} & object name that the spawn function exists within \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file S\-Spawn\-Info.\-h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structSSpawnInfo_ac7031f22395eeabeaa0fd70106a6240d}{\index{S\-Spawn\-Info@{S\-Spawn\-Info}!is\-Mouse@{is\-Mouse}}
+\index{is\-Mouse@{is\-Mouse}!SSpawnInfo@{S\-Spawn\-Info}}
+\subsubsection[{is\-Mouse}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf S\-Spawn\-Info}$<$ T $>$\-::is\-Mouse}}\label{structSSpawnInfo_ac7031f22395eeabeaa0fd70106a6240d}
+Determines whether the mouse was pressed or a keyboard key.
+
+true = mouse, false = keyboard 
+
+Definition at line 27 of file S\-Spawn\-Info.\-h.
+
+\hypertarget{structSSpawnInfo_a170d2aab04fc1f6f8d47214f669c7fa8}{\index{S\-Spawn\-Info@{S\-Spawn\-Info}!key\-Press\-State@{key\-Press\-State}}
+\index{key\-Press\-State@{key\-Press\-State}!SSpawnInfo@{S\-Spawn\-Info}}
+\subsubsection[{key\-Press\-State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf S\-Spawn\-Info}$<$ T $>$\-::key\-Press\-State}}\label{structSSpawnInfo_a170d2aab04fc1f6f8d47214f669c7fa8}
+State of an arbitrary key.
+
+true = pressed, false = released 
+
+Definition at line 34 of file S\-Spawn\-Info.\-h.
+
+\hypertarget{structSSpawnInfo_a2049a025aa48f908865cb50a6e36555f}{\index{S\-Spawn\-Info@{S\-Spawn\-Info}!p\-Event@{p\-Event}}
+\index{p\-Event@{p\-Event}!SSpawnInfo@{S\-Spawn\-Info}}
+\subsubsection[{p\-Event}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf sf\-::\-Event}$\ast$ {\bf S\-Spawn\-Info}$<$ T $>$\-::p\-Event}}\label{structSSpawnInfo_a2049a025aa48f908865cb50a6e36555f}
+Pointer to actual event that occurred 
+
+Definition at line 39 of file S\-Spawn\-Info.\-h.
+
+\hypertarget{structSSpawnInfo_af73182a1abe40cbfc6d20c8d49e68caa}{\index{S\-Spawn\-Info@{S\-Spawn\-Info}!spawn\-Function@{spawn\-Function}}
+\index{spawn\-Function@{spawn\-Function}!SSpawnInfo@{S\-Spawn\-Info}}
+\subsubsection[{spawn\-Function}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void(T\-::$\ast$ {\bf S\-Spawn\-Info}$<$ T $>$\-::spawn\-Function)(int, int)}}\label{structSSpawnInfo_af73182a1abe40cbfc6d20c8d49e68caa}
+Function pointer called if a spawn event has been detected, verified, and then initiated
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & it is assumed that the spawn function exists within an object, this is that \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file S\-Spawn\-Info.\-h.
+
+\hypertarget{structSSpawnInfo_ac3dd746c7d07309d2c8a42aa6841e0ce}{\index{S\-Spawn\-Info@{S\-Spawn\-Info}!spawn\-Key@{spawn\-Key}}
+\index{spawn\-Key@{spawn\-Key}!SSpawnInfo@{S\-Spawn\-Info}}
+\subsubsection[{spawn\-Key}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf sf\-::\-Keyboard\-::\-Key}$\ast$ {\bf S\-Spawn\-Info}$<$ T $>$\-::spawn\-Key}}\label{structSSpawnInfo_ac3dd746c7d07309d2c8a42aa6841e0ce}
+The key (if pressed) will cause a spawn event to occur 
+
+Definition at line 44 of file S\-Spawn\-Info.\-h.
+
+\hypertarget{structSSpawnInfo_aa29b90107ad7e0d6de9eecf5abf4193b}{\index{S\-Spawn\-Info@{S\-Spawn\-Info}!spawn\-Key\-State@{spawn\-Key\-State}}
+\index{spawn\-Key\-State@{spawn\-Key\-State}!SSpawnInfo@{S\-Spawn\-Info}}
+\subsubsection[{spawn\-Key\-State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool$\ast$ {\bf S\-Spawn\-Info}$<$ T $>$\-::spawn\-Key\-State}}\label{structSSpawnInfo_aa29b90107ad7e0d6de9eecf5abf4193b}
+State of the spawn\-Key variable
+
+true = pressed, false = released 
+
+Definition at line 51 of file S\-Spawn\-Info.\-h.
+
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/z\-Zelman/\-Dropbox/\-Placeholder-\/\-R\-T\-S/src/\-Templates/S\-Spawn\-Info.\-h\item 
+/home/z\-Zelman/\-Dropbox/\-Placeholder-\/\-R\-T\-S/src/\-Templates/S\-Spawn\-Info.\-cpp\end{DoxyCompactItemize}

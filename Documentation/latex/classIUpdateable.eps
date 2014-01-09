@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 52.910053
+%%BoundingBox: 0 0 500 47.619048
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 9.450000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 10.500000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
 /rows 4 def
-/cols 9 def
+/cols 10 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -179,6 +179,7 @@ boxfont setfont
 (CPhysicsEngine) cw
 (CRoom_Container) cw
 (CTile_Container) cw
+(CUI) cw
 (CUnit_Container) cw
 (CGameLogic) cw
 (CHUD) cw
@@ -203,13 +204,14 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (IUpdateable) 5.500000 3.000000 box
+ (IUpdateable) 6.000000 3.000000 box
  (AUpdate) 3.000000 2.000000 box
  (CGame) 4.000000 2.000000 box
  (CPhysicsEngine) 5.000000 2.000000 box
  (CRoom_Container) 6.000000 2.000000 box
  (CTile_Container) 7.000000 2.000000 box
- (CUnit_Container) 8.000000 2.000000 box
+ (CUI) 8.000000 2.000000 box
+ (CUnit_Container) 9.000000 2.000000 box
  (CGameLogic) 0.000000 1.000000 box
  (CHUD) 1.000000 1.000000 box
  (CRoom) 3.000000 1.000000 box
@@ -226,9 +228,9 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 5.500000 2.250000 out
+1 6.000000 2.250000 out
 solid
-3.000000 8.000000 3.000000 conn
+3.000000 9.000000 3.000000 conn
 solid
 0 3.000000 2.750000 in
 solid
@@ -245,6 +247,8 @@ solid
 0 7.000000 2.750000 in
 solid
 0 8.000000 2.750000 in
+solid
+0 9.000000 2.750000 in
 solid
 0 0.000000 1.750000 in
 solid

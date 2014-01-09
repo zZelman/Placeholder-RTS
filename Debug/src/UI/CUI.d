@@ -1,5 +1,6 @@
-src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
- ../src/Abstracts/ARender.h ../src/Abstracts/../include_sfml.h \
+src/UI/CUI.d: ../src/UI/CUI.cpp ../src/UI/CUI.h \
+ ../src/UI/../Abstracts/AUserInput.h \
+ ../src/UI/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Config.hpp \
@@ -74,14 +75,64 @@ src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/Abstracts/../Graphics/CTexture.h \
- ../src/Abstracts/../Graphics/../include_sfml.h \
- ../src/Abstracts/../Graphics/CSprite.h \
- ../src/Abstracts/../Graphics/CTexture.h
+ ../src/UI/../Templates/SRoomBookkeeping.h \
+ ../src/UI/../Templates/SSpawnInfo.h \
+ ../src/UI/../Templates/../include_sfml.h ../src/UI/../include_sfml.h \
+ ../src/UI/../Spawner/CSpawner.h \
+ ../src/UI/../Spawner/../Graphics/CTexture.h \
+ ../src/UI/../Spawner/../Graphics/../include_sfml.h \
+ ../src/UI/../Spawner/../Templates/SRoomBookkeeping.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_Container.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/IUpdateable.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/IGetCollisionData.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/ARenderable.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../include_sfml.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/IGetRenderData.h \
+ ../src/UI/../Spawner/../Rooms/../Interfaces/../include_sfml.h \
+ ../src/UI/../Spawner/../Rooms/../Abstracts/AUserInput.h \
+ ../src/UI/../Spawner/../Rooms/../include_sfml.h \
+ ../src/UI/../Spawner/../Rooms/include_rooms.h \
+ ../src/UI/../Spawner/../Rooms/CRoom.h \
+ ../src/UI/../Spawner/../Rooms/../Abstracts/ARenderable.h \
+ ../src/UI/../Spawner/../Rooms/../Abstracts/AUpdate.h \
+ ../src/UI/../Spawner/../Rooms/../Abstracts/../Interfaces/IUpdateable.h \
+ ../src/UI/../Spawner/../Rooms/../Graphics/CSprite.h \
+ ../src/UI/../Spawner/../Rooms/../Graphics/CTexture.h \
+ ../src/UI/../Spawner/../Rooms/../Physics/DPhysics.h \
+ ../src/UI/../Spawner/../Rooms/../Physics/../include_sfml.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_warehouse.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_kitchen.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_smithy.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_powerPlant.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_warSpawner.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_researchSpawner.h \
+ ../src/UI/../Spawner/../Rooms/CRoom_supportSpawner.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/CTile_Container.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../include_sfml.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Interfaces/IUpdateable.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Graphics/CTexture.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Graphics/CSprite.h \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
+ /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
+ ../src/UI/../Spawner/../Rooms/../Tiles/CTile.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Abstracts/ARenderable.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Abstracts/AUpdate.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Physics/DPhysics.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
+ ../src/UI/../Spawner/../Rooms/../Tiles/../Interfaces/IGetRenderData.h \
+ ../src/UI/../Interfaces/IUpdateable.h \
+ ../src/UI/../Tiles/CTile_Container.h \
+ ../src/UI/../Rooms/CRoom_Container.h
 
-../src/Abstracts/ARender.h:
+../src/UI/CUI.h:
 
-../src/Abstracts/../include_sfml.h:
+../src/UI/../Abstracts/AUserInput.h:
+
+../src/UI/../Abstracts/../include_sfml.h:
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp:
 
@@ -231,10 +282,108 @@ src/Abstracts/ARender.d: ../src/Abstracts/ARender.cpp \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/Abstracts/../Graphics/CTexture.h:
+../src/UI/../Templates/SRoomBookkeeping.h:
 
-../src/Abstracts/../Graphics/../include_sfml.h:
+../src/UI/../Templates/SSpawnInfo.h:
 
-../src/Abstracts/../Graphics/CSprite.h:
+../src/UI/../Templates/../include_sfml.h:
 
-../src/Abstracts/../Graphics/CTexture.h:
+../src/UI/../include_sfml.h:
+
+../src/UI/../Spawner/CSpawner.h:
+
+../src/UI/../Spawner/../Graphics/CTexture.h:
+
+../src/UI/../Spawner/../Graphics/../include_sfml.h:
+
+../src/UI/../Spawner/../Templates/SRoomBookkeeping.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_Container.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/IUpdateable.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/IGetCollisionData.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/ARenderable.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../include_sfml.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/CSprite.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/IGetRenderData.h:
+
+../src/UI/../Spawner/../Rooms/../Interfaces/../include_sfml.h:
+
+../src/UI/../Spawner/../Rooms/../Abstracts/AUserInput.h:
+
+../src/UI/../Spawner/../Rooms/../include_sfml.h:
+
+../src/UI/../Spawner/../Rooms/include_rooms.h:
+
+../src/UI/../Spawner/../Rooms/CRoom.h:
+
+../src/UI/../Spawner/../Rooms/../Abstracts/ARenderable.h:
+
+../src/UI/../Spawner/../Rooms/../Abstracts/AUpdate.h:
+
+../src/UI/../Spawner/../Rooms/../Abstracts/../Interfaces/IUpdateable.h:
+
+../src/UI/../Spawner/../Rooms/../Graphics/CSprite.h:
+
+../src/UI/../Spawner/../Rooms/../Graphics/CTexture.h:
+
+../src/UI/../Spawner/../Rooms/../Physics/DPhysics.h:
+
+../src/UI/../Spawner/../Rooms/../Physics/../include_sfml.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_warehouse.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_kitchen.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_smithy.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_powerPlant.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_warSpawner.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_researchSpawner.h:
+
+../src/UI/../Spawner/../Rooms/CRoom_supportSpawner.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/CTile_Container.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../include_sfml.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Interfaces/IUpdateable.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Graphics/CTexture.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Graphics/CSprite.h:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp:
+
+/home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp:
+
+../src/UI/../Spawner/../Rooms/../Tiles/CTile.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Abstracts/ARenderable.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Abstracts/AUpdate.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Physics/DPhysics.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h:
+
+../src/UI/../Spawner/../Rooms/../Tiles/../Interfaces/IGetRenderData.h:
+
+../src/UI/../Interfaces/IUpdateable.h:
+
+../src/UI/../Tiles/CTile_Container.h:
+
+../src/UI/../Rooms/CRoom_Container.h:

@@ -8,7 +8,7 @@
 #ifndef CROOM_H_
 #define CROOM_H_
 
-#include "../Abstracts/ARender.h"
+#include "../Abstracts/ARenderable.h"
 #include "../Abstracts/AUpdate.h"
 #include "../Graphics/CSprite.h"
 #include "../Graphics/CTexture.h"

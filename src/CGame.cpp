@@ -28,6 +28,10 @@ CGame::CGame()
 	                                    m_pTile_Container,
 	                                    m_pHUD);
 
+	m_pSpawner = new CSpawner(m_pRoom_Container);
+
+	m_pUI = new CUI(m_pTile_Container, m_pRoom_Container, m_pSpawner);
+
 
 	// re-work the window to be dependent on the amount of tiles in the world
 	// work toward finding the whole world width/height
@@ -38,6 +42,7 @@ CGame::CGame()
 //	m_pWindow->create(sf::VideoMode(width, height), "Placeholder-RTS");
 
 
+	isFirstUpdate = true;
 	isRunning = false;
 	isPaused = false;
 }
@@ -68,6 +73,12 @@ CGame::~CGame()
 
 	delete m_pRenderEngine;
 	m_pRenderEngine = NULL;
+
+	delete m_pUI;
+	m_pUI = NULL;
+
+	delete m_pSpawner;
+	m_pSpawner = NULL;
 }
 
 
@@ -175,67 +186,83 @@ bool CGame::input_user(sf::Event* pEvent)
 			m_pWindow->close();
 			return true;
 		}
-		else if (m_pUnit_Container->userInput_keyPress(pEvent))
+		else if (m_pUI->userInput_keyPress(pEvent))
 		{
 			return true;
 		}
-		else if (m_pRoom_Container->userInput_keyPress(pEvent))
-		{
-			return true;
-		}
-		else if (m_pHUD->userInput_keyPress(pEvent))
-		{
-			return true;
-		}
+//		else if (m_pUnit_Container->userInput_keyPress(pEvent))
+//		{
+//			return true;
+//		}
+//		else if (m_pRoom_Container->userInput_keyPress(pEvent))
+//		{
+//			return true;
+//		}
+//		else if (m_pHUD->userInput_keyPress(pEvent))
+//		{
+//			return true;
+//		}
 
 	}
 	else if (pEvent->type == sf::Event::KeyReleased) // release
 	{
-		if (m_pUnit_Container->userInput_keyRelease(pEvent))
+		if (m_pUI->userInput_keyRelease(pEvent))
 		{
 			return true;
 		}
-		else if (m_pRoom_Container->userInput_keyRelease(pEvent))
-		{
-			return true;
-		}
-		else if (m_pHUD->userInput_keyRelease(pEvent))
-		{
-			return true;
-		}
+//		if (m_pUnit_Container->userInput_keyRelease(pEvent))
+//		{
+//			return true;
+//		}
+//		else if (m_pRoom_Container->userInput_keyRelease(pEvent))
+//		{
+//			return true;
+//		}
+//		else if (m_pHUD->userInput_keyRelease(pEvent))
+//		{
+//			return true;
+//		}
 
 	}
 
 	// mouse
 	if (pEvent->type == sf::Event::MouseButtonPressed) // press
 	{
+		if (m_pUI->userInput_mousePress(pEvent))
+		{
+			return true;
+		}
 //		if (m_pUnit_Container->userInput_mousePress(pEvent))
 //		{
 //			return true;
 //		}
-		if (m_pRoom_Container->userInput_mousePress(pEvent))
-		{
-			return true;
-		}
-		if (m_pHUD->userInput_mousePress(pEvent))
-		{
-			return true;
-		}
+//		if (m_pRoom_Container->userInput_mousePress(pEvent))
+//		{
+//			return true;
+//		}
+//		if (m_pHUD->userInput_mousePress(pEvent))
+//		{
+//			return true;
+//		}
 	}
 	else if (pEvent->type == sf::Event::MouseButtonReleased) // release
 	{
+		if (m_pUI->userInput_mouseRelease(pEvent))
+		{
+			return true;
+		}
 //		if (m_pUnit_Container->userInput_mouseRelease(pEvent))
 //		{
 //			return true;
 //		}
-		if (m_pRoom_Container->userInput_mouseRelease(pEvent))
-		{
-			return true;
-		}
-		else if (m_pHUD->userInput_mouseRelease(pEvent))
-		{
-			return true;
-		}
+//		if (m_pRoom_Container->userInput_mouseRelease(pEvent))
+//		{
+//			return true;
+//		}
+//		else if (m_pHUD->userInput_mouseRelease(pEvent))
+//		{
+//			return true;
+//		}
 	}
 
 	return false;
@@ -273,8 +300,13 @@ bool CGame::input_gameSystem(sf::Event* pEvent)
 
 void CGame::update()
 {
+	if (isFirstUpdate == true)
+	{
+		m_pRoom_Container->update();
+
+		isFirstUpdate = false;
+	}
 	m_pUnit_Container->update();
-	m_pRoom_Container->update();
 
 	m_pPhysicsEngine->update();
 

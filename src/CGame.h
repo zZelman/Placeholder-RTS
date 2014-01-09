@@ -19,6 +19,8 @@
 #include "Graphics/CRenderEngine.h"
 #include "Logic/CGameLogic.h"
 #include "HUD/CHUD.h"
+#include "UI/CUI.h"
+#include "Spawner/CSpawner.h"
 
 class CGame : public IUpdateable
 {
@@ -41,10 +43,13 @@ private:
 	CRoom_Container* m_pRoom_Container;
 	CGameLogic* m_pGameLogic;
 	CHUD* m_pHUD;
+	CUI* m_pUI;
+	CSpawner* m_pSpawner;
 
 	CPhysicsEngine* m_pPhysicsEngine;
 	CRenderEngine* m_pRenderEngine;
 
+	bool isFirstUpdate;
 	bool isRunning;
 	bool isPaused;
 

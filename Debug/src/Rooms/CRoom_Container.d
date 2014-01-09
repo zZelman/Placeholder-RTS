@@ -1,7 +1,7 @@
 src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/CRoom_Container.h ../src/Rooms/../Interfaces/IUpdateable.h \
  ../src/Rooms/../Interfaces/IGetCollisionData.h \
- ../src/Rooms/../Interfaces/../Abstracts/ARender.h \
+ ../src/Rooms/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Rooms/../Interfaces/../Abstracts/../include_sfml.h \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Window.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/System.hpp \
@@ -86,7 +86,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  ../src/Rooms/../Abstracts/AUserInput.h \
  ../src/Rooms/../Abstracts/../include_sfml.h \
  ../src/Rooms/../include_sfml.h ../src/Rooms/include_rooms.h \
- ../src/Rooms/CRoom.h ../src/Rooms/../Abstracts/ARender.h \
+ ../src/Rooms/CRoom.h ../src/Rooms/../Abstracts/ARenderable.h \
  ../src/Rooms/../Abstracts/AUpdate.h \
  ../src/Rooms/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Rooms/../Graphics/CSprite.h ../src/Rooms/../Graphics/CTexture.h \
@@ -103,7 +103,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Rooms/../Tiles/CTile.h \
- ../src/Rooms/../Tiles/../Abstracts/ARender.h \
+ ../src/Rooms/../Tiles/../Abstracts/ARenderable.h \
  ../src/Rooms/../Tiles/../Abstracts/AUpdate.h \
  ../src/Rooms/../Tiles/../Physics/DPhysics.h \
  ../src/Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
@@ -115,7 +115,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 
 ../src/Rooms/../Interfaces/IGetCollisionData.h:
 
-../src/Rooms/../Interfaces/../Abstracts/ARender.h:
+../src/Rooms/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Interfaces/../Abstracts/../include_sfml.h:
 
@@ -289,7 +289,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 
 ../src/Rooms/CRoom.h:
 
-../src/Rooms/../Abstracts/ARender.h:
+../src/Rooms/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Abstracts/AUpdate.h:
 
@@ -333,7 +333,7 @@ src/Rooms/CRoom_Container.d: ../src/Rooms/CRoom_Container.cpp \
 
 ../src/Rooms/../Tiles/CTile.h:
 
-../src/Rooms/../Tiles/../Abstracts/ARender.h:
+../src/Rooms/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/Rooms/../Tiles/../Abstracts/AUpdate.h:
 

@@ -75,7 +75,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBuffer.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
- ../src/Physics/../Abstracts/ARender.h \
+ ../src/Physics/../Abstracts/ARenderable.h \
  ../src/Physics/../Abstracts/../include_sfml.h \
  ../src/Physics/../Abstracts/../Graphics/CTexture.h \
  ../src/Physics/../Abstracts/../Graphics/../include_sfml.h \
@@ -89,13 +89,13 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Physics/../Tiles/CTile.h \
- ../src/Physics/../Tiles/../Abstracts/ARender.h \
+ ../src/Physics/../Tiles/../Abstracts/ARenderable.h \
  ../src/Physics/../Tiles/../Abstracts/AUpdate.h \
  ../src/Physics/../Tiles/../Abstracts/../Interfaces/IUpdateable.h \
  ../src/Physics/../Tiles/../Physics/DPhysics.h \
  ../src/Physics/../Tiles/../Physics/../include_sfml.h \
  ../src/Physics/../Tiles/../Interfaces/IGetCollisionData.h \
- ../src/Physics/../Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Physics/../Tiles/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Physics/../Tiles/../Interfaces/IGetRenderData.h \
  ../src/Physics/../Tiles/../Interfaces/../include_sfml.h \
  ../src/Physics/../Rooms/CRoom_Container.h \
@@ -106,7 +106,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Rooms/../Abstracts/../include_sfml.h \
  ../src/Physics/../Rooms/../include_sfml.h \
  ../src/Physics/../Rooms/include_rooms.h ../src/Physics/../Rooms/CRoom.h \
- ../src/Physics/../Rooms/../Abstracts/ARender.h \
+ ../src/Physics/../Rooms/../Abstracts/ARenderable.h \
  ../src/Physics/../Rooms/../Abstracts/AUpdate.h \
  ../src/Physics/../Rooms/../Graphics/CSprite.h \
  ../src/Physics/../Rooms/../Graphics/CTexture.h \
@@ -124,12 +124,10 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
  ../src/Physics/../Units/../Abstracts/AUserInput.h \
  ../src/Physics/../Units/../include_sfml.h \
  ../src/Physics/../Units/CUnit.h \
- ../src/Physics/../Units/../Abstracts/ARender.h \
+ ../src/Physics/../Units/../Abstracts/ARenderable.h \
  ../src/Physics/../Units/../Abstracts/AUpdate.h \
  ../src/Physics/../Units/../Graphics/CSprite.h \
  ../src/Physics/../Units/../Tiles/CTile_Container.h \
- ../src/Physics/../Units/../Utills.h \
- ../src/Physics/../Units/../include_sfml.h \
  ../src/Physics/../Units/../Physics/DPhysics.h \
  ../src/Physics/../Units/../Interfaces/IGetCollisionData.h \
  ../src/Physics/../Units/../Interfaces/IGetRenderData.h \
@@ -290,7 +288,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp:
 
-../src/Physics/../Abstracts/ARender.h:
+../src/Physics/../Abstracts/ARenderable.h:
 
 ../src/Physics/../Abstracts/../include_sfml.h:
 
@@ -318,7 +316,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Tiles/CTile.h:
 
-../src/Physics/../Tiles/../Abstracts/ARender.h:
+../src/Physics/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/Physics/../Tiles/../Abstracts/AUpdate.h:
 
@@ -330,7 +328,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Tiles/../Interfaces/IGetCollisionData.h:
 
-../src/Physics/../Tiles/../Interfaces/../Abstracts/ARender.h:
+../src/Physics/../Tiles/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Physics/../Tiles/../Interfaces/IGetRenderData.h:
 
@@ -354,7 +352,7 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Rooms/CRoom.h:
 
-../src/Physics/../Rooms/../Abstracts/ARender.h:
+../src/Physics/../Rooms/../Abstracts/ARenderable.h:
 
 ../src/Physics/../Rooms/../Abstracts/AUpdate.h:
 
@@ -390,17 +388,13 @@ src/Physics/CPhysicsEngine.d: ../src/Physics/CPhysicsEngine.cpp \
 
 ../src/Physics/../Units/CUnit.h:
 
-../src/Physics/../Units/../Abstracts/ARender.h:
+../src/Physics/../Units/../Abstracts/ARenderable.h:
 
 ../src/Physics/../Units/../Abstracts/AUpdate.h:
 
 ../src/Physics/../Units/../Graphics/CSprite.h:
 
 ../src/Physics/../Units/../Tiles/CTile_Container.h:
-
-../src/Physics/../Units/../Utills.h:
-
-../src/Physics/../Units/../include_sfml.h:
 
 ../src/Physics/../Units/../Physics/DPhysics.h:
 

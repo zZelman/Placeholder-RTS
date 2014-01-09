@@ -77,7 +77,7 @@ src/Units/CUnit_Container.d: ../src/Units/CUnit_Container.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundBufferRecorder.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/SFML-2.1/include/SFML/Audio/SoundRecorder.hpp \
  ../src/Units/../include_sfml.h ../src/Units/CUnit.h \
- ../src/Units/../Abstracts/ARender.h \
+ ../src/Units/../Abstracts/ARenderable.h \
  ../src/Units/../Abstracts/../Graphics/CTexture.h \
  ../src/Units/../Abstracts/../Graphics/../include_sfml.h \
  ../src/Units/../Abstracts/../Graphics/CSprite.h \
@@ -93,15 +93,14 @@ src/Units/CUnit_Container.d: ../src/Units/CUnit_Container.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Units/../Tiles/CTile.h \
- ../src/Units/../Tiles/../Abstracts/ARender.h \
+ ../src/Units/../Tiles/../Abstracts/ARenderable.h \
  ../src/Units/../Tiles/../Abstracts/AUpdate.h \
  ../src/Units/../Tiles/../Physics/DPhysics.h \
  ../src/Units/../Tiles/../Physics/../include_sfml.h \
  ../src/Units/../Tiles/../Interfaces/IGetCollisionData.h \
- ../src/Units/../Tiles/../Interfaces/../Abstracts/ARender.h \
+ ../src/Units/../Tiles/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Units/../Tiles/../Interfaces/IGetRenderData.h \
  ../src/Units/../Tiles/../Interfaces/../include_sfml.h \
- ../src/Units/../Utills.h ../src/Units/../include_sfml.h \
  ../src/Units/../Physics/DPhysics.h \
  ../src/Units/../Interfaces/IGetCollisionData.h \
  ../src/Units/../Interfaces/IGetRenderData.h \
@@ -267,7 +266,7 @@ src/Units/CUnit_Container.d: ../src/Units/CUnit_Container.cpp \
 
 ../src/Units/CUnit.h:
 
-../src/Units/../Abstracts/ARender.h:
+../src/Units/../Abstracts/ARenderable.h:
 
 ../src/Units/../Abstracts/../Graphics/CTexture.h:
 
@@ -299,7 +298,7 @@ src/Units/CUnit_Container.d: ../src/Units/CUnit_Container.cpp \
 
 ../src/Units/../Tiles/CTile.h:
 
-../src/Units/../Tiles/../Abstracts/ARender.h:
+../src/Units/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/Units/../Tiles/../Abstracts/AUpdate.h:
 
@@ -309,15 +308,11 @@ src/Units/CUnit_Container.d: ../src/Units/CUnit_Container.cpp \
 
 ../src/Units/../Tiles/../Interfaces/IGetCollisionData.h:
 
-../src/Units/../Tiles/../Interfaces/../Abstracts/ARender.h:
+../src/Units/../Tiles/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Units/../Tiles/../Interfaces/IGetRenderData.h:
 
 ../src/Units/../Tiles/../Interfaces/../include_sfml.h:
-
-../src/Units/../Utills.h:
-
-../src/Units/../include_sfml.h:
 
 ../src/Units/../Physics/DPhysics.h:
 

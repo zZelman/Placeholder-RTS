@@ -83,7 +83,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classCRoom__Container-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -99,7 +98,6 @@ Inheritance diagram for CRoom_Container:</div>
 <area href="classIUpdateable.html" alt="IUpdateable" shape="rect" coords="0,0,114,24"/>
 <area href="classIGetRenderData.html" alt="IGetRenderData" shape="rect" coords="124,0,238,24"/>
 <area href="classIGetCollisionData.html" alt="IGetCollisionData" shape="rect" coords="248,0,362,24"/>
-<area href="classAUserInput.html" alt="AUserInput" shape="rect" coords="372,0,486,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -108,9 +106,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ff9ed6e36687810fa9d3e75f8be311e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ff9ed6e36687810fa9d3e75f8be311e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CRoom_Container</b> (<a class="el" href="classCTile__Container.html">CTile_Container</a> *pGrid)</td></tr>
 <tr class="separator:a8ff9ed6e36687810fa9d3e75f8be311e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4487394b5b73570abf3731200129e507"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4487394b5b73570abf3731200129e507"></a>
-const <a class="el" href="structSNumRooms.html">SNumRooms</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getNumRooms</b> () const </td></tr>
-<tr class="separator:a4487394b5b73570abf3731200129e507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82aafa14e115d22530fbc70f88c5a224"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82aafa14e115d22530fbc70f88c5a224"></a>
+struct <a class="el" href="structSNumRooms.html">SNumRooms</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getNumRooms</b> ()</td></tr>
+<tr class="separator:a82aafa14e115d22530fbc70f88c5a224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24e32e7fba1122db0c40aea2aeb0da2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad24e32e7fba1122db0c40aea2aeb0da2"></a>
+std::list&lt; <a class="el" href="classCRoom.html">CRoom</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>getRooms</b> ()</td></tr>
+<tr class="separator:ad24e32e7fba1122db0c40aea2aeb0da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a976c43bd83d5416c3f3d286d09ebf89d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a976c43bd83d5416c3f3d286d09ebf89d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
 <tr class="separator:a976c43bd83d5416c3f3d286d09ebf89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,40 +121,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>getCollisiondata</b> 
 <tr class="memitem:a15cce22d7e258ca05eaa0605263bd743"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15cce22d7e258ca05eaa0605263bd743"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>getRenderData</b> (std::list&lt; <a class="el" href="classARenderable.html">ARenderable</a> * &gt; *pList)</td></tr>
 <tr class="separator:a15cce22d7e258ca05eaa0605263bd743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa220dc3fd30384ef9d3b13b0f7c0a417"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa220dc3fd30384ef9d3b13b0f7c0a417"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>userInput_keyPress</b> (<a class="el" href="classsf_1_1Event.html">sf::Event</a> *pEvent)</td></tr>
-<tr class="separator:aa220dc3fd30384ef9d3b13b0f7c0a417"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85bb9fcebc84e71bb90fb5c7d7c201a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85bb9fcebc84e71bb90fb5c7d7c201a6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>userInput_keyRelease</b> (<a class="el" href="classsf_1_1Event.html">sf::Event</a> *pEvent)</td></tr>
-<tr class="separator:a85bb9fcebc84e71bb90fb5c7d7c201a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84080540b5cb7a400662aba47fee60fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84080540b5cb7a400662aba47fee60fc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>userInput_mousePress</b> (<a class="el" href="classsf_1_1Event.html">sf::Event</a> *pEvent)</td></tr>
-<tr class="separator:a84080540b5cb7a400662aba47fee60fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb9e0db332c48e7baabf55d7e14ac512"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb9e0db332c48e7baabf55d7e14ac512"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>userInput_mouseRelease</b> (<a class="el" href="classsf_1_1Event.html">sf::Event</a> *pEvent)</td></tr>
-<tr class="separator:adb9e0db332c48e7baabf55d7e14ac512"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb1c5bc2aef2804cb15cbedd5fc649a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2eb1c5bc2aef2804cb15cbedd5fc649a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isCollision</b> (const <a class="el" href="classsf_1_1Rect.html">sf::Rect</a>&lt; float &gt; &amp;rect, <a class="el" href="classCRoom.html">CRoom</a> *&amp;pRoom)</td></tr>
 <tr class="separator:a2eb1c5bc2aef2804cb15cbedd5fc649a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_classAUserInput"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAUserInput')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classAUserInput.html">AUserInput</a></td></tr>
-<tr class="memitem:a55b881326b920413bbcdf6e02c4fb021 inherit pro_attribs_classAUserInput"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55b881326b920413bbcdf6e02c4fb021"></a>
-struct <a class="el" href="structAUserInput_1_1SKeyStates.html">AUserInput::SKeyStates</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_sKeys</b></td></tr>
-<tr class="separator:a55b881326b920413bbcdf6e02c4fb021 inherit pro_attribs_classAUserInput"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706efb0198fe6a811d5065fa4de6ff75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a706efb0198fe6a811d5065fa4de6ff75"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>canSpawnAtPos</b> (int x, int y)</td></tr>
+<tr class="separator:a706efb0198fe6a811d5065fa4de6ff75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc2bd08133c964fe7e21fa579b075d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCRoom__Container.html#a7bc2bd08133c964fe7e21fa579b075d3">deleteRoom</a> (int x, int y)</td></tr>
+<tr class="separator:a7bc2bd08133c964fe7e21fa579b075d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="CRoom__Container_8h_source.html#l00040">40</a> of file <a class="el" href="CRoom__Container_8h_source.html">CRoom_Container.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a7bc2bd08133c964fe7e21fa579b075d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRoom_Container::deleteRoom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DEBUG.</p>
+<p>Deletes a room at mouse coords (x,y) if there exists one </p>
+
+<p>Definition at line <a class="el" href="CRoom__Container_8cpp_source.html#l00137">137</a> of file <a class="el" href="CRoom__Container_8cpp_source.html">CRoom_Container.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/zZelman/Dropbox/Placeholder-RTS/src/Rooms/<a class="el" href="CRoom__Container_8h_source.html">CRoom_Container.h</a></li>
 <li>/home/zZelman/Dropbox/Placeholder-RTS/src/Rooms/<a class="el" href="CRoom__Container_8cpp_source.html">CRoom_Container.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 2 2014 13:31:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 9 2014 14:29:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

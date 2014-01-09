@@ -25,6 +25,7 @@ var searchData=
   ['isconnected',['isConnected',['../classsf_1_1Joystick.html#ac7d4e1923e9f9420174f26703ea63d6c',1,'sf::Joystick']]],
   ['isempty',['isEmpty',['../classsf_1_1String.html#a6c43f0cbe84cf17fa6ba93d58b75fcdc',1,'sf::String']]],
   ['iskeypressed',['isKeyPressed',['../classsf_1_1Keyboard.html#a80a04b2f53005886957f49eee3531599',1,'sf::Keyboard']]],
+  ['ismouse',['isMouse',['../structSSpawnInfo.html#ac7031f22395eeabeaa0fd70106a6240d',1,'SSpawnInfo']]],
   ['isok',['isOk',['../classsf_1_1Ftp_1_1Response.html#a4dadbe0fe0a3ef2d571a017e1645e675',1,'sf::Ftp::Response']]],
   ['isopen',['isOpen',['../classsf_1_1Window.html#a5aa9c2b2b0e51d3423c2b66c80253337',1,'sf::Window']]],
   ['isready',['isReady',['../classsf_1_1SocketSelector.html#a8e67b463db05eadb4d356992c896833c',1,'sf::SocketSelector']]],

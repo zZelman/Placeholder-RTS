@@ -9,7 +9,10 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/Units/subdir.mk
+-include src/UI/subdir.mk
 -include src/Tiles/subdir.mk
+-include src/Templates/subdir.mk
+-include src/Spawner/subdir.mk
 -include src/Rooms/subdir.mk
 -include src/Physics/subdir.mk
 -include src/Logic/subdir.mk

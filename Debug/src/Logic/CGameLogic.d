@@ -79,7 +79,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  ../src/Logic/../Rooms/CRoom_Container.h \
  ../src/Logic/../Rooms/../Interfaces/IUpdateable.h \
  ../src/Logic/../Rooms/../Interfaces/IGetCollisionData.h \
- ../src/Logic/../Rooms/../Interfaces/../Abstracts/ARender.h \
+ ../src/Logic/../Rooms/../Interfaces/../Abstracts/ARenderable.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../include_sfml.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/CTexture.h \
  ../src/Logic/../Rooms/../Interfaces/../Abstracts/../Graphics/../include_sfml.h \
@@ -91,7 +91,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  ../src/Logic/../Rooms/../Abstracts/../include_sfml.h \
  ../src/Logic/../Rooms/../include_sfml.h \
  ../src/Logic/../Rooms/include_rooms.h ../src/Logic/../Rooms/CRoom.h \
- ../src/Logic/../Rooms/../Abstracts/ARender.h \
+ ../src/Logic/../Rooms/../Abstracts/ARenderable.h \
  ../src/Logic/../Rooms/../Abstracts/AUpdate.h \
  ../src/Logic/../Rooms/../Graphics/CSprite.h \
  ../src/Logic/../Rooms/../Graphics/CTexture.h \
@@ -112,7 +112,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml_utils.hpp \
  /home/zZelman/Dropbox/Placeholder-RTS/rapidxml-1.13/rapidxml.hpp \
  ../src/Logic/../Rooms/../Tiles/CTile.h \
- ../src/Logic/../Rooms/../Tiles/../Abstracts/ARender.h \
+ ../src/Logic/../Rooms/../Tiles/../Abstracts/ARenderable.h \
  ../src/Logic/../Rooms/../Tiles/../Abstracts/AUpdate.h \
  ../src/Logic/../Rooms/../Tiles/../Physics/DPhysics.h \
  ../src/Logic/../Rooms/../Tiles/../Interfaces/IGetCollisionData.h \
@@ -280,7 +280,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/../Interfaces/IGetCollisionData.h:
 
-../src/Logic/../Rooms/../Interfaces/../Abstracts/ARender.h:
+../src/Logic/../Rooms/../Interfaces/../Abstracts/ARenderable.h:
 
 ../src/Logic/../Rooms/../Interfaces/../Abstracts/../include_sfml.h:
 
@@ -306,7 +306,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/CRoom.h:
 
-../src/Logic/../Rooms/../Abstracts/ARender.h:
+../src/Logic/../Rooms/../Abstracts/ARenderable.h:
 
 ../src/Logic/../Rooms/../Abstracts/AUpdate.h:
 
@@ -348,7 +348,7 @@ src/Logic/CGameLogic.d: ../src/Logic/CGameLogic.cpp \
 
 ../src/Logic/../Rooms/../Tiles/CTile.h:
 
-../src/Logic/../Rooms/../Tiles/../Abstracts/ARender.h:
+../src/Logic/../Rooms/../Tiles/../Abstracts/ARenderable.h:
 
 ../src/Logic/../Rooms/../Tiles/../Abstracts/AUpdate.h:
 

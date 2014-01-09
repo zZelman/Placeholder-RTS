@@ -5,7 +5,7 @@
  *      Author: zZelman
  */
 
-#include "ARender.h"
+#include "ARenderable.h"
 #include "../include_sfml.h"
 #include "../Graphics/CTexture.h"
 #include "../Graphics/CSprite.h"
