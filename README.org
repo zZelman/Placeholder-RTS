@@ -1,0 +1,4 @@
+#+TITLE: Placeholder-RTS
+#+AUTHOR: Kyle Avrett
+
+This is a video game that I worked on in college. The premise is that the player is building a fortress using the placement mechanics of Tetris. Each room in this fortress can do some function such as spawn units, research upgrades, defense, etc. Eventually the player would build a fortress strong enough to kill the adjacent AI controlled fortress who has been harassing them the whole time.
